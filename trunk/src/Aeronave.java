@@ -15,8 +15,14 @@ public class Aeronave
 		direccion = unStep;
 	}
 	
-	 public void actualizarPosicion()
+	public void actualizarPosicion()
 	{
 		posicion = posicion.sumar(direccion);
 	}
+	
+	public Posicion devolverPosicion()
+	{
+		return posicion;
+	}
+	 
 }
