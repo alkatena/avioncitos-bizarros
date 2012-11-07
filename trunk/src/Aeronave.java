@@ -1,9 +1,9 @@
-public class aeronave 
+public class Aeronave 
 {
 	private Posicion posicion;
 	private Posicion direccion;
 	
-	public aeronave()
+	public Aeronave()
 	{
 		//Inicializarlas random?
 		posicion = new Posicion();
