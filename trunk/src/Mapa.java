@@ -22,7 +22,7 @@ public class Mapa
 		listaTorres.add(avion.devolverTorre());
 	}
 	
-	public void agregarTorre(Pista pista)
+	public void agregarPista(Pista pista)
 	{
 		listaPistas.add(pista);
 	}

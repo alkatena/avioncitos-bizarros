@@ -1,10 +1,14 @@
+enum tipoDeAeronave
+	{
+		AVIONGRANDE,AVIONCHICO,HELICOPTERO
+	}
 
 public class Pista 
 {
 	private Posicion direccion;
 	private Posicion posicion;
-	//Habria que asociar cada pista a un tipo de aviones
-	
+	private tipoDeAeronave pistaDeAeronave;
+
 	public Pista(Posicion dir, Posicion pos)
 	{
 		//Setear atributo de identificacion
@@ -24,7 +28,6 @@ public class Pista
 	
 	public boolean puedeAterrizar(Aeronave avion)
 	{
-		//fijarse si la aeronave puede aterrizar en esta pista y devolver boolean
-		return true;
+		return (avion.tipoDeAeronave()==this.pistaDeAeronave);
 	}
 }

@@ -3,7 +3,7 @@ public class Aeronave
 	private Posicion posicion;
 	private Posicion direccion;
 	private TorreDeControl torre;
-	
+	private tipoDeAeronave aeronave;
 	public Aeronave()
 	{
 		//Inicializarlas random?
@@ -32,6 +32,10 @@ public class Aeronave
 	public Posicion devolverPosicion()
 	{
 		return posicion;
+	}
+
+	public tipoDeAeronave tipoDeAeronave() {
+		return this.aeronave;
 	}
 	 
 }
