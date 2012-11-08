@@ -35,4 +35,9 @@ public class Posicion
 		Posicion nuevapos = new Posicion(this.getX()+ otraPos.getX(), this.getY()+ otraPos.getY());
 		return nuevapos;
 	}
+	public Posicion restar(Posicion otraPos)
+	{
+		Posicion nuevapos = new Posicion(this.getX()- otraPos.getX(), this.getY()- otraPos.getY());
+		return nuevapos;
+	}
 }
