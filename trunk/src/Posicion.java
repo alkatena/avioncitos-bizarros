@@ -23,6 +23,7 @@ public class Posicion
 	{
 		return y;
 	}
+	
 	public boolean compararA(Posicion otraPos)
 	{
 		if (otraPos.getX() == this.getX() )
@@ -30,11 +31,13 @@ public class Posicion
 				return true;
 		return false;
 	}
+	
 	public Posicion sumar(Posicion otraPos)
 	{
 		Posicion nuevapos = new Posicion(this.getX()+ otraPos.getX(), this.getY()+ otraPos.getY());
 		return nuevapos;
 	}
+	
 	public Posicion restar(Posicion otraPos)
 	{
 		Posicion nuevapos = new Posicion(this.getX()- otraPos.getX(), this.getY()- otraPos.getY());
@@ -47,6 +50,6 @@ public class Posicion
 		return nuevapos;	
 	}	
 	
-	}
+}
 	
 
