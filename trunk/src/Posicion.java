@@ -44,10 +44,10 @@ public class Posicion
 		return nuevapos;
 	}
 	
-	public Posicion multiplicarPorEscalar (int escalar)
+	public Posicion multiplicarPorEscalar (float escalar)
 	{
 		Posicion nuevapos= new Posicion(this.getX()*escalar, this.getY()*escalar);
-		return nuevapos;	
+		return nuevapos;
 	}	
 	
 }

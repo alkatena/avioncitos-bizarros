@@ -1,41 +1,28 @@
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.ListIterator;
 
 
 public class Radar 
 {
-	private Mapa map;
+	private Mapa map = Mapa.getMapa();
 	
-	public Radar(Mapa map)
+	public ArrayList<Aeronave> obtenerAviones()
 	{
-		this.map = map;
+		return map.devolverAviones();
 	}
 	
-	public ArrayList<Posicion> posicionesDeAviones()
+	public ArrayList<Aeronave> obtenerAviones(int tam)
 	{
-		ArrayList<TorreDeControl> listaTorres;
-		listaTorres = map.getTorres();
-		Iterator<TorreDeControl> iterador = listaTorres.listIterator();
-		ArrayList<Posicion> listaPosiciones = new ArrayList<Posicion>();
-		while ( iterador.hasNext())
+		ListIterator<Aeronave> iterador = map.devolverAviones().listIterator();
+		ArrayList<Aeronave> listaFiltrada = new ArrayList<Aeronave>();
+		while (iterador.hasNext())
 		{
-			TorreDeControl torre = iterador.next();
-			listaPosiciones.add(torre.posicionAvion());
-		}
-		return listaPosiciones;
-	}
-	
-	public ArrayList<Posicion> posicionesDePistas()
-	{
-		ArrayList<Pista> listaPistas;
-		listaPistas = map.getPistas();
-		Iterator<Pista> iterador = listaPistas.listIterator();
-		ArrayList<Posicion> listaPosiciones = new ArrayList<Posicion>();
-		while ( iterador.hasNext())
-		{
-			Pista pista = iterador.next();
-			listaPosiciones.add(pista.getPosicion());
-		}
-		return listaPosiciones;
+			Aeronave elemento = iterador.next();
+			if( elemento.getTamanio() == tam )
+			{
+				listaFiltrada.add(elemento);
+			}
+		}		
+		return listaFiltrada;
 	}
 }

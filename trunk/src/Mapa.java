@@ -3,27 +3,37 @@ import java.util.ArrayList;
 
 public class Mapa 
 {
+	
+	private static Mapa map;
+	private Radar radar = new Radar();
+	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
+	
+	public static Mapa getMapa()
+	{
+		if(map == null)
+			map = new Mapa();
+		return map;
+	}
 
-	private ArrayList<TorreDeControl> listaTorres;
-	private ArrayList<Pista> listaPistas;
 	
-	public ArrayList<TorreDeControl> getTorres()
+	public Radar getRadar()
 	{
-		return listaTorres;
+		return radar;
 	}
 	
-	public ArrayList<Pista> getPistas()
+	public ArrayList<Aeronave> devolverAviones()
 	{
-		return listaPistas;
+		return listaAviones;
 	}
 	
-	public void agregarAvion(Aeronave avion)
+	public void agregarAvion()
 	{
-		listaTorres.add(avion.devolverTorre());
+		Aeronave avion = new Aeronave();
+		listaAviones.add(avion);
 	}
 	
-	public void agregarPista(Pista pista)
-	{
-		listaPistas.add(pista);
-	}
 }
+	
+	
+	
+
