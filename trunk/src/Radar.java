@@ -11,7 +11,7 @@ public class Radar
 		return map.devolverAviones();
 	}
 	
-	public ArrayList<Aeronave> obtenerAviones(int tam)
+	public ArrayList<Aeronave> obtenerAviones(TipoNave tam)
 	{
 		ListIterator<Aeronave> iterador = map.devolverAviones().listIterator();
 		ArrayList<Aeronave> listaFiltrada = new ArrayList<Aeronave>();

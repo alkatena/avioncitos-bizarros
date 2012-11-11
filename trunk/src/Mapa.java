@@ -16,21 +16,21 @@ public class Mapa
 	}
 
 	
-	public Radar getRadar()
-	{
-		return radar;
-	}
-	
-	public ArrayList<Aeronave> devolverAviones()
-	{
-		return listaAviones;
-	}
-	
 	public void agregarAvion()
 	{
 		Aeronave avion = new Aeronave();
 		listaAviones.add(avion);
 	}
+	
+	
+	//Getters===========================
+	public Radar getRadar()
+	{	return radar;	}
+	
+	
+	public ArrayList<Aeronave> devolverAviones()
+	{	return listaAviones;	}
+	
 	
 }
 	

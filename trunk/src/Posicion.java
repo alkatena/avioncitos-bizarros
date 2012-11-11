@@ -1,25 +1,25 @@
 
 public class Posicion
 {
-	private float x;
-	private float y;
+	private double x;
+	private double y;
 	public Posicion()
 	{
 		x = 0;
 		y = 0;
 	}
-	public Posicion(float X, float Y)
+	public Posicion(double X, double Y)
 	{
 		this.x = X;
 		this.y = Y;
 	}
 	
 	
-	private float getX()
+	private double getX()
 	{
 		return x;
 	}
-	private float getY()
+	private double getY()
 	{
 		return y;
 	}
@@ -44,7 +44,7 @@ public class Posicion
 		return nuevapos;
 	}
 	
-	public Posicion multiplicarPorEscalar (float escalar)
+	public Posicion multiplicarPorEscalar (double escalar)
 	{
 		Posicion nuevapos= new Posicion(this.getX()*escalar, this.getY()*escalar);
 		return nuevapos;
