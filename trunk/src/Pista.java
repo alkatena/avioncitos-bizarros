@@ -1,22 +1,32 @@
-public class Pista implements colisionable
+public abstract class Pista implements colisionable, direccionable
 {
-	private Posicion posicion;
-	private TipoNave tipoAdmitido;
+	protected Posicion posicion;
+	protected TamanioAeronave tamanioAdmitido;
 	
 	public Pista(Posicion pos)
 	{
-		posicion = pos;
-		tipoAdmitido = TipoNave.grande;
+		
 	}
 	
-	public boolean colisionoCon(Aeronave avion)
+	/*es casi el mismo codigo que para la Aeronave*/
+	public boolean colisionoCon(Aeronave unAvion)
 	{
-		if (this.posicion == avion.getPosicion())
-			return (avion.getTamanio() == tipoAdmitido);
-		return false;		
+		double distancia=this.posicion.distanciaCon(unAvion.getPosicion());
+		int	espacioOcupado=(this.tamanioAdmitido.getTamanio()+unAvion.getTamanio().getTamanio());
+		if ((distancia-espacioOcupado)<=0)
+		{
+			return true;
+		}
+		return false;	
 	}
 	
 	public Posicion getPosicion()
 	{ return posicion; }
+	
+	/* Habria que redefinirlo para cada pista que tuviera una direccion distinta */
+	public boolean suDireccionEsCorrecta(Aeronave unAvion)
+	{
+		return true;
+	}
 	
 }
