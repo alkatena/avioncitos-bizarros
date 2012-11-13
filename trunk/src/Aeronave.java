@@ -1,20 +1,17 @@
-enum TipoNave
-{
-	grande, mediana, chica
-}
 
 public class Aeronave implements colisionable
 {
 	private Posicion posicion;
 	private double velocidad;
-	private TipoNave tipo;
+	private TamanioAeronave tamanio;
 	private TrayectoriaRecta trayectoria;
 	
 	public Aeronave()
 	{
 		//Falta generar random las naves que se crean
 		posicion = new Posicion();
-		tipo = TipoNave.grande;
+		tamanio = new TamanioAeronave();
+		tamanio.grande();
 		velocidad = 0.1;
 	}
 	
@@ -26,16 +23,21 @@ public class Aeronave implements colisionable
 	
 	public boolean colisionoCon(Aeronave unAvion)
 	{
-		return (this.posicion == unAvion.getPosicion());
+		double distancia=this.posicion.distanciaCon(unAvion.getPosicion());
+		int	espacioOcupado=(this.tamanio.getTamanio()+unAvion.getTamanio().getTamanio());
+		if ((distancia-espacioOcupado)<=0)
+		{
+			return true;
+		}
+		return false;
 	}
-	
 	
 	//Getters=============
 	public Posicion getPosicion()
 	{	return posicion; }
 	
-	public TipoNave getTamanio()
-	{	return tipo; }
+	public TamanioAeronave getTamanio()
+	{	return tamanio; }
 	
 	
 	
