@@ -5,7 +5,7 @@ public class TrayectoriaRecta
 	private Posicion ptoActual;
 	private Posicion ptoInicial;
 	
-	public TrayectoriaRecta(Posicion pFinal, Posicion pInicial)
+	public TrayectoriaRecta(Posicion pInicial, Posicion pFinal)
 	{
 		ptoFinal = pFinal;
 		ptoInicial = pInicial;
