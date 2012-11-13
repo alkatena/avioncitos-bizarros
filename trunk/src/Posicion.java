@@ -50,6 +50,11 @@ public class Posicion
 		return nuevapos;
 	}	
 	
+	public double distanciaCon(Posicion pos)
+	{
+	Posicion nuevapos=this.restar(pos);
+	return (Math.sqrt(Math.pow(nuevapos.getX(),2)+ Math.pow(nuevapos.getY(),2)));
+	}
 }
 	
 
