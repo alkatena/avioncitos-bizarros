@@ -14,12 +14,12 @@ public class Posicion
 		this.y = Y;
 	}
 	
-	
-	private double getX()
+
+	public double getX()
 	{
 		return x;
 	}
-	private double getY()
+	public double getY()
 	{
 		return y;
 	}
@@ -50,6 +50,7 @@ public class Posicion
 		return nuevapos;
 	}	
 	
+	 /* Te da la distancia con otra posicion cualquiera, se usa para el colisionoCon*/
 	public double distanciaCon(Posicion pos)
 	{
 	Posicion nuevapos=this.restar(pos);
