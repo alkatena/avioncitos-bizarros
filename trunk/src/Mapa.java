@@ -16,9 +16,8 @@ public class Mapa
 	}
 
 	
-	public void agregarAvion()
+	public void agregarAvion(Aeronave avion)
 	{
-		Aeronave avion = new Aeronave();
 		listaAviones.add(avion);
 	}
 	

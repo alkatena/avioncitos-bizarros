@@ -1,29 +1,27 @@
 
-public class Aeronave implements colisionable
+public abstract class Aeronave implements colisionable
 {
-	private Posicion posicion;
-	private double velocidad;
-	private TamanioAeronave tamanio;
-	private TrayectoriaRecta trayectoria;
+	
+	protected Posicion posicionActual;
+	protected double velocidad;
+	protected TamanioAeronave tamanio;
+	protected TrayectoriaRecta trayectoria;
 	
 	public Aeronave()
 	{
-		//Falta generar random las naves que se crean
-		posicion = new Posicion();
-		tamanio = new TamanioAeronave();
-		tamanio.grande();
-		velocidad = 0.1;
+		// Areonave es una clase abstracta, no necesita construcor?
 	}
 	
-	public Posicion actualizar()
+	public Posicion actualizarPosicion(Posicion posicionFinal)
 	{
-		return posicion = trayectoria.avanzar(velocidad);
+		trayectoria = new TrayectoriaRecta(posicionActual,posicionFinal);
+		return posicionActual = trayectoria.avanzar(velocidad);
 	}
 	
 	
 	public boolean colisionoCon(Aeronave unAvion)
 	{
-		double distancia=this.posicion.distanciaCon(unAvion.getPosicion());
+		double distancia=this.posicionActual.distanciaCon(unAvion.getPosicion());
 		int	espacioOcupado=(this.tamanio.getTamanio()+unAvion.getTamanio().getTamanio());
 		if ((distancia-espacioOcupado)<=0)
 		{
@@ -34,7 +32,7 @@ public class Aeronave implements colisionable
 	
 	//Getters=============
 	public Posicion getPosicion()
-	{	return posicion; }
+	{	return posicionActual; }
 	
 	public TamanioAeronave getTamanio()
 	{	return tamanio; }

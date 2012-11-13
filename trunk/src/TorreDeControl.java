@@ -16,7 +16,7 @@ public class TorreDeControl {
 
 	public void comandarAvion(Posicion posicion){
 		while (!alcanzoDestino(this.avion,posicion)){
-			this.avion.actualizarPosicion();
+			this.avion.actualizarPosicion(posicion);
 		}
 	}
 	
