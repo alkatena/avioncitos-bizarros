@@ -2,12 +2,14 @@
 public class TrayectoriaRecta 
 {
 	private Posicion ptoInicial;
+	private Posicion ptoFinal;
 	private Posicion direccion;
 	private double amplificacion;
 	
 	public TrayectoriaRecta(Posicion pInicial, Posicion pFinal)
 	{
 		ptoInicial = pInicial;
+		ptoFinal = pFinal;
 		direccion = this.generarDireccion(pInicial, pFinal);	
 		amplificacion=0;
 	}
@@ -33,4 +35,8 @@ public class TrayectoriaRecta
 		return ptoInicial;
 	}
 
+	public Posicion getPtoFinal() // se usa para el helicoptero
+	{
+		return ptoFinal;
+	}
 }
