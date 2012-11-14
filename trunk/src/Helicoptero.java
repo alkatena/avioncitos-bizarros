@@ -6,15 +6,14 @@ public class Helicoptero extends Aeronave
 			tamanio.mediano();
 			velocidad = 0.6;
 		}
-	
-		public Posicion actualizarPosicion(Posicion posicionFinal)
+		
+		// nose porque tira error, deberia indicar que quiero redefinir el metodo?
+		public void actualizar()
 		{
-			if (posicionFinal!=posicionActual)
+			if (this.trayectoria.getPtoFinal().compararA(this.posicionActual))
 			{
-				trayectoria = new TrayectoriaRecta(posicionActual,posicionFinal);
-				return posicionActual = trayectoria.avanzar(velocidad);
-			}
-			
-			return null;
+				//no deberia modificar nada.
+			}			
+			else { this.trayectoria.avanzar(velocidad); }	
 		}
-	}
+}
