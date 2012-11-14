@@ -17,9 +17,9 @@ public class DireccionPista
 		diferenciaDeDirecciones =(this.direccion.restar(unaDireccion));
 		if( (diferenciaDeDirecciones.getX() <= tolerancia) && (diferenciaDeDirecciones.getY() <= tolerancia) )
 		{
-		return true;
+			return true;
 		}
-	return false;	
+		return false;	
 	}
 	
 }
