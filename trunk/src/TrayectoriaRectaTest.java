@@ -24,5 +24,14 @@ public class TrayectoriaRectaTest extends TestCase {
 		assertTrue ( (pActual.getX() == 1.6) );	
 		assertTrue ( pActual.getY() == 2.7);	
 	}
-
-}
+	//haicendo
+	public void testAvanzarVariosPasos()
+	{
+		// van a ser 3 avances
+		
+		
+		
+		
+	}
+	
+	}
