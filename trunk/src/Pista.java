@@ -6,7 +6,8 @@ public abstract class Pista implements colisionable
 	
 	public Pista(Posicion pos, DireccionPista unaDireccion)
 	{
-		
+		posicion = pos;
+		direccion = unaDireccion;
 	}
 	
 	/*es casi el mismo codigo que para la Aeronave*/

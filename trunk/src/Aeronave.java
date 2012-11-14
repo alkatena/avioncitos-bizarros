@@ -9,7 +9,8 @@ public abstract class Aeronave implements colisionable
 	
 	public Aeronave()
 	{
-		// Areonave es una clase abstracta, no necesita construcor?
+		posicionActual = new Posicion();
+		tamanio = new TamanioAeronave();
 	}
 	
 	public Posicion actualizarPosicion(Posicion posicionFinal)
