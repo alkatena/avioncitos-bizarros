@@ -12,7 +12,7 @@ public abstract class Aeronave implements colisionable
 		
 		//Situar aeronave en lugar random del mapa, con direccion random del mapa.
 		Random gen = new Random();
-		Posicion posInicialDefault = new Posicion(gen.nextInt(), gen.nextInt());
+		Posicion posInicialDefault = new Posicion(max, gen.nextInt(max));
 		Posicion posFinalDefault = new Posicion(gen.nextInt(max), gen.nextInt(max));
 		
 		
@@ -21,7 +21,6 @@ public abstract class Aeronave implements colisionable
 		tamanio = new TamanioAeronave();
 	}
 	
-	/* ademas de cambiar su camino ya hace un primer avanze*/
 	public void actualizarTrayectoria(Posicion posicionFinal)
 	{
 		trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(),posicionFinal);
