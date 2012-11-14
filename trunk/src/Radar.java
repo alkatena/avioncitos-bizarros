@@ -25,7 +25,7 @@ public class Radar
 		}		
 		return listaFiltrada;
 	}
-	public ArrayList<Pista> getPistas()
+	public ArrayList<Pista> obtenerPistas()
 	{
 		return map.devolverPistas();
 	}
