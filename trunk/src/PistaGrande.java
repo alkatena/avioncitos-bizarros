@@ -1,5 +1,3 @@
-/* Mauri: vos que sos capo en herencia, porque me tira error?*/
-
 public class PistaGrande extends Pista
 {
 
