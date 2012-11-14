@@ -6,6 +6,8 @@ public class Mapa
 	
 	private static Mapa map;
 	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
+	private ControlAereo controlA = new ControlAereo();
+	private ControlTerrestre controlT = new ControlTerrestre();
 	
 	public static Mapa getMapa()
 	{
@@ -20,6 +22,17 @@ public class Mapa
 		listaAviones.add(avion);
 	}
 	
+	public void agregarPista(Pista pista)
+	{
+		controlT.agregarPista(pista);
+	}
+	
+	
+	public void actualizar()
+	{
+		controlA.actualizar();
+		controlT.actualizar();
+	}
 	
 	//Getters===========================
 	
