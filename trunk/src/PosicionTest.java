@@ -9,6 +9,9 @@ import junit.framework.TestCase;
  * de cambiar valores sin pinchar o andar corrigiendo todo.
  * 3) se viene lindo quilombo con la precision, es demasiada. En realidad no deberia serlo,
  * pero veremos...No se alarmen aun.
+ * 3bis) debido a la alta precision, yo me hize un proyecto donde me pasaba por consola el
+ * valor de cada cuenta, ejemplo cuando multiplicaba mi calculadora diferia de la compu
+ * por eso esos numeros hardcore super largos.
  */
 
 public class PosicionTest extends TestCase {
