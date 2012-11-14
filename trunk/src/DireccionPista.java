@@ -11,12 +11,11 @@ public class DireccionPista
 		tolerancia= unaTolerancia;
 	}
 	
-	public boolean EsUnaDireccionValida(Posicion unaDireccion)
+	public boolean esUnaDireccionValida(Posicion unaDireccion)
 	{
-	Posicion diferenciaDeDirecciones = new Posicion();
-	diferenciaDeDirecciones =(this.direccion.restar(unaDireccion));
-	if (diferenciaDeDirecciones.getX() <= tolerancia) 
-		&& (diferenciaDeDirecciones.getY() <= tolerancia)
+		Posicion diferenciaDeDirecciones = new Posicion();
+		diferenciaDeDirecciones =(this.direccion.restar(unaDireccion));
+		if( (diferenciaDeDirecciones.getX() <= tolerancia) && (diferenciaDeDirecciones.getY() <= tolerancia) )
 		{
 		return true;
 		}
