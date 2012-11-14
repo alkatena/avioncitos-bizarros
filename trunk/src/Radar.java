@@ -11,14 +11,14 @@ public class Radar
 		return map.devolverAviones();
 	}
 	
-	public ArrayList<Aeronave> obtenerAviones(TipoNave tam)
+	public ArrayList<Aeronave> obtenerAviones(int tam)
 	{
 		ListIterator<Aeronave> iterador = map.devolverAviones().listIterator();
 		ArrayList<Aeronave> listaFiltrada = new ArrayList<Aeronave>();
 		while (iterador.hasNext())
 		{
 			Aeronave elemento = iterador.next();
-			if( elemento.getTamanio() == tam )
+			if( elemento.getTamanio().getTamanio() == tam )
 			{
 				listaFiltrada.add(elemento);
 			}
