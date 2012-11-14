@@ -2,7 +2,6 @@ public class Helicoptero extends Aeronave
 	{
 		public Helicoptero()
 		{
-			//Falta generar random las naves que se crean
 			tamanio.mediano();
 			velocidad = 0.6;
 		}
@@ -10,7 +9,7 @@ public class Helicoptero extends Aeronave
 
 		public void actualizar()
 		{
-			if (this.trayectoria.getPtoFinal().compararA(this.posicionActual))
+			if (this.trayectoria.getPtoFinal().compararA(trayectoria.getPosActual()))
 			{
 				//no deberia modificar nada.
 			}			

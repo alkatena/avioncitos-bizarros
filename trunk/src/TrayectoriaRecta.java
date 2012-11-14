@@ -4,11 +4,13 @@ public class TrayectoriaRecta
 	private Posicion ptoInicial;
 	private Posicion ptoFinal;
 	private Posicion direccion;
+	private Posicion posActual;
 	private double amplificacion;
 	
 	public TrayectoriaRecta(Posicion pInicial, Posicion pFinal)
 	{
 		ptoInicial = pInicial;
+		posActual = pInicial;
 		ptoFinal = pFinal;
 		direccion = this.generarDireccion(pInicial, pFinal);	
 		amplificacion=0;
@@ -19,10 +21,10 @@ public class TrayectoriaRecta
 		return pFinal.restar(pInicial);
 	}
 	
-	public Posicion avanzar(double velocidad)
+	public void avanzar(double velocidad)
 	{
 		this.amplificacion=this.amplificacion+velocidad;
-		return direccion.multiplicarPorEscalar(this.amplificacion).sumar(ptoInicial);
+		posActual = direccion.multiplicarPorEscalar(this.amplificacion).sumar(ptoInicial);
 	}
 	
 	public Posicion getDireccion()
@@ -38,5 +40,10 @@ public class TrayectoriaRecta
 	public Posicion getPtoFinal() // se usa para el helicoptero
 	{
 		return ptoFinal;
+	}
+	
+	public Posicion getPosActual()
+	{
+		return posActual;
 	}
 }

@@ -6,7 +6,6 @@ public class TrayectoriaRectaTest extends TestCase {
 	private Posicion pInicial;
 	private Posicion pFinal;
 	private double velocidad;
-	private Posicion pActual;
 	
 	public void setUp() 
 	{
@@ -19,10 +18,10 @@ public class TrayectoriaRectaTest extends TestCase {
 	public void testAvanzarUnPaso()
 	{
 		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal);
-		pActual = trayectoria.avanzar(velocidad);
+		trayectoria.avanzar(velocidad);
 
-		assertTrue ( (pActual.getX() == 1.6) );	
-		assertTrue ( pActual.getY() == 2.7);	
+		assertTrue ( (trayectoria.getPosActual().getX() == 1.6) );	
+		assertTrue (trayectoria.getPosActual().getY() == 2.7);	
 	}
 	//haicendo
 	public void testAvanzarVariosPasos()
