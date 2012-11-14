@@ -1,9 +1,10 @@
-public abstract class Pista implements colisionable, direccionable
+public abstract class Pista implements colisionable
 {
 	protected Posicion posicion;
 	protected TamanioAeronave tamanioAdmitido;
+	protected DireccionPista direccion;
 	
-	public Pista(Posicion pos)
+	public Pista(Posicion pos, DireccionPista unaDireccion)
 	{
 		
 	}
@@ -22,11 +23,4 @@ public abstract class Pista implements colisionable, direccionable
 	
 	public Posicion getPosicion()
 	{ return posicion; }
-	
-	/* Habria que redefinirlo para cada pista que tuviera una direccion distinta */
-	public boolean suDireccionEsCorrecta(Aeronave unAvion)
-	{
-		return true;
-	}
-	
 }
