@@ -1,7 +1,7 @@
 import junit.framework.TestCase;
 
-public class TrayectoriaRectaTest extends TestCase 
-{
+
+public class TrayectoriaRectaTest extends TestCase {
 
 	private Posicion pInicial;
 	private Posicion pFinal;
@@ -21,8 +21,8 @@ public class TrayectoriaRectaTest extends TestCase
 		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal);
 		pActual = trayectoria.avanzar(velocidad);
 
-		assertTrue ( pActual.getX() == 1.6);	
-		assertTrue ( pActual.getY() == 2.4);	
+		assertTrue ( (pActual.getX() == 1.6) );	
+		assertTrue ( pActual.getY() == 2.7);	
 	}
 
 }
