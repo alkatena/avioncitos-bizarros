@@ -7,7 +7,7 @@ public class Helicoptero extends Aeronave
 			velocidad = 0.6;
 		}
 		
-		// nose porque tira error, deberia indicar que quiero redefinir el metodo?
+
 		public void actualizar()
 		{
 			if (this.trayectoria.getPtoFinal().compararA(this.posicionActual))
