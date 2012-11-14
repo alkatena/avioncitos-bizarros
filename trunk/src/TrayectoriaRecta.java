@@ -28,7 +28,7 @@ public class TrayectoriaRecta
 		return direccion;
 	}
 	
-	public Posicion getPtoInicial()
+	public Posicion getPtoInicial() // o tmb suele llamarse pto de paso.
 	{
 		return ptoInicial;
 	}
