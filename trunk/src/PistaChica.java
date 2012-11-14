@@ -5,6 +5,6 @@ public class PistaChica extends Pista
 	{
 		super(pos, unaDireccion);
 		tamanioAdmitido = new TamanioAeronave();
-		tamanioAdmitido.grande();
+		tamanioAdmitido.chico();
 	}	
 }
