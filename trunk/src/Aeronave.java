@@ -13,10 +13,11 @@ public abstract class Aeronave implements colisionable
 		tamanio = new TamanioAeronave();
 	}
 	
-	public Posicion actualizarPosicion(Posicion posicionFinal)
+	/* ademas de cambiar su camino ya hace un primer avanze*/
+	public void actualizarPosicion(Posicion posicionFinal)
 	{
 		trayectoria = new TrayectoriaRecta(posicionActual,posicionFinal);
-		return posicionActual = trayectoria.avanzar(velocidad);
+		posicionActual = trayectoria.avanzar(velocidad);
 	}
 	
 	public void actualizar()
