@@ -35,7 +35,7 @@ public class Mapa
 	{	return listaAviones;	}
 	
 	public ArrayList<Pista> devolverPistas()
-	{	return listaPistas;	}
+	{	return listaPistas;		}
 	
 	
 }
