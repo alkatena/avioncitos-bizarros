@@ -1,8 +1,8 @@
-
 import junit.framework.TestCase;
 
-public class PosicionTest extends TestCase  
-{
+
+public class PosicionTest extends TestCase {
+
 	private Posicion posicion1;
 	private Posicion posicion2;
 	private Posicion posicion3;
@@ -25,7 +25,7 @@ public class PosicionTest extends TestCase
 		
 	}
 	
-	public void TestGetX()
+	public void testGetX()
 	{
 	
 		assertTrue (posicion1.getX() == 0);
