@@ -9,6 +9,8 @@ public class Mapa
 	private ControlAereo controlA = new ControlAereo();
 	private ControlTerrestre controlT = new ControlTerrestre();
 	
+	private Mapa(){	}
+	
 	public static Mapa getMapa()
 	{
 		if(map == null)

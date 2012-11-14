@@ -31,7 +31,9 @@ public class ControlAereo
 			{
 				if (avion.colisionoCon(iteradorInterno.next()))
 				{
-					//Se perdio el juego, chocaron 2 aviones
+					/*
+					 * Aca se perdio el juego porque chocaron 2 aviones
+					 */
 				}	
 			}
 			contador++;

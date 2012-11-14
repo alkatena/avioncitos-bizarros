@@ -34,8 +34,12 @@ public abstract class Pista implements colisionable
 	{
 		if (this.direccion.esUnaDireccionValida(unAvion.getTrayectoria().getDireccion()) )
 		{
-			//Matar avion
-			//llamar al score, o algo asi.
+			/*
+			 * Aca deberiamos matar al avion.
+			 */
+			
+			//ARREGLAR; SUMA TAMAÑO!
+			Score.getScore().sumarPuntaje(unAvion.getTamanio().getTamanio());
 		}
 	}
 }
