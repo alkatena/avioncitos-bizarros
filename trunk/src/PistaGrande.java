@@ -6,11 +6,5 @@ public class PistaGrande extends Pista
 		super(pos, unaDireccion);
 		tamanioAdmitido = new TamanioAeronave();
 		tamanioAdmitido.grande();
-	}
-	
-	/* Kimo: no hay manera de tener el colisionoCon escrito una sola vez?*/
-	public boolean colisionoCon(Aeronave obj) {
-
-		return false;
-	}
+	}	
 }
