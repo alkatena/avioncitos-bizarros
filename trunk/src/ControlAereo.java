@@ -11,9 +11,32 @@ public class ControlAereo
 		ArrayList<Aeronave> listaAviones = radar.obtenerAviones();
 		ListIterator<Aeronave> iterador = listaAviones.listIterator();
 		while (iterador.hasNext())
-			iterador.next().actualizar();
+		{
+			Aeronave avion = iterador.next();
+			avion.actualizar();
+			if (this.posicionInvalida(avion))
+			{
+				Mapa.getMapa().eliminarAvion(avion);
+			}
+		}
 		
 		this.controlarChoques();
+	}
+	
+	
+	private boolean posicionInvalida(Aeronave avion)
+	{
+		double x = avion.getPosicion().getX();
+		double y= avion.getPosicion().getY();
+		if (x > Mapa.getMapa().getLimite() || x < 0)
+		{
+			return true;
+		}
+		if (y > Mapa.getMapa().getLimite() || y < 0)
+		{
+			return true;
+		}
+		return false;
 	}
 	
 	private void controlarChoques()

@@ -32,14 +32,11 @@ public abstract class Pista implements colisionable
 	
 	public void aterrizar(Aeronave unAvion)
 	{
-		if (this.direccion.esUnaDireccionValida(unAvion.getTrayectoria().getDireccion()) )
+		if (this.direccion.esUnaDireccionValida( unAvion.getTrayectoria().getDireccion()) )
 		{
-			/*
-			 * Aca deberiamos matar al avion.
-			 */
-			
 			//ARREGLAR; SUMA TAMAÑO!
 			Score.getScore().sumarPuntaje(unAvion.getTamanio().getTamanio());
+			Mapa.getMapa().eliminarAvion(unAvion);
 		}
 	}
 }

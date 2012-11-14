@@ -9,7 +9,7 @@ public class Helicoptero extends Aeronave
 
 		public void actualizar()
 		{
-			if (this.trayectoria.getPtoFinal().compararA(trayectoria.getPosActual()))
+			if (this.trayectoria.getPtoFinal().compararA(this.getPosicion()))
 			{
 				//no deberia modificar nada.
 			}			

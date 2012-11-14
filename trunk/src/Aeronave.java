@@ -23,7 +23,7 @@ public abstract class Aeronave implements colisionable
 	
 	public void actualizarTrayectoria(Posicion posicionFinal)
 	{
-		trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(),posicionFinal);
+		trayectoria = new TrayectoriaRecta(this.getPosicion(),posicionFinal);
 	}
 	
 	public void actualizar()
@@ -34,7 +34,7 @@ public abstract class Aeronave implements colisionable
 	/* el if es una comparacion de un integer con un double (no es problema pero lo aclaro)*/
 	public boolean colisionoCon(Aeronave unAvion)
 	{
-		double distancia=trayectoria.getPosActual().distanciaCon(unAvion.getPosicion());
+		double distancia=this.getPosicion().distanciaCon(unAvion.getPosicion());
 		int	espacioOcupado=(this.tamanio.getTamanio()+unAvion.getTamanio().getTamanio());
 		if ((distancia-espacioOcupado)<=0)
 		{

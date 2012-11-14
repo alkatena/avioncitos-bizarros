@@ -5,6 +5,7 @@ public class Mapa
 {
 	
 	private static Mapa map;
+	public int limite = 1000;
 	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
 	private ArrayList<Pista> listaPistas = new ArrayList<Pista>();
 	
@@ -18,6 +19,15 @@ public class Mapa
 		return map;
 	}
 
+	public int getLimite()
+	{
+		return limite;
+	}
+	
+	public void eliminarAvion(Aeronave avion)
+	{
+		listaAviones.remove(avion);
+	}
 	
 	public void agregarAvion(Aeronave avion)
 	{
