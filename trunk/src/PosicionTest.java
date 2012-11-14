@@ -1,5 +1,15 @@
 import junit.framework.TestCase;
 
+/* Muchachos, extraño las pruebas de smalltalk, java en esto es bien mierda;
+ * 1) Limitaciones, ojo que si cambian una de estas posiciones random, como se usan en
+ * distintas pruebas, muchas les pueden fallar ( java si funciona pero da otro resultado no 
+ * marca amarillo como smalltalk te pone rojo, UNA VERGA!)
+ * 2) la unica que esta hecha con distintas variables es testDistanciaCon que seria otra
+ * modalidad, es decir que cada metodo tuviera sus propias variables adentro y sea mas facil
+ * de cambiar valores sin pinchar o andar corrigiendo todo.
+ * 3) se viene lindo quilombo con la precision, es demasiada. En realidad no deberia serlo,
+ * pero veremos...No se alarmen aun.
+ */
 
 public class PosicionTest extends TestCase {
 
