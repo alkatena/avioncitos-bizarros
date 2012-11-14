@@ -10,6 +10,16 @@ public class ControlAereo
 	{
 		ArrayList<Aeronave> listaAviones = radar.obtenerAviones();
 		ListIterator<Aeronave> iterador = listaAviones.listIterator();
+		while (iterador.hasNext())
+			iterador.next().actualizar();
+		
+		this.controlarChoques();
+	}
+	
+	private void controlarChoques()
+	{
+		ArrayList<Aeronave> listaAviones = radar.obtenerAviones();
+		ListIterator<Aeronave> iterador = listaAviones.listIterator();
 		ListIterator<Aeronave> iteradorInterno = listaAviones.listIterator();
 		int contador = 1;
 		while (iterador.hasNext())

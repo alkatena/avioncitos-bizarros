@@ -19,6 +19,11 @@ public abstract class Aeronave implements colisionable
 		return posicionActual = trayectoria.avanzar(velocidad);
 	}
 	
+	public void actualizar()
+	{
+		this.trayectoria.avanzar(velocidad);
+	}
+	
 	/* el if es una comparacion de un integer con un double (no es problema pero lo aclaro)*/
 	public boolean colisionoCon(Aeronave unAvion)
 	{
