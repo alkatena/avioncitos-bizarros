@@ -6,8 +6,8 @@ public class Mapa
 	
 	private static Mapa map;
 	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
-	private ControlAereo controlA = new ControlAereo();
-	private ControlTerrestre controlT = new ControlTerrestre();
+	private ArrayList<Pista> listaPistas = new ArrayList<Pista>();
+	
 	
 	private Mapa(){	}
 	
@@ -26,20 +26,16 @@ public class Mapa
 	
 	public void agregarPista(Pista pista)
 	{
-		controlT.agregarPista(pista);
-	}
-	
-	
-	public void actualizar()
-	{
-		controlA.actualizar();
-		controlT.actualizar();
+		listaPistas.add(pista);
 	}
 	
 	//Getters===========================
 	
 	public ArrayList<Aeronave> devolverAviones()
 	{	return listaAviones;	}
+	
+	public ArrayList<Pista> devolverPistas()
+	{	return listaPistas;	}
 	
 	
 }
