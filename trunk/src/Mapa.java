@@ -5,7 +5,6 @@ public class Mapa
 {
 	
 	private static Mapa map;
-	private Radar radar = new Radar();
 	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
 	
 	public static Mapa getMapa()
@@ -23,9 +22,6 @@ public class Mapa
 	
 	
 	//Getters===========================
-	public Radar getRadar()
-	{	return radar;	}
-	
 	
 	public ArrayList<Aeronave> devolverAviones()
 	{	return listaAviones;	}

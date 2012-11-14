@@ -5,6 +5,7 @@ public class TorreDeControl
 {
 
 	private Pista pista;
+	private Radar radar = new Radar();
 	public TorreDeControl(Pista unaPista)
 	{
 		pista = unaPista;
@@ -12,7 +13,6 @@ public class TorreDeControl
 	
 	public void actualizar()
 	{
-		Radar radar = Mapa.getMapa().getRadar();
 		ArrayList<Aeronave> listaAviones = radar.obtenerAviones(pista.getTamanio());
 		ListIterator<Aeronave> iterador = listaAviones.listIterator();
 		while (iterador.hasNext())
