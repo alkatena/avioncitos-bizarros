@@ -24,4 +24,18 @@ public abstract class Pista implements colisionable
 	
 	public Posicion getPosicion()
 	{ return posicion; }
+	
+	public int getTamanio()
+	{
+		return tamanioAdmitido.getTamanio();
+	}
+	
+	public void aterrizar(Aeronave unAvion)
+	{
+		if (this.direccion.esUnaDireccionValida(unAvion.getTrayectoria().getDireccion()) )
+		{
+			//Matar avion
+			//llamar al score, o algo asi.
+		}
+	}
 }
