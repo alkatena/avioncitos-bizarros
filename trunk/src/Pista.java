@@ -2,10 +2,12 @@ public abstract class Pista implements colisionable
 {
 	protected Posicion posicion;
 	protected TamanioAeronave tamanioAdmitido;
+	protected int AvionesAterrizados;
 	
 	public Pista(Posicion pos)
 	{
 		posicion = pos;
+		AvionesAterrizados = 0;
 	}
 	
 	/*es casi el mismo codigo que para la Aeronave*/
@@ -30,4 +32,6 @@ public abstract class Pista implements colisionable
 	
 	public void aterrizar(Aeronave unAvion) { }
 
+	public int cantidadAvionesAterrizados() 
+	{	return AvionesAterrizados;}
 }
