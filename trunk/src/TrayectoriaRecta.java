@@ -46,7 +46,7 @@ public class TrayectoriaRecta
 	{
 		return posActual;
 	}
-	public void setPosActual(Posicion unaPosicion)
+	public void setPosActual(Posicion unaPosicion) // Para las pruebas
 	{
 		this.posActual = unaPosicion;		
 	}
