@@ -52,6 +52,8 @@ public abstract class Aeronave implements colisionable
 	
 	public TrayectoriaRecta getTrayectoria()
 	{	return trayectoria; }
+	public void setPosicion(Posicion unaPosicion)
+	{	this.trayectoria.setPosActual(unaPosicion);}
 	
 	
 	 
