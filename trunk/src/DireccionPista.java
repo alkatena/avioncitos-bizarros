@@ -5,10 +5,15 @@ public class DireccionPista
 	private Posicion direccion;
 	private double tolerancia;
 	
-	public DireccionPista(Posicion unaDireccion, double unaTolerancia)
+	public DireccionPista(Posicion unaDireccion)
 	{
-		direccion= unaDireccion;
-		tolerancia= unaTolerancia;
+		direccion = unaDireccion;
+	}
+	
+	// Deberia setiarse la tolerancia antes de usar la clase direccion
+	public void setTolerancia (double unaTolerancia)
+	{
+		tolerancia = unaTolerancia;
 	}
 	
 	public boolean esUnaDireccionValida(Posicion unaDireccion)
