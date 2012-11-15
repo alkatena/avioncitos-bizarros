@@ -1,4 +1,4 @@
-public class PistaGrande extends Pista
+public class PistaGrande extends PistaConDireccion
 {
 
 	public PistaGrande(Posicion pos, DireccionPista unaDireccion)
