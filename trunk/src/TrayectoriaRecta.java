@@ -42,7 +42,7 @@ public class TrayectoriaRecta
 		return ptoFinal;
 	}
 	
-	public Posicion getPosActual()
+	public Posicion getPosActual() // solo para las pruebas ?
 	{
 		return posActual;
 	}
