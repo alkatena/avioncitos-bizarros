@@ -11,6 +11,7 @@ public class PistaChicaTest extends TestCase
 	AvionChico avionQueNoColisiona;
 	Posicion posicionPista;
 	Posicion posicionInicial;
+	Posicion posicionFinal;
 	Posicion direccion;
 	Posicion direccionNoParecida;
 	DireccionPista direccionPista;
@@ -29,8 +30,10 @@ public class PistaChicaTest extends TestCase
 	{
 		avionQueAterriza = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
+		posicionFinal = new Posicion(1,1.1);
 		avionQueAterriza.setPosicion(posicionInicial);
-		avionQueAterriza.actualizarTrayectoria(direccion);
+		
+		avionQueAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueAterriza);
 		otroAvionQueAterriza = avionQueAterriza;
 		pistaChica.aterrizar(otroAvionQueAterriza);
@@ -38,16 +41,32 @@ public class PistaChicaTest extends TestCase
 		assertTrue (pistaChica.cantidadAvionesAterrizados() == 2);	
 	}
 	
-	public void testAvionQueNoAterrizaPorDireccionDistina() //No debería aterrizar (ver la dirección que le puse) y aterriza igual
+	public void testAvionQueAterrizaBienConDireccionParecida()
+	{
+		avionQueAterriza = new AvionChico();
+		posicionInicial = new Posicion(1,0.9);
+		posicionFinal = new Posicion(1.1,1.5);
+		
+		avionQueAterriza.setPosicion(posicionInicial);		
+		avionQueAterriza.actualizarTrayectoria(posicionFinal);
+		pistaChica.aterrizar(avionQueAterriza);
+		otroAvionQueAterriza = avionQueAterriza;
+		pistaChica.aterrizar(otroAvionQueAterriza);
+				
+		assertTrue (pistaChica.cantidadAvionesAterrizados() == 2);	
+	}
+	
+	public void testAvionQueNoAterrizaPorDireccionDistina()
 	{
 		avionQueNoAterriza = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
-		direccionNoParecida = new Posicion(50,20);
+		posicionFinal = new Posicion(3,0);
+		
 		avionQueNoAterriza.setPosicion(posicionInicial);
-		avionQueNoAterriza.actualizarTrayectoria(direccionNoParecida);
+		avionQueNoAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueNoAterriza);
 						
-		assertTrue (pistaChica.cantidadAvionesAterrizados() == 0); // Si ponemos == 1 da True o sea que lo aterriza
+		assertTrue (pistaChica.cantidadAvionesAterrizados() == 0);
 	}
 	
 	public void testAvionQueColisiona()
