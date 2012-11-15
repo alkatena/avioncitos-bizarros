@@ -68,6 +68,13 @@ public class Posicion
 		Posicion nuevaPos = new Posicion(	(this.getX())/norma, (this.getY()/norma)	);
 		return nuevaPos;
 	}
+	
+	public double ProductoInternoCanonicoCon(Posicion pos)
+	{
+		return ((this.x*pos.getX())+(this.y*pos.getY()));
+	}
+	
+	
 }
 	
 
