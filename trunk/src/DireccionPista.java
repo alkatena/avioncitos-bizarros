@@ -27,9 +27,8 @@ public class DireccionPista
 	
 	public boolean esUnaDireccionValida(Posicion unaDireccion)
 	{
-		Posicion diferenciaDeDirecciones = new Posicion();
-		diferenciaDeDirecciones =(this.direccion.restar(unaDireccion));
-		if( (Math.abs(diferenciaDeDirecciones.getX()) <= tolerancia) && (Math.abs(diferenciaDeDirecciones.getY()) <= tolerancia) )
+		
+		if (this.diferenciaDeAngulos(unaDireccion) <= tolerancia)
 		{
 			return true;
 		}
