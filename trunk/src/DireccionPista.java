@@ -10,7 +10,7 @@ public class DireccionPista
 		direccion = unaDireccion;
 	}
 	
-	// Deberia setiarse la tolerancia antes de usar la clase direccion
+	// Deberia setiarse la tolerancia antes de usar los objetos direccion
 	public void setTolerancia (double unaTolerancia)
 	{
 		tolerancia = unaTolerancia;
