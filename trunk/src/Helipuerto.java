@@ -3,7 +3,7 @@ public class Helipuerto extends Pista
 
 	public Helipuerto(Posicion pos, DireccionPista unaDireccion)
 	{
-		super(pos, unaDireccion);
+		super(pos);
 		tamanioAdmitido = new TamanioAeronave();
 		tamanioAdmitido.mediano();
 	}	
