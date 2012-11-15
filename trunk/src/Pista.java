@@ -30,7 +30,7 @@ public abstract class Pista implements colisionable
 		return tamanioAdmitido.getTamanio();
 	}
 	
-	public void aterrizar(Aeronave unAvion) { }
+	public void aterrizar(Aeronave unAvion) { }	// Asegurarse que sean aviones del tamaño permitido por la pista
 
 	public int cantidadAvionesAterrizados() 
 	{	return AvionesAterrizados;}
