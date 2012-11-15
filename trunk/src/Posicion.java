@@ -56,6 +56,18 @@ public class Posicion
 	Posicion nuevapos=this.restar(pos);
 	return (Math.sqrt(Math.pow(nuevapos.getX(),2)+ Math.pow(nuevapos.getY(),2)));
 	}
+	
+	public double norma()
+	{
+		Posicion posicionCeroCero = new Posicion(0,0);
+		return distanciaCon(posicionCeroCero);
+	}
+	public Posicion normalizar()
+	{
+		double norma = this.norma();
+		Posicion nuevaPos = new Posicion(	(this.getX())/norma, (this.getY()/norma)	);
+		return nuevaPos;
+	}
 }
 	
 

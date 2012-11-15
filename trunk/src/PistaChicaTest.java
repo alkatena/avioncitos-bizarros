@@ -42,7 +42,7 @@ public class PistaChicaTest extends TestCase
 	{
 		avionQueNoAterriza = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
-		direccionNoParecida = new Posicion(50,9);
+		direccionNoParecida = new Posicion(50,20);
 		avionQueNoAterriza.setPosicion(posicionInicial);
 		avionQueNoAterriza.actualizarTrayectoria(direccionNoParecida);
 		pistaChica.aterrizar(avionQueNoAterriza);

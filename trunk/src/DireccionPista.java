@@ -20,7 +20,7 @@ public class DireccionPista
 	{
 		Posicion diferenciaDeDirecciones = new Posicion();
 		diferenciaDeDirecciones =(this.direccion.restar(unaDireccion));
-		if( (diferenciaDeDirecciones.getX() <= tolerancia) && (diferenciaDeDirecciones.getY() <= tolerancia) )
+		if( (Math.abs(diferenciaDeDirecciones.getX()) <= tolerancia) && (Math.abs(diferenciaDeDirecciones.getY()) <= tolerancia) )
 		{
 			return true;
 		}
