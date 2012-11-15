@@ -46,4 +46,8 @@ public class TrayectoriaRecta
 	{
 		return posActual;
 	}
+	public void setPosActual(Posicion unaPosicion)
+	{
+		this.posActual = unaPosicion;		
+	}
 }

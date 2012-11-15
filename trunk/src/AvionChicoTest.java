@@ -30,7 +30,7 @@ public class AvionChicoTest extends TestCase {
 		Posicion posicionFinal = new Posicion(4,0);
 		avioneta.actualizarTrayectoria(posicionFinal);
 		avioneta.actualizar();
-		assertTrue (posicionFinal.getX() == 1.9);
+		assertTrue (avioneta.getPosicion().getY() == 1.9);
 	}  // Este test pasa la prueba y no debería
 	
 	
