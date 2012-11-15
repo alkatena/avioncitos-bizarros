@@ -65,7 +65,7 @@ public class Posicion
 	public Posicion normalizar()
 	{
 		double norma = this.norma();
-		Posicion nuevaPos = new Posicion(	(this.getX())/norma, (this.getY()/norma)	);
+		Posicion nuevaPos = new Posicion(	(this.getX()/norma), (this.getY()/norma)	);
 		return nuevaPos;
 	}
 	
