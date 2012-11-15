@@ -20,10 +20,9 @@ public class DireccionPista
 	}
 	
 	// en grados
-	public double diferenciaDeAngulos (pos otraDireccion)
+	public double diferenciaDeAngulos (Posicion otraDireccion)
 	{
-		//aca deberia ir arco cosena!
-		return direccion.ProductoInternoCanonicoCon(otraDireccion)/(direccion.norma*otraDireccion.norma)
+		return Math.toDegrees(Math.acos(direccion.ProductoInternoCanonicoCon(otraDireccion)/(direccion.norma()*otraDireccion.norma())));
 	}
 	
 	public boolean esUnaDireccionValida(Posicion unaDireccion)
