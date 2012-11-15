@@ -2,12 +2,10 @@ public abstract class Pista implements colisionable
 {
 	protected Posicion posicion;
 	protected TamanioAeronave tamanioAdmitido;
-	protected DireccionPista direccion;
 	
-	public Pista(Posicion pos, DireccionPista unaDireccion)
+	public Pista(Posicion pos)
 	{
 		posicion = pos;
-		direccion = unaDireccion;
 	}
 	
 	/*es casi el mismo codigo que para la Aeronave*/
@@ -30,13 +28,6 @@ public abstract class Pista implements colisionable
 		return tamanioAdmitido.getTamanio();
 	}
 	
-	public void aterrizar(Aeronave unAvion)
-	{
-		if (this.direccion.esUnaDireccionValida( unAvion.getTrayectoria().getDireccion()) )
-		{
-			//ARREGLAR; SUMA TAMAÑO!
-			Score.getScore().sumarPuntaje(unAvion.getTamanio().getTamanio());
-			Mapa.getMapa().eliminarAvion(unAvion);
-		}
-	}
+	public void aterrizar(Aeronave unAvion) { }
+
 }
