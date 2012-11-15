@@ -7,4 +7,11 @@ public class Helipuerto extends Pista
 		tamanioAdmitido = new TamanioAeronave();
 		tamanioAdmitido.mediano();
 	}	
+	
+	public void aterrizar(Aeronave unAvion)
+	{
+		//ARREGLAR; SUMA TAMAÑO!
+		Score.getScore().sumarPuntaje(unAvion.getTamanio().getTamanio());
+		Mapa.getMapa().eliminarAvion(unAvion);
+	}
 }
