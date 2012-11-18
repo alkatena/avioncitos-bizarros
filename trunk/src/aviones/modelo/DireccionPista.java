@@ -1,19 +1,15 @@
 package aviones.modelo;
 
-public class DireccionPista
+public class DireccionPista extends Direccion
 {
 
-	private Posicion direccion;
 	private double tolerancia;
 	
-	public DireccionPista(Posicion unaDireccion)
+	public DireccionPista(Posicion puntoFinal)
 	{
-		direccion = unaDireccion;
+		super(puntoFinal);
+		tolerancia = 0.0;
 	}
-	
-	/* Deberia setiarse la tolerancia antes de usar los objetos direccion
-	* rango en 0 y 20 (grados?)
-	*/
 	
 	public void setTolerancia (double unaTolerancia)
 	{
@@ -21,12 +17,7 @@ public class DireccionPista
 	}
 	
 	// en grados
-	public double diferenciaDeAngulos (Posicion otraDireccion)
-	{
-		return Math.toDegrees(Math.acos(direccion.ProductoInternoCanonicoCon(otraDireccion)/(direccion.norma()*otraDireccion.norma())));
-	}
-	
-	public boolean esUnaDireccionValida(Posicion unaDireccion)
+	public boolean estaAlineadaCon(Direccion unaDireccion)
 	{
 		
 		if (this.diferenciaDeAngulos(unaDireccion) <= tolerancia)
@@ -35,5 +26,4 @@ public class DireccionPista
 		}
 		return false;	
 	}
-	
 }

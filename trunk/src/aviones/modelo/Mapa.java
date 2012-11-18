@@ -40,6 +40,10 @@ public class Mapa
 		listaPistas.add(pista);
 	}
 	
+	public boolean estaDentroDeLimites(Posicion unaPos)
+	{
+		return unaPos.estaEntre(0,limite);
+	}
 	//Getters===========================
 	
 	public ArrayList<Aeronave> devolverAviones()

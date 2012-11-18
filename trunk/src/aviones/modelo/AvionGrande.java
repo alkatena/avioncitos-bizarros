@@ -1,10 +1,16 @@
 package aviones.modelo;
 public class AvionGrande extends Aeronave 
 	{
-		public AvionGrande()
+		public AvionGrande(Posicion inicio, Posicion fin)
 		{
-			tamanio.grande();
-			velocidad = 0.9;
+			super (inicio, fin);
+			tamanio = TamanioAeronave.grande();
+			velocidad = 0.1;
+		}
+	
+		public boolean puedeAterrizarEn(Pista unaPista)
+		{
+			return unaPista.puedeAterrizarAvionGrande();
 		}
 	
 	}

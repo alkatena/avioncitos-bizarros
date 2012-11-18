@@ -29,12 +29,11 @@ public class PistaChicaTest extends TestCase
 	
 	public void testAvionQueAterrizaBienConMismaDireccion()
 	{
-		avionQueAterriza = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
 		posicionFinal = new Posicion(1,1.1);
-		avionQueAterriza.setPosicion(posicionInicial);
+		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal);
 		
-		avionQueAterriza.actualizarTrayectoria(posicionFinal);
+		//avionQueAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueAterriza);
 		otroAvionQueAterriza = avionQueAterriza;
 		pistaChica.aterrizar(otroAvionQueAterriza);
@@ -44,12 +43,11 @@ public class PistaChicaTest extends TestCase
 	
 	public void testAvionQueAterrizaBienConDireccionParecida()
 	{
-		avionQueAterriza = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
 		posicionFinal = new Posicion(1.1,1.5);
-		
-		avionQueAterriza.setPosicion(posicionInicial);		
-		avionQueAterriza.actualizarTrayectoria(posicionFinal);
+		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal);
+	
+		//avionQueAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueAterriza);
 		otroAvionQueAterriza = avionQueAterriza;
 		pistaChica.aterrizar(otroAvionQueAterriza);
@@ -59,12 +57,11 @@ public class PistaChicaTest extends TestCase
 	
 	public void testAvionQueNoAterrizaPorDireccionDistina()
 	{
-		avionQueNoAterriza = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
 		posicionFinal = new Posicion(3,0);
+		avionQueNoAterriza = new AvionChico(posicionInicial, posicionFinal);
 		
-		avionQueNoAterriza.setPosicion(posicionInicial);
-		avionQueNoAterriza.actualizarTrayectoria(posicionFinal);
+		//avionQueNoAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueNoAterriza);
 						
 		assertTrue (pistaChica.cantidadAvionesAterrizados() == 0);
@@ -72,18 +69,18 @@ public class PistaChicaTest extends TestCase
 	
 	public void testAvionQueColisiona()
 	{
-		avionQueColisiona = new AvionChico();
 		posicionInicial = new Posicion(1,0.9);
-		avionQueColisiona.setPosicion(posicionInicial);
+		Posicion trayect = new Posicion (3,3);
+		avionQueColisiona = new AvionChico(posicionInicial, trayect);
 		
 		assertTrue (pistaChica.colisionoCon(avionQueColisiona));
 	}
 	
 	public void testAvionQueNoColisiona()
 	{
-		avionQueNoColisiona = new AvionChico();
 		posicionInicial = new Posicion(6,2);
-		avionQueNoColisiona.setPosicion(posicionInicial);
+		Posicion trayect = new Posicion (3,3);
+		avionQueNoColisiona = new AvionChico(posicionInicial, trayect);
 		
 		assertFalse (pistaChica.colisionoCon(avionQueNoColisiona));
 	}

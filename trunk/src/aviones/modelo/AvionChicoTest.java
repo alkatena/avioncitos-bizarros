@@ -10,33 +10,22 @@ public class AvionChicoTest extends TestCase {
 	Posicion pInicial;
 	Posicion otraPInicial;
 	Posicion pInicialColision;
+	Posicion trayect;
+	
 	public void setUp() 
 	{
 			pInicial = new Posicion(1,0);
 			pInicialColision = new Posicion(1,1);
 			otraPInicial = new Posicion(9,9);
-			avioneta = new AvionChico();
-			aeronaveChocadora = new AvionChico();
-			aeronaveNoChocadora = new AvionChico();
-			aeronaveNoChocadora.setPosicion(otraPInicial);
-			aeronaveChocadora.setPosicion(pInicialColision);
-			avioneta.setPosicion(pInicial);
+			trayect = new Posicion (4,0);
+			avioneta = new AvionChico(pInicial, trayect);
+			aeronaveChocadora = new AvionChico(pInicialColision,trayect);
+			aeronaveNoChocadora = new AvionChico(otraPInicial,trayect);
 	}
 
 	
-	public void testActualizarTrayectoria()
-	{
-		Posicion posicionFinal = new Posicion(2,0);
-		avioneta.actualizarTrayectoria(posicionFinal);
-		TrayectoriaRecta trayectoriaNueva = avioneta.getTrayectoria();
-		
-		assertTrue ( (trayectoriaNueva.getPtoFinal()== posicionFinal) );	
-	}
-
 	public void testactualizarPosicion()
 	{
-		Posicion posicionFinal = new Posicion(4,0);
-		avioneta.actualizarTrayectoria(posicionFinal);
 		avioneta.actualizar();
 		assertTrue (avioneta.getPosicion().getX() == 1.9);
 	}  

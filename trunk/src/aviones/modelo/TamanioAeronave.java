@@ -11,29 +11,48 @@ public class TamanioAeronave {
 	static final int TAMANIO_CHICO = 2;
 	
 	private int tamanio;
-	public TamanioAeronave()
+	
+	private TamanioAeronave(int tam)
 	{
-		tamanio=0;
+		tamanio = tam;
 	}
 	
-	public void grande()
+	public static TamanioAeronave grande()
 	{
-		this.tamanio= TAMANIO_GRANDE; 
+		return new TamanioAeronave(TAMANIO_GRANDE);
 	}
 	
-	public void mediano()
+	public static TamanioAeronave mediano()
 	{
-		this.tamanio= TAMANIO_MEDIANO;
+		return new TamanioAeronave(TAMANIO_MEDIANO);
 	}
 	
-	public void chico()
+	public static TamanioAeronave chico()
 	{
-		this.tamanio= TAMANIO_CHICO;
+		return new TamanioAeronave(TAMANIO_CHICO);
 	}
 	
-	public int getTamanio()
+	public TamanioAeronave getTamanio()
 	{
-		return this.tamanio;
+		return new TamanioAeronave(this.tamanio);
+	}
+	
+	private int getTamanioInterno()
+	{
+		return tamanio;
+	}
+	
+	public boolean seSuperponeCon(TamanioAeronave otroTamanio, Posicion mia, Posicion otraPosicion)
+	{
+		int espacioOcupado = tamanio + otroTamanio.getTamanioInterno();
+		double distancia = mia.distanciaCon(otraPosicion);
+		
+		return ((distancia - espacioOcupado)<= 0);		
+	}
+	
+	public boolean esIgualA(TamanioAeronave otroTamanio)
+	{
+		return (this.tamanio == otroTamanio.getTamanioInterno());
 	}
 
 }

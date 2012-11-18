@@ -27,17 +27,7 @@ public class ControlAereo
 	
 	private boolean posicionInvalida(Aeronave avion)
 	{
-		double x = avion.getPosicion().getX();
-		double y= avion.getPosicion().getY();
-		if (x > Mapa.getMapa().getLimite() || x < 0)
-		{
-			return true;
-		}
-		if (y > Mapa.getMapa().getLimite() || y < 0)
-		{
-			return true;
-		}
-		return false;
+		return (!( Mapa.getMapa().estaDentroDeLimites(avion.getPosicion()) ));
 	}
 	
 	private void controlarChoques()

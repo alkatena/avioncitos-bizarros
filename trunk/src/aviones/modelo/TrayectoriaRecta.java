@@ -3,8 +3,7 @@ package aviones.modelo;
 public class TrayectoriaRecta 
 {
 	private Posicion ptoInicial;
-	private Posicion ptoFinal;
-	private Posicion direccion;
+	private Direccion direccion;
 	private Posicion posActual;
 	private double amplificacion;
 	
@@ -12,23 +11,22 @@ public class TrayectoriaRecta
 	{
 		ptoInicial = pInicial;
 		posActual = pInicial;
-		ptoFinal = pFinal;
 		direccion = this.generarDireccion(pInicial, pFinal);	
 		amplificacion=0;
 	}
 	
-	private Posicion generarDireccion(Posicion pInicial, Posicion pFinal)
+	private Direccion generarDireccion(Posicion pInicial, Posicion pFinal)
 	{
-		return pFinal.restar(pInicial);
+		return new Direccion(pFinal.restar(pInicial));
 	}
 	
 	public void avanzar(double velocidad)
 	{
 		this.amplificacion=this.amplificacion+velocidad;
-		posActual = direccion.multiplicarPorEscalar(this.amplificacion).sumar(ptoInicial);
+		posActual = direccion.getVector().multiplicarPorEscalar(this.amplificacion).sumar(ptoInicial);
 	}
 	
-	public Posicion getDireccion()
+	public Direccion getDireccion()
 	{
 		return direccion;
 	}
@@ -38,17 +36,8 @@ public class TrayectoriaRecta
 		return ptoInicial;
 	}
 
-	public Posicion getPtoFinal() // se usa para el helicoptero
-	{
-		return ptoFinal;
-	}
-	
-	public Posicion getPosActual() // solo para las pruebas ?
+	public Posicion getPosActual()
 	{
 		return posActual;
-	}
-	public void setPosActual(Posicion unaPosicion) // Para las pruebas
-	{
-		this.posActual = unaPosicion;		
 	}
 }

@@ -13,13 +13,10 @@ public abstract class PistaConDireccion extends Pista {
 	
 	public void aterrizar(Aeronave unAvion)
 	{
-		if (this.direccion.esUnaDireccionValida( unAvion.getTrayectoria().getDireccion()) )
+		if (this.direccion.estaAlineadaCon(unAvion.getDireccion()))
 		{
-			//ARREGLAR; SUMA TAMAÑO!
 			AvionesAterrizados++;
-			Score.getScore().sumarPuntaje(unAvion.getTamanio().getTamanio());
-			Mapa.getMapa().eliminarAvion(unAvion);
-			
+			super.aterrizar(unAvion);
 		}
 	}
 

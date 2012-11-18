@@ -14,12 +14,12 @@ public class TorreDeControl
 	
 	public void actualizar()
 	{
-		ArrayList<Aeronave> listaAviones = radar.obtenerAviones(pista.getTamanio());
+		ArrayList<Aeronave> listaAviones = radar.obtenerAviones();
 		ListIterator<Aeronave> iterador = listaAviones.listIterator();
 		while (iterador.hasNext())
 		{
 			Aeronave avion = iterador.next();
-			if (pista.colisionoCon(avion))
+			if (avion.puedeAterrizarEn(pista) && pista.colisionoCon(avion))
 			{
 				pista.aterrizar(avion);
 			}

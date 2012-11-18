@@ -27,9 +27,11 @@ public class Posicion
 	
 	public boolean compararA(Posicion otraPos)
 	{
+		if (otraPos == null)
+				return false;
+		
 		if (otraPos.getX() == this.getX() )
-			if (otraPos.getY() == this.getY() )
-				return true;
+			return (otraPos.getY() == this.getY());
 		return false;
 	}
 	
@@ -47,15 +49,15 @@ public class Posicion
 	
 	public Posicion multiplicarPorEscalar (double escalar)
 	{
-		Posicion nuevapos= new Posicion(this.getX()*escalar, this.getY()*escalar);
+		Posicion nuevapos = new Posicion(this.getX()*escalar, this.getY()*escalar);
 		return nuevapos;
 	}	
 	
 	 /* Te da la distancia con otra posicion cualquiera, se usa para el colisionoCon*/
 	public double distanciaCon(Posicion pos)
 	{
-	Posicion nuevapos=this.restar(pos);
-	return (Math.sqrt(Math.pow(nuevapos.getX(),2)+ Math.pow(nuevapos.getY(),2)));
+		Posicion nuevapos=this.restar(pos);
+		return (Math.sqrt(Math.pow(nuevapos.getX(),2)+ Math.pow(nuevapos.getY(),2)));
 	}
 	
 	public double norma()
@@ -63,6 +65,7 @@ public class Posicion
 		Posicion posicionCeroCero = new Posicion(0,0);
 		return distanciaCon(posicionCeroCero);
 	}
+	
 	public Posicion normalizar()
 	{
 		double norma = this.norma();
@@ -75,6 +78,18 @@ public class Posicion
 		return ((this.x*pos.getX())+(this.y*pos.getY()));
 	}
 	
+	public boolean estaEntre(int limiteInf, int limiteSup)
+	{
+		if (x > limiteSup || x < limiteInf)
+		{
+			return false;
+		}
+		if (y > limiteSup || y < limiteInf)
+		{
+			return false;
+		}
+		return true;
+	}
 	
 }
 	

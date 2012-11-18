@@ -11,27 +11,36 @@ public abstract class Pista implements colisionable
 		AvionesAterrizados = 0;
 	}
 	
-	/*es casi el mismo codigo que para la Aeronave*/
+
 	public boolean colisionoCon(Aeronave unAvion)
 	{
-		double distancia=this.posicion.distanciaCon(unAvion.getPosicion());
-		int	espacioOcupado=(this.tamanioAdmitido.getTamanio()+unAvion.getTamanio().getTamanio());
-		if ((distancia-espacioOcupado)<=0)
-		{
-			return true;
-		}
-		return false;	
+		return (this.tamanioAdmitido.seSuperponeCon(unAvion.getTamanio(), this.posicion, unAvion.getPosicion()));
 	}
+	
+	
+	public boolean puedeAterrizarAvionChico()
+	{	return false;	}
+	
+	public boolean puedeAterrizarAvionGrande()
+	{	return false;	}
+	
+	public boolean puedeAterrizarHelicoptero()
+	{	return false; }
+	
 	
 	public Posicion getPosicion()
 	{ return posicion; }
 	
-	public int getTamanio()
+	public TamanioAeronave getTamanio()
 	{
 		return tamanioAdmitido.getTamanio();
 	}
 	
-	public void aterrizar(Aeronave unAvion) { }	// Asegurarse que sean aviones del tamaño permitido por la pista
+	public void aterrizar(Aeronave unAvion)
+	{ 
+		Score.getScore().sumarPuntaje(1);
+		Mapa.getMapa().eliminarAvion(unAvion);
+	}
 
 	public int cantidadAvionesAterrizados() 
 	{	return AvionesAterrizados;}
