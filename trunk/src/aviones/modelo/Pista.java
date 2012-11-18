@@ -1,3 +1,4 @@
+package aviones.modelo;
 public abstract class Pista implements colisionable
 {
 	protected Posicion posicion;

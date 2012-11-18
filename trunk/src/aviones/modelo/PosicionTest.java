@@ -1,3 +1,4 @@
+package aviones.modelo;
 import junit.framework.TestCase;
 
 /* Muchachos, extraño las pruebas de smalltalk, java en esto es bien mierda;

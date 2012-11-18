@@ -1,3 +1,4 @@
+package aviones.modelo;
 public class AvionChico extends Aeronave 
 	{
 		public AvionChico()

@@ -1,3 +1,4 @@
+package aviones.modelo;
 import java.util.Random;
 
 public abstract class Aeronave implements colisionable

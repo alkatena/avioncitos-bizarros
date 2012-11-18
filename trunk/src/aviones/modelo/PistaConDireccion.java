@@ -1,3 +1,4 @@
+package aviones.modelo;
 
 public abstract class PistaConDireccion extends Pista {
 	

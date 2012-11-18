@@ -1,3 +1,4 @@
+package aviones.modelo;
 
 public class TrayectoriaRecta 
 {

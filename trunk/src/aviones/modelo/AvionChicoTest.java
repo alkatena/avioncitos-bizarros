@@ -1,10 +1,11 @@
+package aviones.modelo;
 import junit.framework.TestCase;
 
 
-public class AvionGrandeTest extends TestCase {
+public class AvionChicoTest extends TestCase {
 
-	AvionGrande boeing777;
-	AvionGrande aeronaveChocadora;
+	AvionChico avioneta;
+	AvionChico aeronaveChocadora;
 	AvionChico aeronaveNoChocadora;
 	Posicion pInicial;
 	Posicion otraPInicial;
@@ -12,22 +13,22 @@ public class AvionGrandeTest extends TestCase {
 	public void setUp() 
 	{
 			pInicial = new Posicion(1,0);
-			pInicialColision = new Posicion(1,6);
+			pInicialColision = new Posicion(1,1);
 			otraPInicial = new Posicion(9,9);
-			boeing777 = new AvionGrande();
-			aeronaveChocadora = new AvionGrande();
+			avioneta = new AvionChico();
+			aeronaveChocadora = new AvionChico();
 			aeronaveNoChocadora = new AvionChico();
 			aeronaveNoChocadora.setPosicion(otraPInicial);
 			aeronaveChocadora.setPosicion(pInicialColision);
-			boeing777.setPosicion(pInicial);
+			avioneta.setPosicion(pInicial);
 	}
 
 	
 	public void testActualizarTrayectoria()
 	{
 		Posicion posicionFinal = new Posicion(2,0);
-		boeing777.actualizarTrayectoria(posicionFinal);
-		TrayectoriaRecta trayectoriaNueva = boeing777.getTrayectoria();
+		avioneta.actualizarTrayectoria(posicionFinal);
+		TrayectoriaRecta trayectoriaNueva = avioneta.getTrayectoria();
 		
 		assertTrue ( (trayectoriaNueva.getPtoFinal()== posicionFinal) );	
 	}
@@ -35,19 +36,19 @@ public class AvionGrandeTest extends TestCase {
 	public void testactualizarPosicion()
 	{
 		Posicion posicionFinal = new Posicion(4,0);
-		boeing777.actualizarTrayectoria(posicionFinal);
-		boeing777.actualizar();
-		assertTrue (boeing777.getPosicion().getX() == 3.7);
+		avioneta.actualizarTrayectoria(posicionFinal);
+		avioneta.actualizar();
+		assertTrue (avioneta.getPosicion().getX() == 1.9);
 	}  
 	
 	public void testColisionEntreDosAviones()
 	{
-		assertTrue (boeing777.colisionoCon(aeronaveChocadora));		
+		assertTrue (avioneta.colisionoCon(aeronaveChocadora));		
 	}
 	
 	public void testNoColisionEntreDosAviones()
 	{
-		assertFalse (boeing777.colisionoCon(aeronaveNoChocadora));		
+		assertFalse (avioneta.colisionoCon(aeronaveNoChocadora));		
 	}
 	
 	}
