@@ -17,12 +17,11 @@ public class Recorrido
 	public void setPosiciones (Queue<Posicion> pos)
 	{
 		posiciones = pos;
-		posFinal = posiciones.poll();
 	}
 	
 	public void avanzar(double vel)
 	{
-		if (trayectoria.getPosActual().compararA(posFinal)) //COMPARA EXACTO; ESTA MAL
+		if (trayectoria.getPosActual().compararA(posFinal)) //COMPARA EXACTO; ESTA MAL?
 		{
 			posFinal = posiciones.poll();
 			if (posFinal != null)
