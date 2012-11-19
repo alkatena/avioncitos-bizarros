@@ -17,6 +17,8 @@ public class Recorrido
 	public void setPosiciones (Queue<Posicion> pos)
 	{
 		posiciones = pos;
+		posFinal = posiciones.poll();
+		trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal);
 	}
 	
 	public void avanzar(double vel)
