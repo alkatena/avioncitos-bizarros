@@ -21,9 +21,17 @@ public class TrayectoriaRectaTest extends TestCase
 	{
 		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal, velocidad);
 		trayectoria.avanzar();
-
-		assertTrue ( (trayectoria.getPosActual().getX() == 1.6) );	
-		assertTrue (trayectoria.getPosActual().getY() == 2.7);	
+		Posicion posDeLlegada = new Posicion(1.2683,2.8658) ;
+		assertTrue ( trayectoria.getPosActual().compararA(posDeLlegada));	
+	}
+	
+	public void testAvanzarHastaPoscionFinal()
+	{
+		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal, velocidad);
+		for( int step = 0; step < 7; step++)
+		{trayectoria.avanzar();}
+	
+		assertTrue ( trayectoria.getPosActual().compararA(pFinal));	
 	}
 
 	public void testAvanzarVariosPasos()
