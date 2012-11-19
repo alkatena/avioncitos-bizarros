@@ -34,14 +34,4 @@ public class TrayectoriaRectaTest extends TestCase
 		assertTrue ( trayectoria.getPosActual().compararA(pFinal));	
 	}
 
-	public void testAvanzarVariosPasos()
-	{
-		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal,velocidad);
-		trayectoria.avanzar();
-		trayectoria.avanzar();
-		
-		assertTrue ( (trayectoria.getPosActual().getX() == 2.2) );	
-		assertTrue (trayectoria.getPosActual().getY() == 2.4);
-	}
-	
 }
