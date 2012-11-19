@@ -4,7 +4,7 @@ public class Posicion
 {
 	private double x;
 	private double y;
-	private static double tolerancia =0.15;
+	private static double tolerancia = 0.15;
 	
 	public Posicion()
 	{
@@ -22,6 +22,7 @@ public class Posicion
 	{
 		return x;
 	}
+	
 	public double getY()
 	{
 		return y;
@@ -32,9 +33,7 @@ public class Posicion
 		if (otraPos == null)
 				return false;
 		
-		if (this.distanciaCon(otraPos) <= tolerancia )
-			return true;
-		return false;
+		return (this.distanciaCon(otraPos) <= tolerancia );
 	}
 	
 	public Posicion sumar(Posicion otraPos)
@@ -55,7 +54,6 @@ public class Posicion
 		return nuevapos;
 	}	
 	
-	 /* Te da la distancia con otra posicion cualquiera, se usa para el colisionoCon*/
 	public double distanciaCon(Posicion pos)
 	{
 		Posicion nuevapos=this.restar(pos);
