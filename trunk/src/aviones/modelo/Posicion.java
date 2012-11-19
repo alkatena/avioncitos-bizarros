@@ -4,6 +4,8 @@ public class Posicion
 {
 	private double x;
 	private double y;
+	private static double tolerancia =0.15;
+	
 	public Posicion()
 	{
 		x = 0;
@@ -30,8 +32,8 @@ public class Posicion
 		if (otraPos == null)
 				return false;
 		
-		if (otraPos.getX() == this.getX() )
-			return (otraPos.getY() == this.getY());
+		if (this.distanciaCon(otraPos) <= tolerancia )
+			return true;
 		return false;
 	}
 	
