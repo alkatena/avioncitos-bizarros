@@ -11,6 +11,7 @@ public class HelicopteroTest extends TestCase {
 	Posicion otraPInicial;
 	Posicion pInicialColision;
 	Posicion trayect;
+	double vel = 0.5;
 	
 	public void setUp() 
 	{
@@ -18,9 +19,9 @@ public class HelicopteroTest extends TestCase {
 			pInicialColision = new Posicion(1,6);
 			otraPInicial = new Posicion(9,9);
 			trayect = new Posicion (4,0);
-			helicopteroPresidencial = new Helicoptero(pInicial, trayect);
-			aeronaveChocadora = new Helicoptero(pInicialColision, trayect);
-			aeronaveNoChocadora = new AvionChico(otraPInicial, trayect);
+			helicopteroPresidencial = new Helicoptero(pInicial, trayect, vel);
+			aeronaveChocadora = new Helicoptero(pInicialColision, trayect, vel);
+			aeronaveNoChocadora = new AvionChico(otraPInicial, trayect, vel);
 	}
 
 	

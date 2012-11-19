@@ -17,6 +17,7 @@ public class PistaChicaTest extends TestCase
 	Posicion direccionNoParecida;
 	DireccionPista direccionPista;
 	PistaChica pistaChica;
+	double vel = 0.5;
 	
 	public void setUp() 
 	{
@@ -31,7 +32,7 @@ public class PistaChicaTest extends TestCase
 	{
 		posicionInicial = new Posicion(1,0.9);
 		posicionFinal = new Posicion(1,1.1);
-		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal);
+		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal, vel);
 		
 		//avionQueAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueAterriza);
@@ -45,7 +46,7 @@ public class PistaChicaTest extends TestCase
 	{
 		posicionInicial = new Posicion(1,0.9);
 		posicionFinal = new Posicion(1.1,1.5);
-		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal);
+		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal, vel);
 	
 		//avionQueAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueAterriza);
@@ -59,7 +60,7 @@ public class PistaChicaTest extends TestCase
 	{
 		posicionInicial = new Posicion(1,0.9);
 		posicionFinal = new Posicion(3,0);
-		avionQueNoAterriza = new AvionChico(posicionInicial, posicionFinal);
+		avionQueNoAterriza = new AvionChico(posicionInicial, posicionFinal, vel);
 		
 		//avionQueNoAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueNoAterriza);
@@ -71,7 +72,7 @@ public class PistaChicaTest extends TestCase
 	{
 		posicionInicial = new Posicion(1,0.9);
 		Posicion trayect = new Posicion (3,3);
-		avionQueColisiona = new AvionChico(posicionInicial, trayect);
+		avionQueColisiona = new AvionChico(posicionInicial, trayect, vel);
 		
 		assertTrue (pistaChica.colisionoCon(avionQueColisiona));
 	}
@@ -80,7 +81,7 @@ public class PistaChicaTest extends TestCase
 	{
 		posicionInicial = new Posicion(6,2);
 		Posicion trayect = new Posicion (3,3);
-		avionQueNoColisiona = new AvionChico(posicionInicial, trayect);
+		avionQueNoColisiona = new AvionChico(posicionInicial, trayect, vel);
 		
 		assertFalse (pistaChica.colisionoCon(avionQueNoColisiona));
 	}

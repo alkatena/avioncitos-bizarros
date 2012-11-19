@@ -4,14 +4,13 @@ import java.util.Queue;
 
 public abstract class Aeronave implements colisionable
 {
-	protected double velocidad;
 	protected TamanioAeronave tamanio;
 	protected Recorrido recorrido;
 	
 
-	public Aeronave(Posicion inicio, Posicion fin)
+	public Aeronave(Posicion inicio, Posicion fin, double velocidad)
 	{
-		recorrido = new Recorrido(inicio, fin);
+		recorrido = new Recorrido(inicio, fin, velocidad);
 	}
 	
 	public void actualizarRecorrido(Queue<Posicion> posiciones)
@@ -21,7 +20,7 @@ public abstract class Aeronave implements colisionable
 	
 	public void actualizar()
 	{
-		this.recorrido.avanzar(velocidad);
+		this.recorrido.avanzar();
 	}
 	
 	public boolean colisionoCon(Aeronave unAvion)
@@ -38,11 +37,7 @@ public abstract class Aeronave implements colisionable
 	
 	public TamanioAeronave getTamanio()
 	{	return tamanio; }
-	
-	/* public Recorrido getTrayectoria()
-		{	return trayectoria; }
-	*/
-	
+		
 	public Direccion getDireccion()
 	{	return recorrido.getDireccion();	}
 	

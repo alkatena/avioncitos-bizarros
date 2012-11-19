@@ -1,11 +1,10 @@
 package aviones.modelo;
 public class AvionChico extends Aeronave 
 	{
-		public AvionChico(Posicion inicio, Posicion fin)
+		public AvionChico(Posicion inicio, Posicion fin, double velocidad)
 		{
-			super (inicio, fin);
+			super (inicio, fin, velocidad);
 			tamanio = TamanioAeronave.chico();
-			velocidad = 0.5;
 		}
 		
 		public boolean puedeAterrizarEn(Pista unaPista)

@@ -7,10 +7,12 @@ public class Recorrido
 	private Queue<Posicion> posiciones = new LinkedList<Posicion>();
 	public TrayectoriaRecta trayectoria;
 	private Posicion posFinal;
+	private double velocidad;
 	
-	public Recorrido(Posicion inicio, Posicion fin)
+	public Recorrido(Posicion inicio, Posicion fin, double velocidad)
 	{
-		trayectoria = new TrayectoriaRecta(inicio, fin);
+		this.velocidad = velocidad;
+		trayectoria = new TrayectoriaRecta(inicio, fin, velocidad);
 		posFinal = fin;
 	}
 	
@@ -18,18 +20,18 @@ public class Recorrido
 	{
 		posiciones = pos;
 		posFinal = posiciones.poll();
-		trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal);
+		trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
 	}
 	
-	public void avanzar(double vel)
+	public void avanzar()
 	{
 		if (trayectoria.getPosActual().compararA(posFinal)) //COMPARA EXACTO; ESTA MAL?
 		{
 			posFinal = posiciones.poll();
 			if (posFinal != null)
-				trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal);
+				trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
 		}
-		trayectoria.avanzar(vel);
+		trayectoria.avanzar();
 	}
 	
 	public Posicion getPosicion()

@@ -1,11 +1,10 @@
 package aviones.modelo;
 public class Helicoptero extends Aeronave 
 	{
-		public Helicoptero(Posicion inicio, Posicion fin)
+		public Helicoptero(Posicion inicio, Posicion fin, double velocidad)
 		{
-			super (inicio, fin);
+			super (inicio, fin, velocidad);
 			tamanio = TamanioAeronave.mediano();
-			velocidad = 0.2;
 		}
 		
 
@@ -20,6 +19,6 @@ public class Helicoptero extends Aeronave
 			if (this.recorrido.getPtoFinal() == null)
 			{ /*no deberia modificar nada.*/
 			}
-			else { this.recorrido.avanzar(velocidad); }	
+			else { this.recorrido.avanzar(); }	
 		}
 }

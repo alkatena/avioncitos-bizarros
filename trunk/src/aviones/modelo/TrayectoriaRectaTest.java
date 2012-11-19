@@ -19,18 +19,18 @@ public class TrayectoriaRectaTest extends TestCase
 	
 	public void testAvanzarUnPaso()
 	{
-		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal);
-		trayectoria.avanzar(velocidad);
+		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal, velocidad);
+		trayectoria.avanzar();
 
 		assertTrue ( (trayectoria.getPosActual().getX() == 1.6) );	
 		assertTrue (trayectoria.getPosActual().getY() == 2.7);	
 	}
-	//haicendo
+
 	public void testAvanzarVariosPasos()
 	{
-		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal);
-		trayectoria.avanzar(velocidad);
-		trayectoria.avanzar(velocidad);
+		TrayectoriaRecta trayectoria = new TrayectoriaRecta(pInicial, pFinal,velocidad);
+		trayectoria.avanzar();
+		trayectoria.avanzar();
 		
 		assertTrue ( (trayectoria.getPosActual().getX() == 2.2) );	
 		assertTrue (trayectoria.getPosActual().getY() == 2.4);

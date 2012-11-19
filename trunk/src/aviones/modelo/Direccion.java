@@ -16,5 +16,4 @@ public class Direccion
 	{
 		return Math.toDegrees(Math.acos(vectorInterno.ProductoInternoCanonicoCon(otraDireccion.getVector())/(vectorInterno.norma()*otraDireccion.getVector().norma())));
 	}
-	
 }

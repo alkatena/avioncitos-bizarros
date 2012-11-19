@@ -11,6 +11,7 @@ public class AvionChicoTest extends TestCase {
 	Posicion otraPInicial;
 	Posicion pInicialColision;
 	Posicion trayect;
+	double vel = 0.5;
 	
 	public void setUp() 
 	{
@@ -18,9 +19,9 @@ public class AvionChicoTest extends TestCase {
 			pInicialColision = new Posicion(1,1);
 			otraPInicial = new Posicion(9,9);
 			trayect = new Posicion (4,0);
-			avioneta = new AvionChico(pInicial, trayect);
-			aeronaveChocadora = new AvionChico(pInicialColision,trayect);
-			aeronaveNoChocadora = new AvionChico(otraPInicial,trayect);
+			avioneta = new AvionChico(pInicial, trayect, vel);
+			aeronaveChocadora = new AvionChico(pInicialColision,trayect, vel);
+			aeronaveNoChocadora = new AvionChico(otraPInicial,trayect, vel);
 	}
 
 	
