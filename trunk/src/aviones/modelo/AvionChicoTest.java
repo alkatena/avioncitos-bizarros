@@ -11,6 +11,7 @@ public class AvionChicoTest extends TestCase {
 	Posicion otraPInicial;
 	Posicion pInicialColision;
 	Posicion trayect;
+	Posicion pArbitraria;
 	double vel = 0.5;
 	
 	public void setUp() 
@@ -27,8 +28,9 @@ public class AvionChicoTest extends TestCase {
 	
 	public void testactualizarPosicion()
 	{
+		pArbitraria = new Posicion(1.6,0);
 		avioneta.actualizar();
-		assertTrue (avioneta.getPosicion().getX() == 1.9);
+		assertTrue (avioneta.getPosicion().compararA(pArbitraria));
 	}  
 	
 	public void testColisionEntreDosAviones()

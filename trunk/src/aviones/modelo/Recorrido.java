@@ -14,6 +14,7 @@ public class Recorrido
 		this.velocidad = velocidad;
 		trayectoria = new TrayectoriaRecta(inicio, fin, velocidad);
 		posFinal = fin;
+		this.posiciones.add(fin);
 	}
 	
 	public void setPosiciones (Queue<Posicion> pos)
