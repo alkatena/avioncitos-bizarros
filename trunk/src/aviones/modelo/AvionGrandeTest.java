@@ -62,7 +62,7 @@ public class AvionGrandeTest extends TestCase {
 		pIntermedia = new Posicion(0,50); // Hace que el avión se mueva en la dirección (0,1)
 		pFinal1 = new Posicion(1,1);
 		pFinal2 = new Posicion(1,2);
-		pArbitraria = new Posicion(1,4);
+		pArbitraria = new Posicion(1,6);
 		
 		Queue<Posicion> posiciones = new LinkedList<Posicion>();
 		posiciones.add(pFinal1);
@@ -71,11 +71,12 @@ public class AvionGrandeTest extends TestCase {
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
 		boeing777.actualizar(); // El avión se movió hacia la (0,1)
 		boeing777.setRecorrido(posiciones); // "Hago clic" en las posición (1,1) y luego en la (1,2)
-		boeing777.actualizar(); 
 		boeing777.actualizar();
 		boeing777.actualizar();
 		boeing777.actualizar();
-			
+		boeing777.actualizar();
+		boeing777.actualizar();
+		boeing777.actualizar();
 		
 		assertTrue (boeing777.getPosicion().compararA(pArbitraria));
 	}  
@@ -86,7 +87,7 @@ public class AvionGrandeTest extends TestCase {
 		pIntermedia = new Posicion(0,50); // Hace que el avión se mueva en la dirección (0,1)
 		pFinal1 = new Posicion(1,1);
 		pFinal2 = new Posicion(1,2);
-		pArbitraria = new Posicion(1,1);
+		pArbitraria = new Posicion(1,3);
 		
 		Queue<Posicion> posiciones = new LinkedList<Posicion>();
 		posiciones.add(pFinal1);
@@ -95,7 +96,9 @@ public class AvionGrandeTest extends TestCase {
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
 		boeing777.actualizar(); // El avión se movió hacia la (0,1)
 		boeing777.setRecorrido(posiciones); // "Hago clic" en las posición (1,1) y luego en la (1,2)
-		boeing777.actualizar(); 
+		boeing777.actualizar();
+		boeing777.actualizar();
+		boeing777.actualizar();
 
 			
 		

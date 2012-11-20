@@ -31,6 +31,18 @@ public class Recorrido
 			if (posFinal != null)
 				trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
 		}
+		trayectoria.avanzar(); // !!
+	}
+	
+	public void avanzarHastaDestino()
+	{
+		if (trayectoria.getPosActual().compararA(posFinal)) //COMPARA EXACTO; ESTA MAL?
+		{
+			posFinal = posiciones.poll();
+			if (posFinal != null)
+				trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
+		}
+		if (posFinal != null)
 		trayectoria.avanzar();
 	}
 	
