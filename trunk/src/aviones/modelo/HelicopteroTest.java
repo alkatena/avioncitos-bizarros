@@ -100,28 +100,33 @@ public class HelicopteroTest extends TestCase {
 	
 	public void testVerificarHelicopteroFrenadoConColaDePosiciones() 
 	{
-		pFinal1 = new Posicion(20,1);
-		pFinal2 = new Posicion(1,15);
+		pFinal1 = new Posicion(3,1);
+		pFinal2 = new Posicion(3,2);
 		pFinal = new Posicion(1,20);
-		pArbitraria = new Posicion(1,3);
+		pArbitraria = new Posicion(3,2);
 		
 		helicopteroPresidencial = new Helicoptero(pInicial,pFinal,1);
+		helicopteroPresidencial.actualizar();
 		
 		Queue<Posicion> posiciones = new LinkedList<Posicion>();
 		posiciones.add(pFinal1);
 		posiciones.add(pFinal2);	
 		helicopteroPresidencial.setRecorrido(posiciones);
+
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
 		
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
-		helicopteroPresidencial.actualizar();
 		assertTrue ( helicopteroPresidencial.getPosicion().compararA(pArbitraria));
 		
 		
