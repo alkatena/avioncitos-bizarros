@@ -1,4 +1,7 @@
 package aviones.modelo;
+import java.util.LinkedList;
+import java.util.Queue;
+
 import junit.framework.TestCase;
 
 
@@ -10,6 +13,8 @@ public class HelicopteroTest extends TestCase {
 	Posicion pInicial;
 	Posicion otraPInicial;
 	Posicion pFinal;
+	Posicion pFinal1;
+	Posicion pFinal2;
 	Posicion pInicialColision;
 	Posicion trayect;
 	Posicion pArbitraria;
@@ -92,6 +97,35 @@ public class HelicopteroTest extends TestCase {
 		
 		assertTrue ( helicopteroPresidencial.getPosicion().compararA(pArbitraria));
 	} 
+	
+	public void testVerificarHelicopteroFrenadoConColaDePosiciones() 
+	{
+		pFinal1 = new Posicion(20,1);
+		pFinal2 = new Posicion(1,15);
+		pFinal = new Posicion(1,20);
+		pArbitraria = new Posicion(1,3);
+		
+		helicopteroPresidencial = new Helicoptero(pInicial,pFinal,1);
+		
+		Queue<Posicion> posiciones = new LinkedList<Posicion>();
+		posiciones.add(pFinal1);
+		posiciones.add(pFinal2);	
+		helicopteroPresidencial.setRecorrido(posiciones);
+		
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		helicopteroPresidencial.actualizar();
+		assertTrue ( helicopteroPresidencial.getPosicion().compararA(pArbitraria));
+		
+		
+	}
 	
 	
 	public void testColisionEntreDosAviones()

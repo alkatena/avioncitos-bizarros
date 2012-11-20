@@ -4,7 +4,7 @@ public class Posicion
 {
 	private double x;
 	private double y;
-	private static double tolerancia = 0.15; // deberia ser la (velocidad max)/2 por teorema de Mirko...
+	private static double tolerancia = 0.5; // deberia ser la (velocidad max)/2 por teorema de Mirko...
 	
 	public Posicion()
 	{
