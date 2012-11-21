@@ -22,6 +22,7 @@ public class PosicionTest extends TestCase {
 	private Posicion posicion3;
 	private Posicion posicion4;
 	private Posicion posicion5;
+	private Posicion posicion6;
 	private Posicion auxiliar;
 	double escalar;
 
@@ -33,12 +34,19 @@ public class PosicionTest extends TestCase {
 		posicion3 = new Posicion(-2.2,-3);
 		posicion4 = new Posicion(-5.1,3);
 		posicion5 = new Posicion(1,0);
+		posicion6 = new Posicion(0.51,0);
 		escalar = 0.3;
 	}
 	
-	public void testCompararA()
+	public void testCompararAMisma()
 	{
 		assertTrue (posicion1.compararA(posicion1));
+		
+	}
+	
+	public void testCompararADistinta()
+	{
+		assertTrue (posicion5.compararA(posicion6));
 		
 	}
 	

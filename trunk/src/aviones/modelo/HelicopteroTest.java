@@ -165,4 +165,11 @@ public class HelicopteroTest extends TestCase {
 		assertFalse (helicopteroPresidencial.colisionoCon(aeronaveNoChocadora));		
 	}
 	
+	public void testGetPosicionActual()
+	{
+		pArbitraria = new Posicion(1,0); 
+		
+		assertTrue (	pInicial.compararA(pArbitraria)	);
 	}
+	
+}

@@ -15,7 +15,6 @@ public abstract class PistaConDireccion extends Pista {
 	{
 		if (this.direccion.estaAlineadaCon(unAvion.getDireccion()))
 		{
-			AvionesAterrizados++;
 			super.aterrizar(unAvion);
 		}
 	}

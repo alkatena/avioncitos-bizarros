@@ -11,13 +11,11 @@ public abstract class Pista implements colisionable
 		AvionesAterrizados = 0;
 	}
 	
-
 	public boolean colisionoCon(Aeronave unAvion)
 	{
 		return (this.tamanioAdmitido.seSuperponeCon(unAvion.getTamanio(), this.posicion, unAvion.getPosicion()));
 	}
-	
-	
+		
 	public boolean puedeAterrizarAvionChico()
 	{	return false;	}
 	
@@ -38,10 +36,11 @@ public abstract class Pista implements colisionable
 	
 	public void aterrizar(Aeronave unAvion)
 	{ 
+		AvionesAterrizados++;
 		Score.getScore().sumarPuntaje(1);
 		Mapa.getMapa().eliminarAvion(unAvion);
 	}
 
 	public int cantidadAvionesAterrizados() 
-	{	return AvionesAterrizados;}
+	{	return AvionesAterrizados;	}
 }

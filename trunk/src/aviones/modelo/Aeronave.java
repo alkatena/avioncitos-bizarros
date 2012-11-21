@@ -41,7 +41,8 @@ public abstract class Aeronave implements colisionable
 	public Direccion getDireccion()
 	{	return recorrido.getDireccion();	}
 	
-	public void setRecorrido(Queue<Posicion> colaPosiciones) { this.recorrido.setPosiciones(colaPosiciones); }
+	public void setRecorrido(Queue<Posicion> colaPosiciones) 
+	{	this.recorrido.setPosiciones(colaPosiciones);	}
 	
 	 
 }
