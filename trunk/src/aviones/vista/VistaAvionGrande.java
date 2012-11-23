@@ -9,7 +9,7 @@ import ar.uba.fi.algo3.titiritero.Dibujable;
 public class VistaAvionGrande extends  /*Circulo*/Imagen  {
 
 	public VistaAvionGrande(){
-		this.setNombreArchivoImagen("/imagenes/battlecrousier.jpg");
+		this.setNombreArchivoImagen("/imagenes/battlecrousier.png");
 	}
 	
 	/*public VistaAvionGrande()
