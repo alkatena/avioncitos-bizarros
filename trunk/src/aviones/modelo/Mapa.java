@@ -1,8 +1,9 @@
 package aviones.modelo;
+
 import java.util.ArrayList;
+import  ar.uba.fi.algo3.titiritero.Posicionable;
 
-
-public class Mapa 
+public class Mapa implements Posicionable
 {
 	
 	private static Mapa map;
@@ -51,6 +52,18 @@ public class Mapa
 	
 	public ArrayList<Pista> devolverPistas()
 	{	return listaPistas;		}
+	
+	// Por ser objeto Posicionable
+	public int getX()
+	{
+		return 0 ;
+	
+	}
+	public int getY()
+	{
+		return 0 ;
+	
+	}
 	
 	
 }
