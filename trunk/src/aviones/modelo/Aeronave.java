@@ -48,6 +48,17 @@ public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
 	{	this.recorrido.setPosiciones(colaPosiciones);	}
 	
 	// Por ser objeto Posicionable
+	
+	/*(!) el problema es que para dibujar, el titiritero usa int, el casteo
+	 * se realiza rre mocho. Ejemplos;
+	 * posReal=1.4 posCastiada=1
+	 * posReal=1.9 posCastiada=1
+	 * posReal=2.4 posCastiada=2
+	 * 
+	 * es decir, toma el primer numero, pero no pasa nada hasta ahora con 
+	 * el mover de aviones. Hay que ver choques y demas.
+	 * 
+	 */
 	public int getX()
 	{
 		return (int)this.getPosicion().getX();
