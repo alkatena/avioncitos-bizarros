@@ -1,4 +1,7 @@
 package aviones.control;
+
+import java.util.LinkedList;
+import java.util.Queue;
 //extra
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -37,15 +40,14 @@ public class Juego {
 		Posicion posi = new Posicion(0,0);
 		Posicion posf = new Posicion(700,800);
 		AvionGrande avion = new AvionGrande(posi,posf,0.3);
-		
 	
 		Posicion posi2 = new Posicion(0,0);
 		Posicion posf2 = new Posicion(700,0);
-		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.3);
+		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.5);
 		
 		Posicion posi3 = new Posicion(0,0);
 		Posicion posf3 = new Posicion(0,800);
-		AvionChico avionChico = new AvionChico(posi3,posf3,0.3);
+		AvionChico avionChico = new AvionChico(posi3,posf3,1);
 		
 
 		Mapa map= Mapa.getMapa();
