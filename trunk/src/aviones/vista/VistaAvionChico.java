@@ -9,7 +9,7 @@ import ar.uba.fi.algo3.titiritero.Dibujable;
 public class VistaAvionChico extends  /*Circulo*/Imagen  {
 
 	public VistaAvionChico(){
-		this.setNombreArchivoImagen("/imagenes/battlecrousier.jpg");
+		this.setNombreArchivoImagen("/imagenes/valkyrie.jpg");
 	}
 	
 	/*public VistaAvionChico()
