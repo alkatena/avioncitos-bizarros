@@ -18,12 +18,15 @@ import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.Dibujable;
 // las nuestras
 import aviones.modelo.AvionGrande;
+import aviones.modelo.AvionChico;
 import aviones.modelo.Helicoptero;
 import aviones.modelo.Mapa;
 import aviones.modelo.Posicion;
 import aviones.vista.VistaMapa;
 import aviones.vista.VistaAvionGrande;
+import aviones.vista.VistaAvionChico;
 import aviones.vista.VistaHelicoptero;
+
 
 public class Juego {
 	
@@ -35,29 +38,29 @@ public class Juego {
 		Posicion posf = new Posicion(700,800);
 		AvionGrande avion = new AvionGrande(posi,posf,0.3);
 		
-	/*
-		Posicion posi2 = new Posicion(700,800);
-		Posicion posf2 = new Posicion(0,800);
+	
+		Posicion posi2 = new Posicion(0,0);
+		Posicion posf2 = new Posicion(700,0);
 		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.3);
-		*/
-		/*Posicion posi3 = new Posicion(0,700);
-		Posicion posf3 = new Posicion(0,0);
-		AvionGrande avion3 = new AvionGrande(posi3,posf3,0.3);
-		*/
+		
+		Posicion posi3 = new Posicion(0,0);
+		Posicion posf3 = new Posicion(0,800);
+		AvionChico avionChico = new AvionChico(posi3,posf3,0.3);
+		
 
 		Mapa map= Mapa.getMapa();
 		map.agregarAvion(avion);
-		//map.agregarAvion(helicoptero);
-		//map.agregarAvion(avion3);
+		map.agregarAvion(helicoptero);
+		map.agregarAvion(avionChico);
 		//Agrego las vistas
 		VistaMapa vistaMapa = new VistaMapa();
 		vistaMapa.setPosicionable(map);	
 		VistaAvionGrande vistaAvion = new VistaAvionGrande();
 		vistaAvion.setPosicionable(avion);	
-		//VistaHelicoptero vistaHelicoptero = new VistaHelicoptero();
-		//vistaHelicoptero.setPosicionable(helicoptero);
-		//VistaAvionGrande vistaAvion3 = new VistaAvionGrande();
-		//vistaAvion3.setPosicionable(avion3);
+		VistaHelicoptero vistaHelicoptero = new VistaHelicoptero();
+		vistaHelicoptero.setPosicionable(helicoptero);
+		VistaAvionChico vistaAvionChico = new VistaAvionChico();
+		vistaAvionChico.setPosicionable(avionChico);
 		
 		/* Creo el control y el panel y al primero le agrego todos los elementos
 		creados*/
@@ -66,13 +69,13 @@ public class Juego {
 		control.setSuperficieDeDibujo(panel);
 	
 		control.agregarObjetoVivo(avion);
-		//control.agregarObjetoVivo(helicoptero);
-		//control.agregarObjetoVivo(avion3);
+		control.agregarObjetoVivo(helicoptero);
+		control.agregarObjetoVivo(avionChico);
 		
 		control.agregarDibujable(vistaMapa);
 		control.agregarDibujable(vistaAvion);
-		//control.agregarDibujable(vistaHelicoptero);
-		//control.agregarDibujable(vistaAvion3);
+		control.agregarDibujable(vistaHelicoptero);
+		control.agregarDibujable(vistaAvionChico);
 		
 		// (!) tiempo en el que espera para refreshiar
 		control.setIntervaloSimulacion(20);
