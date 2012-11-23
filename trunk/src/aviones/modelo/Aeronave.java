@@ -2,7 +2,10 @@ package aviones.modelo;
 
 import java.util.Queue;
 
-public abstract class Aeronave implements colisionable
+import ar.uba.fi.algo3.titiritero.ObjetoVivo;
+import  ar.uba.fi.algo3.titiritero.Posicionable;
+
+public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
 {
 	protected TamanioAeronave tamanio;
 	protected Recorrido recorrido;
@@ -44,5 +47,22 @@ public abstract class Aeronave implements colisionable
 	public void setRecorrido(Queue<Posicion> colaPosiciones) 
 	{	this.recorrido.setPosiciones(colaPosiciones);	}
 	
-	 
+	// Por ser objeto Posicionable
+	public int getX()
+	{
+		return 0 ;
+	
+	}
+	public int getY()
+	{
+		return 0 ;
+	
+	}
+	// Por ser ObjetoVivo 
+	public void vivir()
+	{
+		
+	}
+	
+	
 }
