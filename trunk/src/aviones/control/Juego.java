@@ -46,8 +46,13 @@ public class Juego {
 		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.5);
 		
 		Posicion posi3 = new Posicion(0,0);
-		Posicion posf3 = new Posicion(0,800);
+		Posicion posf3 = new Posicion(0,200);
+		Queue<Posicion> lista = new LinkedList<Posicion>();
+		lista.add(posf3);
+		lista.add(new Posicion(700,500));
+		lista.add(new Posicion(1000,100));
 		AvionChico avionChico = new AvionChico(posi3,posf3,1);
+		avionChico.actualizarRecorrido(lista);
 		
 
 		Mapa map= Mapa.getMapa();
