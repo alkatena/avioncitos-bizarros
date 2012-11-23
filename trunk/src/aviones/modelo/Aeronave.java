@@ -6,7 +6,7 @@ import ar.uba.fi.algo3.titiritero.ObjetoVivo;
 import  ar.uba.fi.algo3.titiritero.Posicionable;
 
 public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
-{
+{	
 	protected TamanioAeronave tamanio;
 	protected Recorrido recorrido;
 	
@@ -50,18 +50,22 @@ public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
 	// Por ser objeto Posicionable
 	public int getX()
 	{
-		return 0 ;
+		return (int)this.getPosicion().getX();
 	
 	}
 	public int getY()
 	{
-		return 0 ;
+		return (int)this.getPosicion().getY();
 	
 	}
 	// Por ser ObjetoVivo 
 	public void vivir()
 	{
-		
+		this.actualizar();
+		System.out.print("posicion real:");
+		System.out.println(this.getPosicion().getX());
+		System.out.print("posicion castiada:");
+		System.out.println((int)this.getPosicion().getX());
 	}
 	
 	
