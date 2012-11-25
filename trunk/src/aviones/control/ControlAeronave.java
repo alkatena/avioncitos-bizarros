@@ -9,8 +9,9 @@ import aviones.modelo.Radar;
 public class ControlAeronave implements MouseClickObservador
 {
 	private Radar radar = new Radar();
-	private Aeronave avionInterno;
-	
+	private Aeronave avionSeleccionado = null;
+	boolean primero = true;
+
 	public void MouseClick(int x, int y)
 	{
 		
@@ -21,14 +22,26 @@ public class ControlAeronave implements MouseClickObservador
 	
 	private void actualizar(Aeronave avion, Posicion pos)
 	{
-		if (avion == null)
-		{
-			avionInterno.agregarAlRecorrido(pos);
-		}
-		else
-		{
-			avionInterno = avion;
-			avionInterno.cambiarRecorrido(pos);
-		}
+			if (avion != null)
+			{
+				avionSeleccionado = avion;
+				System.out.println("SELECCIONE AVION");
+				primero = true;
+			}
+			else
+			{	
+				if (avionSeleccionado != null)
+				{
+					if(primero)
+					{
+						avionSeleccionado.cambiarRecorrido(pos);
+						primero = false;
+						System.out.println("CAMBIE RECORRIDO");
+					}
+					else
+						System.out.println("AGREGA RECORRIDO");
+						avionSeleccionado.agregarAlRecorrido(pos);
+				}
+			}
 	}
 }
