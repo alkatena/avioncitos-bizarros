@@ -1,6 +1,4 @@
 package aviones.modelo;
-import java.util.LinkedList;
-import java.util.Queue;
 
 import junit.framework.TestCase;
 
@@ -42,13 +40,10 @@ public class AvionGrandeTest extends TestCase {
 		pFinal2 = new Posicion(1,2);
 		pArbitraria = new Posicion(1,2);
 		
-		Queue<Posicion> posiciones = new LinkedList<Posicion>();
-		posiciones.add(pFinal1);
-		posiciones.add(pFinal2);
-		
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
 		boeing777.actualizar(); // El avión se movió hacia la (0,1)
-		boeing777.setRecorrido(posiciones); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.agregarAlRecorrido(pFinal2);
 		boeing777.actualizar(); 
 		boeing777.actualizar(); 
 			
@@ -64,13 +59,10 @@ public class AvionGrandeTest extends TestCase {
 		pFinal2 = new Posicion(1,2);
 		pArbitraria = new Posicion(1,6);
 		
-		Queue<Posicion> posiciones = new LinkedList<Posicion>();
-		posiciones.add(pFinal1);
-		posiciones.add(pFinal2);
-		
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
 		boeing777.actualizar(); // El avión se movió hacia la (0,1)
-		boeing777.setRecorrido(posiciones); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.agregarAlRecorrido(pFinal2);
 		boeing777.actualizar();
 		boeing777.actualizar();
 		boeing777.actualizar();
@@ -89,13 +81,10 @@ public class AvionGrandeTest extends TestCase {
 		pFinal2 = new Posicion(1,2);
 		pArbitraria = new Posicion(1,3);
 		
-		Queue<Posicion> posiciones = new LinkedList<Posicion>();
-		posiciones.add(pFinal1);
-		posiciones.add(pFinal2);
-		
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
 		boeing777.actualizar(); // El avión se movió hacia la (0,1)
-		boeing777.setRecorrido(posiciones); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.agregarAlRecorrido(pFinal2);
 		boeing777.actualizar();
 		boeing777.actualizar();
 		boeing777.actualizar();

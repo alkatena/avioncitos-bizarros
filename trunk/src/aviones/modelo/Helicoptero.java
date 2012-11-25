@@ -16,9 +16,9 @@ public class Helicoptero extends Aeronave
 	
 		public void actualizar()
 		{
-			if (this.recorrido.finalizado())
-			{ /*no deberia modificar nada.*/
+			if (! (this.recorrido.finalizado()) )
+			{ 
+				 this.recorrido.avanzar();
 			}
-			else { this.recorrido.avanzar(); }	
 		}
 }

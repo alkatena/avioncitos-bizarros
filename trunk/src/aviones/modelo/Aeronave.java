@@ -16,9 +16,14 @@ public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
 		recorrido = new Recorrido(inicio, fin, velocidad);
 	}
 	
-	public void actualizarRecorrido(Queue<Posicion> posiciones)
+	public void cambiarRecorrido(Posicion posicion)
 	{
-		recorrido.setPosiciones(posiciones);
+		recorrido.setPosicion(posicion);
+	}
+	
+	public void agregarAlRecorrido(Posicion posicion)
+	{
+		recorrido.agregarPosicion(posicion);
 	}
 	
 	public void actualizar()
@@ -43,9 +48,6 @@ public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
 		
 	public Direccion getDireccion()
 	{	return recorrido.getDireccion();	}
-	
-	public void setRecorrido(Queue<Posicion> colaPosiciones) 
-	{	this.recorrido.setPosiciones(colaPosiciones);	}
 	
 	// Por ser objeto Posicionable
 	

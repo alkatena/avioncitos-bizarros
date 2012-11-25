@@ -16,11 +16,18 @@ public class Recorrido
 		posFinal = fin;
 	}
 	
-	public void setPosiciones (Queue<Posicion> pos)
+	public void setPosicion (Posicion pos)
 	{
-		posiciones = pos;
+		Queue<Posicion> nuevasPosiciones = new LinkedList<Posicion>();
+		nuevasPosiciones.add(pos);
+		posiciones = nuevasPosiciones;
 		posFinal = posiciones.poll();
 		trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
+	}
+	
+	public void agregarPosicion(Posicion pos)
+	{
+		posiciones.add(pos);
 	}
 	
 	public void avanzar()

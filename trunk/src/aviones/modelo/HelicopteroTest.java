@@ -1,6 +1,4 @@
 package aviones.modelo;
-import java.util.LinkedList;
-import java.util.Queue;
 
 import junit.framework.TestCase;
 
@@ -108,10 +106,8 @@ public class HelicopteroTest extends TestCase {
 		helicopteroPresidencial = new Helicoptero(pInicial,pFinal,1);
 		helicopteroPresidencial.actualizar();
 		
-		Queue<Posicion> posiciones = new LinkedList<Posicion>();
-		posiciones.add(pFinal1);
-		posiciones.add(pFinal2);	
-		helicopteroPresidencial.setRecorrido(posiciones);
+		helicopteroPresidencial.cambiarRecorrido(pFinal1);
+		helicopteroPresidencial.agregarAlRecorrido(pFinal2);
 
 		helicopteroPresidencial.actualizar();
 		helicopteroPresidencial.actualizar();
@@ -142,10 +138,8 @@ public class HelicopteroTest extends TestCase {
 		helicopteroPresidencial = new Helicoptero(pInicial,pFinal,1);
 		helicopteroPresidencial.actualizar();
 		
-		Queue<Posicion> posiciones = new LinkedList<Posicion>();
-		posiciones.add(pFinal1);
-		posiciones.add(pFinal2);	
-		helicopteroPresidencial.setRecorrido(posiciones);
+		helicopteroPresidencial.cambiarRecorrido(pFinal1);
+		helicopteroPresidencial.agregarAlRecorrido(pFinal2);
 
 		helicopteroPresidencial.actualizar();
 		helicopteroPresidencial.actualizar();
