@@ -8,5 +8,4 @@ public class VistaHelipuerto extends Imagen {
 		{
 			this.setNombreArchivoImagen("/imagenes/helipuerto.png");
 		}
-
 }

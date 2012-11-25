@@ -12,8 +12,5 @@ public class VistaMapa extends Imagen  {
 
 	public VistaMapa(){
 		this.setNombreArchivoImagen("/imagenes/mapa1.jpg");
-			
 	}
-		
-	
 }

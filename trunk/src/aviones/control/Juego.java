@@ -6,6 +6,7 @@ import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.vista.Ventana;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 
+import aviones.modelo.LanzadorAviones;
 // las nuestras
 import aviones.modelo.Refresher;
 import aviones.modelo.AvionGrande;
@@ -34,7 +35,7 @@ public class Juego {
 	public static void main(String[] args)
 	{
 		//Creo Aviones
-		
+		/*
 		Posicion posi = new Posicion(0,0);
 		Posicion posf = new Posicion(700,0);
 		AvionGrande avion = new AvionGrande(posi,posf,0.3);
@@ -47,7 +48,7 @@ public class Juego {
 		Posicion posf3 = new Posicion(0,0);
 		AvionChico avionChico = new AvionChico(posi3,posf3,0.1);
 		avionChico.agregarAlRecorrido(new Posicion(700,500));
-		avionChico.agregarAlRecorrido(new Posicion(1000,100));
+		avionChico.agregarAlRecorrido(new Posicion(1000,100));*/
 		
 		//Agrego Pistas
 		Posicion posHeli = new Posicion(500,500);
@@ -59,19 +60,20 @@ public class Juego {
 		PistaGrande pistaGrande = new PistaGrande(posPistaGrande,direcPistaGrande);
 
 		Mapa map= Mapa.getMapa();
-		map.agregarAvion(avion);
+		/*map.agregarAvion(avion);
 		map.agregarAvion(helicoptero);
-		map.agregarAvion(avionChico);
+		map.agregarAvion(avionChico);*/
+		map.agregarPista(pistaGrande);
 		map.agregarPista(helipuerto);
+		
 		//Agrego las vistas
 		VistaMapa vistaMapa = new VistaMapa();
 		vistaMapa.setPosicionable(map);	
-		VistaAvionGrande vistaAvion = new VistaAvionGrande();
-		vistaAvion.setPosicionable(avion);	
-		VistaHelicoptero vistaHelicoptero = new VistaHelicoptero();
+
+		/*VistaHelicoptero vistaHelicoptero = new VistaHelicoptero();
 		vistaHelicoptero.setPosicionable(helicoptero);
 		VistaAvionChico vistaAvionChico = new VistaAvionChico();
-		vistaAvionChico.setPosicionable(avionChico);
+		vistaAvionChico.setPosicionable(avionChico);*/
 		VistaHelipuerto vistaHelipuerto = new VistaHelipuerto();
 		vistaHelipuerto.setPosicionable(helipuerto);
 		VistaPistaGrande vistaPistaGrande = new VistaPistaGrande();
@@ -88,18 +90,21 @@ public class Juego {
 		control.agregarObjetoVivo(helicoptero);
 		control.agregarObjetoVivo(avionChico);*/
 		Refresher refresh = new Refresher();
+		LanzadorAviones lanzador = new LanzadorAviones(10,control);
+		control.agregarObjetoVivo(lanzador);
 		control.agregarObjetoVivo(refresh);
 		
 		control.agregarDibujable(vistaMapa);
 		control.agregarDibujable(vistaHelipuerto);
 		control.agregarDibujable(vistaPistaGrande);
-		control.agregarDibujable(vistaAvion);
+
+		/*
 		control.agregarDibujable(vistaHelicoptero);
 		control.agregarDibujable(vistaAvionChico);
-		
+		*/
 		
 		// (!) tiempo en el que espera para refreshiar
-		control.setIntervaloSimulacion(20);
+		control.setIntervaloSimulacion(10);
 		//agrego los observers o control de click de aviones al CONTROL
 		ControlAeronave controlAeronave = new ControlAeronave();
 		control.agregarMouseClickObservador(controlAeronave);

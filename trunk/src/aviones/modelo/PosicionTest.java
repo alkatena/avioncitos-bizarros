@@ -1,20 +1,6 @@
 package aviones.modelo;
 import junit.framework.TestCase;
 
-/* Muchachos, extraño las pruebas de smalltalk, java en esto es bien mierda;
- * 1) Limitaciones, ojo que si cambian una de estas posiciones random, como se usan en
- * distintas pruebas, muchas les pueden fallar ( java si funciona pero da otro resultado no 
- * marca amarillo como smalltalk te pone rojo, UNA VERGA!)
- * 2) la unica que esta hecha con distintas variables es testDistanciaCon que seria otra
- * modalidad, es decir que cada metodo tuviera sus propias variables adentro y sea mas facil
- * de cambiar valores sin pinchar o andar corrigiendo todo.
- * 3) se viene lindo quilombo con la precision, es demasiada. En realidad no deberia serlo,
- * pero veremos...No se alarmen aun.
- * 3bis) debido a la alta precision, yo me hize un proyecto donde me pasaba por consola el
- * valor de cada cuenta, ejemplo cuando multiplicaba mi calculadora diferia de la compu
- * por eso esos numeros hardcore super largos.
- */
-
 public class PosicionTest extends TestCase {
 
 	private Posicion posicion1;

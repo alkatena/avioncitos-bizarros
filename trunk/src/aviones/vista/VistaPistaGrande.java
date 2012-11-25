@@ -8,10 +8,4 @@ public class VistaPistaGrande extends Imagen {
 		{
 			this.setNombreArchivoImagen("/imagenes/pista.jpg");
 		}
-
 }
-
-
-/* Gente, la pista grande no lo logro estacionar, hay que ver de calibrar
- * (tolerancia y tamanioPista) o ver que esta fallando, igual con la imagen
- * cabeza que subi se imaginan que no es muy facil embocarle. */

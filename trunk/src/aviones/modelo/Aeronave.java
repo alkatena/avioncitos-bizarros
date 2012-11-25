@@ -74,15 +74,5 @@ public abstract class Aeronave implements colisionable, Posicionable
 		return (int)pos;
 	
 	}
-	// Por ser ObjetoVivo 
-	/*public void vivir()
-	{
-		this.actualizar();
-		System.out.print("posicion real:");
-		System.out.println(this.getPosicion().getX());
-		System.out.print("posicion castiada:");
-		System.out.println((int)this.getPosicion().getX());
-	}*/
-	
 	
 }

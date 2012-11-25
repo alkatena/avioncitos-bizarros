@@ -2,7 +2,11 @@ package aviones.modelo;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class LanzadorAviones 
+import ar.uba.fi.algo3.titiritero.ControladorJuego;
+import ar.uba.fi.algo3.titiritero.ObjetoVivo;
+import aviones.vista.VistaAvionGrande;
+
+public class LanzadorAviones implements ObjetoVivo
 {
 	int max = Mapa.getMapa().getLimite();
 	Random gen = new Random();
@@ -10,15 +14,17 @@ public class LanzadorAviones
 	int ciclosDeEspera = 5;
 	Radar radar = new Radar();
 	int contador = 0;
+	ControladorJuego controlador;
 	
-	public LanzadorAviones(int CantidadMaxAviones)
+	public LanzadorAviones(int CantidadMaxAviones, ControladorJuego control)
 	{
-		maxAviones = CantidadMaxAviones;
+		this.maxAviones = CantidadMaxAviones;
+		this.controlador = control;
 	}
 	
 	private Posicion randomearPosLimiteSup()
 	{
-		Posicion pos = new Posicion(max, gen.nextInt(max));
+		Posicion pos = new Posicion(gen.nextInt(max),0);
 		return pos;
 	}
 	
@@ -48,15 +54,27 @@ public class LanzadorAviones
 	        reflexion.add(AvionChico.class);
 	        reflexion.add(AvionGrande.class);
 	        reflexion.add(Helicoptero.class);
-	        Class tipoAvion = reflexion.get(gen.nextInt(4));
+	        Class tipoAvion = reflexion.get(gen.nextInt(3));
 	        Aeronave avion = null;
 	        try {
 	             avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),0.3);
+	     		Mapa map= Mapa.getMapa();
+	     		map.agregarAvion(avion);
+	     		VistaAvionGrande vistaAvion = new VistaAvionGrande();
+	    		vistaAvion.setPosicionable(avion);
+	    		this.controlador.agregarDibujable(vistaAvion);
+	        
 	        } catch (Exception e)
 	        {
 	            throw new RuntimeException(e);
 	        }
 	        Mapa.getMapa().agregarAvion(avion);
-	    }	
+	    }
+	  
+	  public void vivir() 
+	  {
+		  this.actualizar();
+	  }
+	  
 }
 		

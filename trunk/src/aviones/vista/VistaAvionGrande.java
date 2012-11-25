@@ -6,15 +6,9 @@ import ar.uba.fi.algo3.titiritero.vista.Imagen;
 import ar.uba.fi.algo3.titiritero.vista.Circulo;
 import ar.uba.fi.algo3.titiritero.Dibujable;
 
-public class VistaAvionGrande extends  /*Circulo*/Imagen  {
+public class VistaAvionGrande extends  Imagen  {
 
 	public VistaAvionGrande(){
 		this.setNombreArchivoImagen("/imagenes/battlecrousier.png");
 	}
-	
-	/*public VistaAvionGrande()
-	{
-	super(30);
-	setColor(Color.RED);
-	}*/
 }

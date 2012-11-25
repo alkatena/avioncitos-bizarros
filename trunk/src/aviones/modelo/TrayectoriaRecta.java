@@ -5,7 +5,6 @@ public class TrayectoriaRecta
 	private Posicion ptoInicial;
 	private Direccion direccion;
 	private Posicion posActual;
-	//private double amplificacion;
 	private Posicion step;
 	
 	public TrayectoriaRecta(Posicion pInicial, Posicion pFinal, double velocidad)

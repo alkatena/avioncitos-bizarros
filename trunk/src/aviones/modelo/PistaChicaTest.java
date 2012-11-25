@@ -48,7 +48,6 @@ public class PistaChicaTest extends TestCase
 		posicionFinal = new Posicion(1.1,1.5);
 		avionQueAterriza = new AvionChico(posicionInicial, posicionFinal, vel);
 	
-		//avionQueAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueAterriza);
 		otroAvionQueAterriza = avionQueAterriza;
 		pistaChica.aterrizar(otroAvionQueAterriza);
@@ -62,7 +61,6 @@ public class PistaChicaTest extends TestCase
 		posicionFinal = new Posicion(3,0);
 		avionQueNoAterriza = new AvionChico(posicionInicial, posicionFinal, vel);
 		
-		//avionQueNoAterriza.actualizarTrayectoria(posicionFinal);
 		pistaChica.aterrizar(avionQueNoAterriza);
 						
 		assertTrue (pistaChica.cantidadAvionesAterrizados() == 0);
