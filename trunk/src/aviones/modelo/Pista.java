@@ -37,6 +37,7 @@ public abstract class Pista implements colisionable, Posicionable
 		AvionesAterrizados++;
 		Score.getScore().sumarPuntaje(1);
 		Mapa.getMapa().eliminarAvion(unAvion);
+		System.out.println("se estaciono");
 	}
 
 	public int cantidadAvionesAterrizados() 
