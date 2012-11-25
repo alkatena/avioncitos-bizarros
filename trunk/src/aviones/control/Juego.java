@@ -6,6 +6,7 @@ import java.util.Queue;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Rectangle;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -30,6 +31,9 @@ import aviones.vista.VistaAvionGrande;
 import aviones.vista.VistaAvionChico;
 import aviones.vista.VistaHelicoptero;
 
+
+import ar.uba.fi.algo3.titiritero.vista.MouseClickController;
+import aviones.control.ControlAeronave;
 
 public class Juego {
 	
@@ -71,7 +75,7 @@ public class Juego {
 		ControladorJuego control =new ControladorJuego(true);
 		Panel panel = new Panel(1183,603);
 		control.setSuperficieDeDibujo(panel);
-	
+		
 		control.agregarObjetoVivo(avion);
 		control.agregarObjetoVivo(helicoptero);
 		control.agregarObjetoVivo(avionChico);
@@ -82,7 +86,18 @@ public class Juego {
 		control.agregarDibujable(vistaAvionChico);
 		
 		// (!) tiempo en el que espera para refreshiar
-		control.setIntervaloSimulacion(20);
+		control.setIntervaloSimulacion(50);
+		//agrego los observers o control de click de aviones al CONTROL
+		ControlAeronave controlAeronave = new ControlAeronave();
+		control.agregarMouseClickObservador(controlAeronave);
+		// Asocio mouse al CONTROL y al panel
+		MouseClickController controlMouse = new MouseClickController(control);
+		panel.addMouseListener(controlMouse);
+	
+	
+		
+	
+							
 		// creo la ventana que contiene al panel y a su vez al control
 		Ventana ventana = new Ventana(1190,620,control);
 		ventana.setTitle("StarCraftTraffic");
