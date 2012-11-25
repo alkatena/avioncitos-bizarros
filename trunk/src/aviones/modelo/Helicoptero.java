@@ -4,7 +4,7 @@ public class Helicoptero extends Aeronave
 		public Helicoptero(Posicion inicio, Posicion fin, double velocidad)
 		{
 			super (inicio, fin, velocidad);
-			tamanio = TamanioAeronave.mediano();
+			tamanio = TamanioAeronave.chico();
 		}
 		
 

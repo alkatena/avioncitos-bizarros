@@ -51,7 +51,7 @@ public class LanzadorAviones
 	        Class tipoAvion = reflexion.get(gen.nextInt(4));
 	        Aeronave avion = null;
 	        try {
-	             avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero());
+	             avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),0.3);
 	        } catch (Exception e)
 	        {
 	            throw new RuntimeException(e);
