@@ -89,9 +89,7 @@ public class Juego {
 		/*control.agregarObjetoVivo(avion);
 		control.agregarObjetoVivo(helicoptero);
 		control.agregarObjetoVivo(avionChico);*/
-		Refresher refresh = new Refresher();
-		LanzadorAviones lanzador = new LanzadorAviones(10,control);
-		control.agregarObjetoVivo(lanzador);
+		Refresher refresh = new Refresher(control);
 		control.agregarObjetoVivo(refresh);
 		
 		control.agregarDibujable(vistaMapa);
