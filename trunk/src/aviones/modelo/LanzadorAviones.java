@@ -7,6 +7,7 @@ public class LanzadorAviones
 	int max = Mapa.getMapa().getLimite();
 	Random gen = new Random();
 	int maxAviones;
+	int ciclosDeEspera = 5;
 	Radar radar = new Radar();
 	int contador = 0;
 	
@@ -29,7 +30,7 @@ public class LanzadorAviones
 	
 	public void actualizar()
 	{
-		if (contador < maxAviones)
+		if (contador < ciclosDeEspera)
 			contador++;
 		else
 		{
