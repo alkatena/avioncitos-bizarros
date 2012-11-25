@@ -6,7 +6,7 @@ public class VistaHelipuerto extends Imagen {
 
 		public VistaHelipuerto()
 		{
-			this.setNombreArchivoImagen("/imagenes/helipuerto.jpg");
+			this.setNombreArchivoImagen("/imagenes/helipuerto.png");
 		}
 
 }
