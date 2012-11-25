@@ -21,6 +21,7 @@ import ar.uba.fi.algo3.titiritero.ObjetoVivo;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.Dibujable;
 // las nuestras
+import aviones.modelo.Refresher;
 import aviones.modelo.AvionGrande;
 import aviones.modelo.AvionChico;
 import aviones.modelo.Helicoptero;
@@ -41,17 +42,18 @@ public class Juego {
 	public static void main(String[] args)
 	{
 		//Creo Aviones
+		
 		Posicion posi = new Posicion(0,0);
 		Posicion posf = new Posicion(700,800);
-		AvionGrande avion = new AvionGrande(posi,posf,0.3);
+		AvionGrande avion = new AvionGrande(posi,posf,1);
 	
-		Posicion posi2 = new Posicion(0,0);
-		Posicion posf2 = new Posicion(700,0);
-		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.5);
+		Posicion posi2 = new Posicion(700,0);
+		Posicion posf2 = new Posicion(0,0);
+		Helicoptero helicoptero = new Helicoptero(posi2,posf2,3);
 		
-		Posicion posi3 = new Posicion(0,0);
-		Posicion posf3 = new Posicion(0,200);
-		AvionChico avionChico = new AvionChico(posi3,posf3,1);
+		Posicion posi3 = new Posicion(0,600);
+		Posicion posf3 = new Posicion(0,0);
+		AvionChico avionChico = new AvionChico(posi3,posf3,2);
 		avionChico.agregarAlRecorrido(new Posicion(700,500));
 		avionChico.agregarAlRecorrido(new Posicion(1000,100));
 		
@@ -73,12 +75,14 @@ public class Juego {
 		/* Creo el control y el panel y al primero le agrego todos los elementos
 		creados*/
 		ControladorJuego control =new ControladorJuego(true);
-		Panel panel = new Panel(1183,603);
+		Panel panel = new Panel(800,600);
 		control.setSuperficieDeDibujo(panel);
 		
-		control.agregarObjetoVivo(avion);
+		/*control.agregarObjetoVivo(avion);
 		control.agregarObjetoVivo(helicoptero);
-		control.agregarObjetoVivo(avionChico);
+		control.agregarObjetoVivo(avionChico);*/
+		Refresher refresh = new Refresher();
+		control.agregarObjetoVivo(refresh);
 		
 		control.agregarDibujable(vistaMapa);
 		control.agregarDibujable(vistaAvion);
@@ -86,7 +90,7 @@ public class Juego {
 		control.agregarDibujable(vistaAvionChico);
 		
 		// (!) tiempo en el que espera para refreshiar
-		control.setIntervaloSimulacion(50);
+		control.setIntervaloSimulacion(100);
 		//agrego los observers o control de click de aviones al CONTROL
 		ControlAeronave controlAeronave = new ControlAeronave();
 		control.agregarMouseClickObservador(controlAeronave);
@@ -99,7 +103,7 @@ public class Juego {
 	
 							
 		// creo la ventana que contiene al panel y a su vez al control
-		Ventana ventana = new Ventana(1190,620,control);
+		Ventana ventana = new Ventana(800,600,control);
 		ventana.setTitle("StarCraftTraffic");
 		ventana.add(panel);
 		ventana.setVisible(true);
