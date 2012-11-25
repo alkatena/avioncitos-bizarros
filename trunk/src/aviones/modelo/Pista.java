@@ -1,5 +1,8 @@
 package aviones.modelo;
-public abstract class Pista implements colisionable
+
+import  ar.uba.fi.algo3.titiritero.Posicionable;
+
+public abstract class Pista implements colisionable, Posicionable
 {
 	protected Posicion posicion;
 	protected TamanioAeronave tamanioPista = TamanioAeronave.mediano();
@@ -38,4 +41,20 @@ public abstract class Pista implements colisionable
 
 	public int cantidadAvionesAterrizados() 
 	{	return AvionesAterrizados;	}
+	
+	public int getX()
+	{
+		double pos = this.getPosicion().getX();
+		pos = (pos - tamanioPista.getTamanioInterno()*2);
+		return (int)pos;
+	
+	}
+	public int getY()
+	{
+		double pos = this.getPosicion().getY();
+		pos = (pos - tamanioPista.getTamanioInterno()*2);
+		return (int)pos;
+	
+	}
+	
 }
