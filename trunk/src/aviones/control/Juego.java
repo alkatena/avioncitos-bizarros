@@ -47,7 +47,7 @@ public class Juego {
 		Posicion posf = new Posicion(700,800);
 		AvionGrande avion = new AvionGrande(posi,posf,0.3);
 	
-		Posicion posi2 = new Posicion(700,0);
+		Posicion posi2 = new Posicion(700,200);
 		Posicion posf2 = new Posicion(0,0);
 		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.2);
 		

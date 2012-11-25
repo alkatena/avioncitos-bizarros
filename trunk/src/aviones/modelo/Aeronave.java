@@ -64,14 +64,14 @@ public abstract class Aeronave implements colisionable, Posicionable, ObjetoVivo
 	public int getX()
 	{
 		double pos = this.getPosicion().getX();
-		pos = (pos - tamanio.getTamanioInterno()/2);
+		pos = (pos - tamanio.getTamanioInterno()*2);
 		return (int)pos;
 	
 	}
 	public int getY()
 	{
 		double pos = this.getPosicion().getY();
-		pos = (pos - tamanio.getTamanioInterno()/2);
+		pos = (pos - tamanio.getTamanioInterno()*2);
 		return (int)pos;
 	
 	}

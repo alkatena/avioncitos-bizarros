@@ -16,7 +16,7 @@ public class VistaHelicoptero extends  /*Imagen*/ Cuadrado  {
 	
 	public VistaHelicoptero()
 	{
-	super(20,20);
+	super(80,80);
 	setColor(Color.RED);
 	}
 }
