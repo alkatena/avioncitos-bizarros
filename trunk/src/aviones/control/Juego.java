@@ -45,15 +45,15 @@ public class Juego {
 		
 		Posicion posi = new Posicion(0,0);
 		Posicion posf = new Posicion(700,800);
-		AvionGrande avion = new AvionGrande(posi,posf,1);
+		AvionGrande avion = new AvionGrande(posi,posf,0.3);
 	
 		Posicion posi2 = new Posicion(700,0);
 		Posicion posf2 = new Posicion(0,0);
-		Helicoptero helicoptero = new Helicoptero(posi2,posf2,3);
+		Helicoptero helicoptero = new Helicoptero(posi2,posf2,0.2);
 		
 		Posicion posi3 = new Posicion(0,600);
 		Posicion posf3 = new Posicion(0,0);
-		AvionChico avionChico = new AvionChico(posi3,posf3,2);
+		AvionChico avionChico = new AvionChico(posi3,posf3,0.1);
 		avionChico.agregarAlRecorrido(new Posicion(700,500));
 		avionChico.agregarAlRecorrido(new Posicion(1000,100));
 		
@@ -75,7 +75,7 @@ public class Juego {
 		/* Creo el control y el panel y al primero le agrego todos los elementos
 		creados*/
 		ControladorJuego control =new ControladorJuego(true);
-		Panel panel = new Panel(800,600);
+		Panel panel = new Panel(800,800);
 		control.setSuperficieDeDibujo(panel);
 		
 		/*control.agregarObjetoVivo(avion);
@@ -90,7 +90,7 @@ public class Juego {
 		control.agregarDibujable(vistaAvionChico);
 		
 		// (!) tiempo en el que espera para refreshiar
-		control.setIntervaloSimulacion(100);
+		control.setIntervaloSimulacion(20);
 		//agrego los observers o control de click de aviones al CONTROL
 		ControlAeronave controlAeronave = new ControlAeronave();
 		control.agregarMouseClickObservador(controlAeronave);
@@ -103,7 +103,7 @@ public class Juego {
 	
 							
 		// creo la ventana que contiene al panel y a su vez al control
-		Ventana ventana = new Ventana(800,600,control);
+		Ventana ventana = new Ventana(800,800,control);
 		ventana.setTitle("StarCraftTraffic");
 		ventana.add(panel);
 		ventana.setVisible(true);
