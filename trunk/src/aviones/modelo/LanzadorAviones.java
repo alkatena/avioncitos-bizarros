@@ -4,14 +4,17 @@ import java.util.Random;
 
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.ObjetoVivo;
+import ar.uba.fi.algo3.titiritero.vista.Imagen;
+import aviones.vista.VistaAvionChico;
 import aviones.vista.VistaAvionGrande;
+import aviones.vista.VistaHelicoptero;
 
-public class LanzadorAviones implements ObjetoVivo
+public class LanzadorAviones
 {
 	int max = Mapa.getMapa().getLimite();
 	Random gen = new Random();
 	int maxAviones;
-	int ciclosDeEspera = 5;
+	int ciclosDeEspera = 400;
 	Radar radar = new Radar();
 	int contador = 0;
 	ControladorJuego controlador;
@@ -50,31 +53,35 @@ public class LanzadorAviones implements ObjetoVivo
 	
 	  private void lanzarAvionRandom()
 	    {
+		    int index = gen.nextInt(3);
 	        ArrayList<Class> reflexion = new ArrayList<Class>();
 	        reflexion.add(AvionChico.class);
 	        reflexion.add(AvionGrande.class);
 	        reflexion.add(Helicoptero.class);
-	        Class tipoAvion = reflexion.get(gen.nextInt(3));
-	        Aeronave avion = null;
-	        try {
-	             avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),0.3);
-	     		Mapa map= Mapa.getMapa();
-	     		map.agregarAvion(avion);
-	     		VistaAvionGrande vistaAvion = new VistaAvionGrande();
-	    		vistaAvion.setPosicionable(avion);
-	    		this.controlador.agregarDibujable(vistaAvion);
+	        Class tipoAvion = reflexion.get(index);
 	        
-	        } catch (Exception e)
-	        {
-	            throw new RuntimeException(e);
-	        }
+	        ArrayList<Class> reflexionVista = new ArrayList<Class>();
+	        reflexionVista.add(VistaAvionChico.class);
+	        reflexionVista.add(VistaAvionGrande.class);
+	        reflexionVista.add(VistaHelicoptero.class);
+	        Class tipoVistaAvion = reflexionVista.get(index);
+	        
+	        double[] v= new double[] {0.1, 0.2, 0.3};
+	       
+	        
+	        Aeronave avion = null;
+	        Imagen vistaAvion = null;
+	        try {
+	            	avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),v[index]);
+	            	vistaAvion =(Imagen) tipoVistaAvion.newInstance();	        
+	        	}
+	        catch (Exception e)
+	        	{
+	            	throw new RuntimeException(e);
+	        	}
 	        Mapa.getMapa().agregarAvion(avion);
-	    }
-	  
-	  public void vivir() 
-	  {
-		  this.actualizar();
-	  }
-	  
+    		vistaAvion.setPosicionable(avion);
+    		this.controlador.agregarDibujable(vistaAvion);
+	    }	  
 }
 		
