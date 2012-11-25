@@ -1,6 +1,4 @@
 package aviones.control;
-import java.util.LinkedList;
-import java.util.Queue;
 
 import ar.uba.fi.algo3.titiritero.MouseClickObservador;
 import aviones.modelo.Aeronave;
