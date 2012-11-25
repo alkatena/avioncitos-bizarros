@@ -1,25 +1,11 @@
 package aviones.control;
 
-import java.util.LinkedList;
-import java.util.Queue;
-//extra
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Rectangle;
-import java.awt.event.MouseEvent;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-import javax.swing.JLabel;
 //titiritero
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.vista.Ventana;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 
-import ar.uba.fi.algo3.titiritero.ObjetoVivo;
-import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
-import ar.uba.fi.algo3.titiritero.Dibujable;
 // las nuestras
 import aviones.modelo.Refresher;
 import aviones.modelo.AvionGrande;
@@ -27,11 +13,13 @@ import aviones.modelo.AvionChico;
 import aviones.modelo.Helicoptero;
 import aviones.modelo.Mapa;
 import aviones.modelo.Posicion;
+import aviones.modelo.Helipuerto;
+
 import aviones.vista.VistaMapa;
 import aviones.vista.VistaAvionGrande;
 import aviones.vista.VistaAvionChico;
 import aviones.vista.VistaHelicoptero;
-
+import aviones.vista.VistaHelipuerto;
 
 import ar.uba.fi.algo3.titiritero.vista.MouseClickController;
 import aviones.control.ControlAeronave;
@@ -57,11 +45,16 @@ public class Juego {
 		avionChico.agregarAlRecorrido(new Posicion(700,500));
 		avionChico.agregarAlRecorrido(new Posicion(1000,100));
 		
+		//Agrego Pistas
+		Posicion posHeli = new Posicion(500,500);
+		Helipuerto helipuerto = new Helipuerto(posHeli);
+		
 
 		Mapa map= Mapa.getMapa();
 		map.agregarAvion(avion);
 		map.agregarAvion(helicoptero);
 		map.agregarAvion(avionChico);
+		map.agregarPista(helipuerto);
 		//Agrego las vistas
 		VistaMapa vistaMapa = new VistaMapa();
 		vistaMapa.setPosicionable(map);	
@@ -71,6 +64,8 @@ public class Juego {
 		vistaHelicoptero.setPosicionable(helicoptero);
 		VistaAvionChico vistaAvionChico = new VistaAvionChico();
 		vistaAvionChico.setPosicionable(avionChico);
+		VistaHelipuerto vistaHelipuerto = new VistaHelipuerto();
+		vistaHelipuerto.setPosionable(helipuerto);
 		
 		/* Creo el control y el panel y al primero le agrego todos los elementos
 		creados*/
