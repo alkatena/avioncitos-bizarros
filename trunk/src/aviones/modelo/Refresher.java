@@ -1,6 +1,8 @@
 package aviones.modelo;
 
-public class Refresher 
+import ar.uba.fi.algo3.titiritero.ObjetoVivo;
+
+public class Refresher implements ObjetoVivo
 {
 	private ControlAereo controlAereo;
 	private ControlTerrestre controlTerrestre;
@@ -18,5 +20,10 @@ public class Refresher
 		controlTerrestre.actualizar();
 	}
 
+	
+	public void vivir()
+	{
+		this.refresh();
+	}
 }
 
