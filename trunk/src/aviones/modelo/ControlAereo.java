@@ -18,6 +18,7 @@ public class ControlAereo
 			if (this.posicionInvalida(avion))
 			{
 				Mapa.getMapa().eliminarAvion(avion);
+				System.out.println("DEB01: Avion fuera de limites(Deleted)");
 			}
 		}
 		
@@ -45,7 +46,7 @@ public class ControlAereo
 			{
 				if (avion.colisionoCon(iteradorInterno.next()))
 				{
-					System.out.println("se chocaron");
+					System.out.println("DEB03: Aviones colisionados(END)");
 				}	
 			}
 			contador++;
