@@ -6,9 +6,9 @@ package aviones.modelo;
 
 public class TamanioAeronave {
 	
-	private static final int TAMANIO_GRANDE = 90;
-	static final int TAMANIO_MEDIANO = 70;
-	static final int TAMANIO_CHICO = 64;
+	private static final int TAMANIO_GRANDE = 30;
+	static final int TAMANIO_MEDIANO = 20;
+	static final int TAMANIO_CHICO = 10;
 	
 	private int tamanio;
 	
