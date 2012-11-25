@@ -13,13 +13,17 @@ import aviones.modelo.AvionChico;
 import aviones.modelo.Helicoptero;
 import aviones.modelo.Mapa;
 import aviones.modelo.Posicion;
+import aviones.modelo.DireccionPista;
 import aviones.modelo.Helipuerto;
+import aviones.modelo.PistaGrande;
+
 
 import aviones.vista.VistaMapa;
 import aviones.vista.VistaAvionGrande;
 import aviones.vista.VistaAvionChico;
 import aviones.vista.VistaHelicoptero;
 import aviones.vista.VistaHelipuerto;
+import aviones.vista.VistaPistaGrande;
 
 import ar.uba.fi.algo3.titiritero.vista.MouseClickController;
 import aviones.control.ControlAeronave;
@@ -32,7 +36,7 @@ public class Juego {
 		//Creo Aviones
 		
 		Posicion posi = new Posicion(0,0);
-		Posicion posf = new Posicion(700,800);
+		Posicion posf = new Posicion(700,0);
 		AvionGrande avion = new AvionGrande(posi,posf,0.3);
 	
 		Posicion posi2 = new Posicion(700,200);
@@ -48,7 +52,11 @@ public class Juego {
 		//Agrego Pistas
 		Posicion posHeli = new Posicion(500,500);
 		Helipuerto helipuerto = new Helipuerto(posHeli);
-		
+		Posicion posPistaGrande = new Posicion(300,50);
+		//(!)
+		Posicion direccion = new Posicion (10,2);
+		DireccionPista direcPistaGrande = new DireccionPista(direccion);
+		PistaGrande pistaGrande = new PistaGrande(posPistaGrande,direcPistaGrande);
 
 		Mapa map= Mapa.getMapa();
 		map.agregarAvion(avion);
@@ -66,6 +74,9 @@ public class Juego {
 		vistaAvionChico.setPosicionable(avionChico);
 		VistaHelipuerto vistaHelipuerto = new VistaHelipuerto();
 		vistaHelipuerto.setPosicionable(helipuerto);
+		VistaPistaGrande vistaPistaGrande = new VistaPistaGrande();
+		vistaPistaGrande.setPosicionable(pistaGrande);
+		
 		
 		/* Creo el control y el panel y al primero le agrego todos los elementos
 		creados*/
@@ -81,6 +92,7 @@ public class Juego {
 		
 		control.agregarDibujable(vistaMapa);
 		control.agregarDibujable(vistaHelipuerto);
+		control.agregarDibujable(vistaPistaGrande);
 		control.agregarDibujable(vistaAvion);
 		control.agregarDibujable(vistaHelicoptero);
 		control.agregarDibujable(vistaAvionChico);
