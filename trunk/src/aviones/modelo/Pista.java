@@ -2,7 +2,7 @@ package aviones.modelo;
 public abstract class Pista implements colisionable
 {
 	protected Posicion posicion;
-	protected TamanioAeronave tamanioAdmitido;
+	protected TamanioAeronave tamanioPista = TamanioAeronave.mediano();
 	protected int AvionesAterrizados;
 	
 	public Pista(Posicion pos)
@@ -13,7 +13,7 @@ public abstract class Pista implements colisionable
 	
 	public boolean colisionoCon(Aeronave unAvion)
 	{
-		return (this.tamanioAdmitido.seSuperponeCon(unAvion.getTamanio(), this.posicion, unAvion.getPosicion()));
+		return (this.tamanioPista.seSuperponeCon(unAvion.getTamanio(), this.posicion, unAvion.getPosicion()));
 	}
 		
 	public boolean puedeAterrizarAvionChico()
@@ -28,11 +28,6 @@ public abstract class Pista implements colisionable
 	
 	public Posicion getPosicion()
 	{ return posicion; }
-	
-	public TamanioAeronave getTamanio()
-	{
-		return tamanioAdmitido.getTamanio();
-	}
 	
 	public void aterrizar(Aeronave unAvion)
 	{ 

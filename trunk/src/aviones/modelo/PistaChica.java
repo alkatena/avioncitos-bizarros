@@ -5,7 +5,7 @@ public class PistaChica extends PistaConDireccion
 	public PistaChica(Posicion pos, DireccionPista unaDireccion)
 	{
 		super(pos, unaDireccion);
-		tamanioAdmitido = TamanioAeronave.chico();
+		tamanioPista = TamanioAeronave.mediano();
 		this.direccion.setTolerancia(15);
 	}	
 	

@@ -5,7 +5,7 @@ public class Helipuerto extends Pista
 	public Helipuerto(Posicion pos)
 	{
 		super(pos);
-		tamanioAdmitido = TamanioAeronave.mediano();
+		tamanioPista = TamanioAeronave.mediano();
 	}	
 	
 	public boolean puedeAterrizarHelicoptero()
