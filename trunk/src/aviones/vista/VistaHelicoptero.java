@@ -11,7 +11,7 @@ public class VistaHelicoptero extends  Imagen /*Cuadrado*/  {
 
 	public VistaHelicoptero()
 	{
-		this.setNombreArchivoImagen("/imagenes/scivess.jpg");
+		this.setNombreArchivoImagen("/imagenes/scivess.png");
 	}
 
 	/*
