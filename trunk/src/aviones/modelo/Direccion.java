@@ -9,11 +9,17 @@ public class Direccion
 		vectorInterno = puntoFinal;
 	}
 	
-	public Posicion getVector()
+	private Posicion getVector()
 	{ return vectorInterno; }
+	
 	
 	public double diferenciaDeAngulos (Direccion otraDireccion)
 	{
 		return Math.toDegrees(Math.acos(vectorInterno.ProductoInternoCanonicoCon(otraDireccion.getVector())/(vectorInterno.norma()*otraDireccion.getVector().norma())));
+	}
+	
+	public Posicion generarStepParaVelocidad(double velocidad)
+	{
+		return vectorInterno.normalizar().multiplicarPorEscalar(velocidad);
 	}
 }

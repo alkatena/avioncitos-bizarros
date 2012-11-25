@@ -26,6 +26,21 @@ public class Radar
 		}		
 		return listaFiltrada;
 	}
+	
+	public Aeronave obtenerAvion(Posicion pos)
+	{
+		ArrayList<Aeronave> lista = this.obtenerAviones();
+		ListIterator<Aeronave> iterador = lista.listIterator();
+		while (iterador.hasNext())
+		{
+			AvionFalso avionFalso = new AvionFalso(pos);
+			Aeronave avion = iterador.next();
+			if(avion.colisionoCon(avionFalso))
+				return avion;
+		}
+		return null;
+	}
+	
 	public ArrayList<Pista> obtenerPistas()
 	{
 		return map.devolverPistas();

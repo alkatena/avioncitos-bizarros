@@ -13,7 +13,7 @@ public class TrayectoriaRecta
 		ptoInicial = pInicial;
 		posActual = pInicial;
 		direccion = this.generarDireccion(pInicial, pFinal);	
-		step = direccion.getVector().normalizar().multiplicarPorEscalar(velocidad);
+		step = direccion.generarStepParaVelocidad(velocidad);
 	}
 	
 	private Direccion generarDireccion(Posicion pInicial, Posicion pFinal)

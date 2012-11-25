@@ -25,36 +25,24 @@ public class Recorrido
 	
 	public void avanzar()
 	{
-		if (trayectoria.getPosActual().compararA(posFinal)) //COMPARA EXACTO; ESTA MAL?
+		trayectoria.avanzar(); // La primer pos del recorrido, no puede ser la actual.
+		if (trayectoria.getPosActual().compararA(posFinal))
 		{
 			posFinal = posiciones.poll();
 			if (posFinal != null)
 				trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
 		}
-		trayectoria.avanzar(); // !!
 	}
-	
-	public void avanzarHastaDestino()
-	{
-		if (trayectoria.getPosActual().compararA(posFinal)) //COMPARA EXACTO; ESTA MAL?
-		{
-			posFinal = posiciones.poll();
-			if (posFinal != null)
-				trayectoria = new TrayectoriaRecta(trayectoria.getPosActual(), posFinal, velocidad);
-		}
-		if (posFinal != null)
-		trayectoria.avanzar();
-	}
-	
+		
 	public Posicion getPosicion()
 	{	return trayectoria.getPosActual();	}
 	
 	public Direccion getDireccion()
 	{	return trayectoria.getDireccion(); }
 	
-	public Posicion getPtoFinal()
+	public boolean finalizado()
 	{
-		return posFinal;
+		return (posFinal == null);
 	}
 	
 }

@@ -41,17 +41,21 @@ public class LanzadorAviones
 		}
 	}
 	
-	private void lanzarAvionRandom()
-	{
-		ArrayList<String> reflexion = new ArrayList<String>();
-		reflexion.add("AvionChico");
-		reflexion.add("AvionGrande");
-		reflexion.add("Helicoptero");
-		String clase = reflexion.get(gen.nextInt(4));
-		Class tipoAvion = Class.forName(clase);
-		Aeronave avion = (Aeronave) tipoAvion.getConstructor(tipoavion.class).newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero());
-		Mapa.getMapa().agregarAvion(avion);
-	}
-		
+	  private void lanzarAvionRandom()
+	    {
+	        ArrayList<Class> reflexion = new ArrayList<Class>();
+	        reflexion.add(AvionChico.class);
+	        reflexion.add(AvionGrande.class);
+	        reflexion.add(Helicoptero.class);
+	        Class tipoAvion = reflexion.get(gen.nextInt(4));
+	        Aeronave avion = null;
+	        try {
+	             avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero());
+	        } catch (Exception e)
+	        {
+	            throw new RuntimeException(e);
+	        }
+	        Mapa.getMapa().agregarAvion(avion);
+	    }	
 }
 		
