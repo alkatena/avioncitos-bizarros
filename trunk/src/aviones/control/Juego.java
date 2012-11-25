@@ -51,9 +51,9 @@ public class Juego {
 		avionChico.agregarAlRecorrido(new Posicion(1000,100));*/
 		
 		//Agrego Pistas
-		Posicion posHeli = new Posicion(500,500);
+		Posicion posHeli = new Posicion(700,410);
 		Helipuerto helipuerto = new Helipuerto(posHeli);
-		Posicion posPistaGrande = new Posicion(300,50);
+		Posicion posPistaGrande = new Posicion(300,500);
 		//(!)
 		Posicion direccion = new Posicion (10,2);
 		DireccionPista direcPistaGrande = new DireccionPista(direccion);
