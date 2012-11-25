@@ -65,7 +65,7 @@ public class Juego {
 		VistaAvionChico vistaAvionChico = new VistaAvionChico();
 		vistaAvionChico.setPosicionable(avionChico);
 		VistaHelipuerto vistaHelipuerto = new VistaHelipuerto();
-		vistaHelipuerto.setPosionable(helipuerto);
+		vistaHelipuerto.setPosicionable(helipuerto);
 		
 		/* Creo el control y el panel y al primero le agrego todos los elementos
 		creados*/
@@ -80,9 +80,11 @@ public class Juego {
 		control.agregarObjetoVivo(refresh);
 		
 		control.agregarDibujable(vistaMapa);
+		control.agregarDibujable(vistaHelipuerto);
 		control.agregarDibujable(vistaAvion);
 		control.agregarDibujable(vistaHelicoptero);
 		control.agregarDibujable(vistaAvionChico);
+		
 		
 		// (!) tiempo en el que espera para refreshiar
 		control.setIntervaloSimulacion(20);
