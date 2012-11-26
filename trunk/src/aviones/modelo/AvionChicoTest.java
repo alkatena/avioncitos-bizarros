@@ -18,7 +18,7 @@ public class AvionChicoTest extends TestCase {
 	{
 			pInicial = new Posicion(1,0);
 			pInicialColision = new Posicion(1,1);
-			otraPInicial = new Posicion(9,9);
+			otraPInicial = new Posicion(15,15);
 			trayect = new Posicion (4,0);
 			avioneta = new AvionChico(pInicial, trayect, vel);
 			aeronaveChocadora = new AvionChico(pInicialColision,trayect, vel);

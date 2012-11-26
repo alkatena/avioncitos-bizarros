@@ -23,7 +23,7 @@ public class AvionGrandeTest extends TestCase {
 	{
 
 			pInicialColision = new Posicion(1,6);
-			otraPInicial = new Posicion(9,9);
+			otraPInicial = new Posicion(35,30);
 			trayect = new Posicion (4,0);
 			
 
@@ -105,9 +105,9 @@ public class AvionGrandeTest extends TestCase {
 	
 	public void testNoColisionEntreDosAviones()
 	{
-		pInicial = new Posicion(0,0);
+		pInicial = new Posicion(1,0);
 		
-		boeing777 = new AvionGrande(pInicial, trayect, 1);
+		boeing777 = new AvionGrande(pInicial, trayect, 0.5);
 		assertFalse (boeing777.colisionoCon(aeronaveNoChocadora));		
 	}
 	

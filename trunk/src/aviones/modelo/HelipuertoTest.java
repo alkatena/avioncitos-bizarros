@@ -22,7 +22,7 @@ public class HelipuertoTest extends TestCase
 			posicionPista = new Posicion(1,1);
 			helipuerto = new Helipuerto(posicionPista);
 			posicionInicial = new Posicion(1,0.9);
-			posicionInicial2 = new Posicion(9,0.9);
+			posicionInicial2 = new Posicion(25,25);
 			posicionFinal = new Posicion(1,50);
 			helicopteroQueAterriza = new Helicoptero(posicionInicial,posicionFinal,0.1);
 			helicopteroQueNoAterriza = new Helicoptero(posicionInicial2,posicionFinal,0.1);

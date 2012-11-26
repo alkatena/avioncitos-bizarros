@@ -23,7 +23,7 @@ public class HelicopteroTest extends TestCase {
 			pInicial = new Posicion(1,0);
 			pInicialColision = new Posicion(1,6);
 
-			otraPInicial = new Posicion(9,9);
+			otraPInicial = new Posicion(20,9);
 			trayect = new Posicion (4,0);
 			helicopteroPresidencial = new Helicoptero(pInicial, trayect, vel);
 			aeronaveChocadora = new Helicoptero(pInicialColision, trayect, vel);

@@ -4,7 +4,7 @@ public class AvionChico extends Aeronave
 		public AvionChico(Posicion inicio, Posicion fin, double velocidad)
 		{
 			super (inicio, fin, velocidad);
-			tamanio = TamanioAeronave.mediano();
+			tamanio = TamanioAeronave.chico();
 		}
 		
 		public boolean puedeAterrizarEn(Pista unaPista)

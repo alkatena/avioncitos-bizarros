@@ -77,8 +77,8 @@ public class PistaChicaTest extends TestCase
 	
 	public void testAvionQueNoColisiona()
 	{
-		posicionInicial = new Posicion(6,2);
-		Posicion trayect = new Posicion (3,3);
+		posicionInicial = new Posicion(20,15);
+		Posicion trayect = new Posicion (1,1);
 		avionQueNoColisiona = new AvionChico(posicionInicial, trayect, vel);
 		
 		assertFalse (pistaChica.colisionoCon(avionQueNoColisiona));
