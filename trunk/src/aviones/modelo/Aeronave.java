@@ -1,7 +1,5 @@
 package aviones.modelo;
 
-import java.util.Queue;
-
 import  ar.uba.fi.algo3.titiritero.Posicionable;
 
 public abstract class Aeronave implements colisionable, Posicionable

@@ -6,6 +6,7 @@ import java.util.ListIterator;
 public class ControlAereo 
 {
 	private Radar radar = new Radar();
+	private Aeronave avionEliminado = null;
 	
 	public void actualizar()
 	{
@@ -17,11 +18,12 @@ public class ControlAereo
 			avion.actualizar();
 			if (this.posicionInvalida(avion))
 			{
-				Mapa.getMapa().eliminarAvion(avion);
+				avionEliminado = avion;
 				System.out.println("DEB01: Avion fuera de limites(Deleted)");
 			}
 		}
-		
+		if (avionEliminado != null)
+			{Mapa.getMapa().eliminarAvion(avionEliminado);avionEliminado = null;}
 		this.controlarChoques();
 	}
 	

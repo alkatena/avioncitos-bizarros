@@ -30,18 +30,18 @@ public class ControlAeronave implements MouseClickObservador
 			}
 			else
 			{	
-				if (avionSeleccionado != null)
+				if ((avionSeleccionado != null) && primero)
 				{
-					if(primero)
-					{
-						avionSeleccionado.cambiarRecorrido(pos);
-						primero = false;
-						System.out.println("DEB05: Recorrido cambiado");
-					}
-					else
-						avionSeleccionado.agregarAlRecorrido(pos);
-						System.out.println("DEB06: Recorrido agregado");
+					avionSeleccionado.cambiarRecorrido(pos);
+					primero = false;
+					System.out.println("DEB05: Recorrido cambiado");
+				}
+				else
+				{
+					avionSeleccionado.agregarAlRecorrido(pos);
+					System.out.println("DEB06: Recorrido agregado");
 				}
 			}
-	}
+		}
 }
+

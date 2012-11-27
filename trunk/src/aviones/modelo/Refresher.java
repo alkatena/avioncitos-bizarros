@@ -1,7 +1,7 @@
 package aviones.modelo;
 
-import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.ObjetoVivo;
+
 
 public class Refresher implements ObjetoVivo
 {
@@ -9,12 +9,11 @@ public class Refresher implements ObjetoVivo
 	private ControlTerrestre controlTerrestre;
 	private LanzadorAviones lanzador;
 
-	public Refresher(ControladorJuego control)
+	public Refresher()
 	{
 		controlAereo = new ControlAereo();
 		controlTerrestre = new ControlTerrestre();
-		lanzador = new LanzadorAviones(5,control);
-		
+		lanzador = new LanzadorAviones(5);		
 	}
 	
 	public void refresh()
