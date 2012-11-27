@@ -2,9 +2,9 @@ package aviones.control;
 
 public abstract class Nivel 
 {
-	public static boolean instanciable = true;
+	private static boolean instanciable = true;
 	
-	public static void instanciar(Niveles nivel)
+	public final static void instanciar(Niveles nivel)
 	{
 		if (instanciable)
 		{
