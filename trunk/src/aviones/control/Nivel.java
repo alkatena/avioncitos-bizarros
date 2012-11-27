@@ -4,10 +4,12 @@ public abstract class Nivel
 {
 	public static boolean instanciable = true;
 	
-	public final void construite()
+	public static void instanciar(Niveles nivel)
 	{
 		if (instanciable)
-			this.build();
+		{
+			nivel.crear().build();
+		}
 		instanciable = false;
 	}
 	

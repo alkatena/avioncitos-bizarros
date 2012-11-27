@@ -39,8 +39,7 @@ public class Juego {
 		
 		
 		//=======Selecciono Nivel=======
-		Nivel nivel = new NivelStarCraft();
-		nivel.construite();
+		Nivel.instanciar(Niveles.Starcraft);
 		
 		//========ComienzoJuego=========
 		control.comenzarJuego();	

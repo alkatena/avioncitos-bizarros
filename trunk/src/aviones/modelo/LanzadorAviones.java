@@ -53,11 +53,11 @@ public class LanzadorAviones
 		    
 		    //Selecciono la aeronave randomeada.
 		    Aeronave avion = null;
-	        ArrayList<Class> reflexion = new ArrayList<Class>();
+	        ArrayList<Class<?>> reflexion = new ArrayList<Class<?>>();
 	        reflexion.add(AvionChico.class);
 	        reflexion.add(AvionGrande.class);
 	        reflexion.add(Helicoptero.class);
-	        Class tipoAvion = reflexion.get(index); 			
+	        Class<?> tipoAvion = reflexion.get(index); 			
 	        	        
 	        double[] velocidad= new double[] {0.1, 0.2, 0.3, 0.4, 0.5};
 	       	        
