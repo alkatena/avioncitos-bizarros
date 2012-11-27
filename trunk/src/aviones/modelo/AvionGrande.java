@@ -1,4 +1,7 @@
 package aviones.modelo;
+
+import aviones.vista.VistaAvionGrande;
+
 public class AvionGrande extends Aeronave 
 	{
 		public AvionGrande(Posicion inicio, Posicion fin, double velocidad)
@@ -10,6 +13,11 @@ public class AvionGrande extends Aeronave
 		public boolean puedeAterrizarEn(Pista unaPista)
 		{
 			return unaPista.puedeAterrizarAvionGrande();
+		}
+		
+		protected void asignarVista()
+		{
+			vistaAvion = new VistaAvionGrande();
 		}
 	
 	}

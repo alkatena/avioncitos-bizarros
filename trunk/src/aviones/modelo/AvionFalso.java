@@ -1,4 +1,7 @@
 package aviones.modelo;
+
+import aviones.vista.VistaAvionChico;
+
 public class AvionFalso extends Aeronave 
 	{
 		public AvionFalso(Posicion inicio)
@@ -9,4 +12,7 @@ public class AvionFalso extends Aeronave
 		
 		public boolean puedeAterrizarEn(Pista unaPista) 
 		{ return false; }
+		
+		protected void asignarVista()
+		{vistaAvion = new VistaAvionChico();}
 	}

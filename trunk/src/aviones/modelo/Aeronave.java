@@ -1,17 +1,23 @@
 package aviones.modelo;
 
+import ar.uba.fi.algo3.titiritero.Dibujable;
 import  ar.uba.fi.algo3.titiritero.Posicionable;
 
 public abstract class Aeronave implements colisionable, Posicionable
 {	
 	protected TamanioAeronave tamanio;
 	protected Recorrido recorrido;
+	protected Dibujable vistaAvion;
 	
 
 	public Aeronave(Posicion inicio, Posicion fin, double velocidad)
 	{
 		recorrido = new Recorrido(inicio, fin, velocidad);
+		this.asignarVista();
+		vistaAvion.setPosicionable(this);
 	}
+	
+	protected abstract void asignarVista();
 	
 	public void cambiarRecorrido(Posicion posicion)
 	{
@@ -45,6 +51,9 @@ public abstract class Aeronave implements colisionable, Posicionable
 		
 	public Direccion getDireccion()
 	{	return recorrido.getDireccion();	}
+	
+	public Dibujable getVista()
+	{ return vistaAvion; }
 	
 	// Por ser objeto Posicionable
 	

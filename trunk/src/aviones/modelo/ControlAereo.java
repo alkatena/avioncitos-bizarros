@@ -2,6 +2,8 @@ package aviones.modelo;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
+import aviones.control.ControlVistas;
+
 
 public class ControlAereo 
 {
@@ -23,7 +25,10 @@ public class ControlAereo
 			}
 		}
 		if (avionEliminado != null)
-			{Mapa.getMapa().eliminarAvion(avionEliminado);avionEliminado = null;}
+			{	
+				ControlVistas.removerDibujable(avionEliminado.getVista());
+				Mapa.getMapa().eliminarAvion(avionEliminado);avionEliminado = null;
+			}
 		this.controlarChoques();
 	}
 	

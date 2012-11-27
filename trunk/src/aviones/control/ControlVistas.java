@@ -2,7 +2,6 @@ package aviones.control;
 
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.Dibujable;
-import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 
 
 public class ControlVistas 
@@ -17,14 +16,13 @@ public class ControlVistas
 	
 	
 	public static void removerDibujable(Dibujable dibujable)
-	{	controlador.removerDibujable(dibujable);	}
+	{	
+		controlador.removerDibujable(dibujable);
+		controlador.getSuperficieDeDibujo().limpiar();
+	}
 	
 	
 	public static void agregarDibujable(Dibujable dibujable)
 	{	controlador.agregarDibujable(dibujable);	}
-	
-	
-	public static SuperficieDeDibujo getSuperficie()
-	{	return controlador.getSuperficieDeDibujo();	}
 
 }
