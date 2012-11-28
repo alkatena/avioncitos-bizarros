@@ -33,7 +33,7 @@ public class TamanioAeronave {
 		return new TamanioAeronave(this.tamanio);
 	}
 	
-	public int getTamanioInterno()
+	private int getTamanioInterno()
 	{
 		return tamanio;
 	}

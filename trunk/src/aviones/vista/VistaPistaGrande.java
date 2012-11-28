@@ -6,6 +6,6 @@ public class VistaPistaGrande extends Imagen {
 
 		public VistaPistaGrande()
 		{
-			this.setNombreArchivoImagen("/imagenes/pistaLargaD.jpg");
+			this.setNombreArchivoImagen("/imagenes/pistaLargaD.png");
 		}
 }

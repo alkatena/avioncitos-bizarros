@@ -7,6 +7,7 @@ public abstract class Pista implements colisionable, Posicionable
 	protected Posicion posicion;
 	protected TamanioAeronave tamanioPista = TamanioAeronave.mediano();
 	protected int AvionesAterrizados;
+	protected int anchoImagen, altoImagen;
 	
 	public Pista(Posicion pos)
 	{
@@ -44,18 +45,14 @@ public abstract class Pista implements colisionable, Posicionable
 	{	return AvionesAterrizados;	}
 	
 	public int getX()
-	{
-		double pos = this.getPosicion().getX();
-		pos = (pos - tamanioPista.getTamanioInterno()*2);
-		return (int)pos;
-	
+	{	
+		
+		return (int) ( this.getPosicion().getX() - (this.anchoImagen/2) );
 	}
+	
 	public int getY()
 	{
-		double pos = this.getPosicion().getY();
-		pos = (pos - tamanioPista.getTamanioInterno()*2);
-		return (int)pos;
-	
+		return (int) ( this.getPosicion().getY() - (this.anchoImagen/2) );
 	}
 	
 }

@@ -8,7 +8,7 @@ public class Mapa implements Posicionable
 	
 	private static Mapa map;
 	public int limiteHor = 1110;
-	public int limiteVer = 600;
+	public int limiteVer = 580;
 	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
 	private ArrayList<Pista> listaPistas = new ArrayList<Pista>();
 	

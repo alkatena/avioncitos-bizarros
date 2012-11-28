@@ -8,6 +8,7 @@ public abstract class Aeronave implements colisionable, Posicionable
 	protected TamanioAeronave tamanio;
 	protected Recorrido recorrido;
 	protected Dibujable vistaAvion;
+	protected int anchoImagen, altoImagen;
 	
 
 	public Aeronave(Posicion inicio, Posicion fin, double velocidad)
@@ -68,18 +69,13 @@ public abstract class Aeronave implements colisionable, Posicionable
 	 * 
 	 */
 	public int getX()
-	{
-		double pos = this.getPosicion().getX();
-		pos = (pos - tamanio.getTamanioInterno()*2);
-		return (int)pos;
-	
+	{	
+		return (int) ( this.getPosicion().getX() - (this.anchoImagen/2) );
 	}
+	
 	public int getY()
 	{
-		double pos = this.getPosicion().getY();
-		pos = (pos - tamanio.getTamanioInterno()*2);
-		return (int)pos;
-	
+		return (int) ( this.getPosicion().getY() - (this.altoImagen/2) );
 	}
 	
 }

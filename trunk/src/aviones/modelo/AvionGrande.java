@@ -8,6 +8,7 @@ public class AvionGrande extends Aeronave
 		{
 			super (inicio, fin, velocidad);
 			tamanio = TamanioAeronave.grande();
+			anchoImagen = 80; altoImagen = 80;
 		}
 	
 		public boolean puedeAterrizarEn(Pista unaPista)

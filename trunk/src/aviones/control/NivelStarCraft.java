@@ -17,8 +17,8 @@ public class NivelStarCraft extends Nivel
 		{
 			//Pistas
 			Helipuerto helipuerto = new Helipuerto(new Posicion(830,380));
-			PistaGrande pistaGrande = new PistaGrande(new Posicion(450,100),new DireccionPista( new Posicion(1,-1) ));
-			PistaChica pistaChica = new PistaChica(new Posicion(210,420),new DireccionPista( new Posicion(1,1) ));
+			PistaGrande pistaGrande = new PistaGrande(new Posicion(600,280),new DireccionPista( new Posicion(1,1) ));
+			PistaChica pistaChica = new PistaChica(new Posicion(350,550),new DireccionPista( new Posicion(1,-1) ));
 			
 			Mapa.getMapa().agregarPista(helipuerto);
 			Mapa.getMapa().agregarPista(pistaGrande);

@@ -8,6 +8,7 @@ public class Helicoptero extends Aeronave
 		{
 			super (inicio, fin, velocidad);
 			tamanio = TamanioAeronave.chico();
+			anchoImagen = 40; altoImagen = 40;
 		}
 		
 

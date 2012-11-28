@@ -7,6 +7,8 @@ public class PistaGrande extends PistaConDireccion
 		super(pos, unaDireccion);
 		tamanioPista = TamanioAeronave.mediano();
 		this.direccion.setTolerancia(20);
+		this.anchoImagen = 400;
+		this.altoImagen = 210;
 	}
 	
 	public boolean puedeAterrizarAvionGrande()
