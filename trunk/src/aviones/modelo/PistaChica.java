@@ -6,8 +6,8 @@ public class PistaChica extends PistaConDireccion
 		super(pos, unaDireccion);
 		tamanioPista = TamanioAeronave.chico();
 		this.direccion.setTolerancia(15);
-		this.anchoImagen = 300;
-		this.altoImagen = 150;
+		this.anchoImagen = 190;
+		this.altoImagen = 100;
 	}	
 	
 	public boolean puedeAterrizarnAvionChico()
