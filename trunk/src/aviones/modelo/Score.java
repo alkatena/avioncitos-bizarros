@@ -1,6 +1,8 @@
 package aviones.modelo;
 
-public class Score 
+import ar.uba.fi.algo3.titiritero.Posicionable;
+
+public class Score implements Posicionable
 {
 	private int puntaje = 0;
 	private static Score score;
@@ -22,5 +24,16 @@ public class Score
 	public int devolverPuntaje()
 	{
 		return puntaje;
+	}
+	
+	// hardCore dimensiones mapa
+	public int getX()
+	{
+		return  (Mapa.getMapa().getLimiteHor()-120);
+	}
+	
+	public int getY()
+	{
+		return (Mapa.getMapa().getLimiteVer()-60);
 	}
 }
