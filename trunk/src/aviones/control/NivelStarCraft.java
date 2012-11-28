@@ -1,15 +1,21 @@
 package aviones.control;
 
+import java.awt.Color;
+import java.awt.Font;
+import ar.uba.fi.algo3.titiritero.vista.TextoDinamico;
+
 import aviones.modelo.DireccionPista;
 import aviones.modelo.Helipuerto;
 import aviones.modelo.Mapa;
 import aviones.modelo.PistaGrande;
 import aviones.modelo.PistaChica;
 import aviones.modelo.Posicion;
+import aviones.modelo.Score;
 import aviones.vista.VistaHelipuerto;
 import aviones.vista.VistaMapa;
 import aviones.vista.VistaPistaGrande;
 import aviones.vista.VistaPistaChica;
+
 
 public class NivelStarCraft extends Nivel
 {
@@ -17,8 +23,8 @@ public class NivelStarCraft extends Nivel
 		{
 			//Pistas
 			Helipuerto helipuerto = new Helipuerto(new Posicion(830,380));
-			PistaGrande pistaGrande = new PistaGrande(new Posicion(480,220),new DireccionPista( new Posicion(10,10) ));
-			PistaChica pistaChica = new PistaChica(new Posicion(310,450),new DireccionPista( new Posicion(10,-10) ));
+			PistaGrande pistaGrande = new PistaGrande(new Posicion(480,220),new DireccionPista( new Posicion(10,-10) ));
+			PistaChica pistaChica = new PistaChica(new Posicion(310,450),new DireccionPista( new Posicion(10,10) ));
 			
 			Mapa.getMapa().agregarPista(helipuerto);
 			Mapa.getMapa().agregarPista(pistaGrande);
@@ -39,5 +45,12 @@ public class NivelStarCraft extends Nivel
 			ControlVistas.agregarDibujable(vistaHelipuerto);
 			ControlVistas.agregarDibujable(vistaPistaGrande);
 			ControlVistas.agregarDibujable(vistaPistaChica);
+			
+			//Agrego el Score correspondiente a las dimensiones del mapa
+			TextoDinamico textoScoreDin = new TextoDinamico(Score.getScore(),Color.RED, new Font( "TimesRoman",Font.PLAIN,25));
+			textoScoreDin.setPosicionable(Score.getScore());
+			ControlVistas.agregarDibujable(textoScoreDin);
+			
+			
 		}
 }
