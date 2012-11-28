@@ -52,7 +52,7 @@ public abstract class Pista implements colisionable, Posicionable
 	
 	public int getY()
 	{
-		return (int) ( this.getPosicion().getY() - (this.anchoImagen/2) );
+		return (int) ( this.getPosicion().getY() - (this.altoImagen/2) );
 	}
 	
 }
