@@ -7,7 +7,8 @@ public class Mapa implements Posicionable
 {
 	
 	private static Mapa map;
-	public int limite = 800;
+	public int limiteHor = 1000;
+	public int limiteVer = 600;
 	private ArrayList<Aeronave> listaAviones = new ArrayList<Aeronave>();
 	private ArrayList<Pista> listaPistas = new ArrayList<Pista>();
 	
@@ -21,10 +22,13 @@ public class Mapa implements Posicionable
 		return map;
 	}
 
-	public int getLimite()
+	public int getLimiteHor()
 	{
-		return limite;
+		return limiteHor;
 	}
+	
+	public int getLimiteVer()
+	{ return limiteVer; }
 	
 	public void eliminarAvion(Aeronave avion)
 	{
@@ -43,7 +47,7 @@ public class Mapa implements Posicionable
 	
 	public boolean estaDentroDeLimites(Posicion unaPos)
 	{
-		return unaPos.estaEntre(0,limite);
+		return unaPos.estaEntre(0,limiteHor,limiteVer);
 	}
 	//Getters===========================
 	

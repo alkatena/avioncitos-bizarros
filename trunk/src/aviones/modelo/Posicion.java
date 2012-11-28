@@ -78,13 +78,13 @@ public class Posicion
 		return ((this.x*pos.getX())+(this.y*pos.getY()));
 	}
 	
-	public boolean estaEntre(int limiteInf, int limiteSup)
+	public boolean estaEntre(int limiteInf, int limiteHor, int limiteVer)
 	{
-		if (x > limiteSup || x < limiteInf)
+		if (x > limiteHor || x < limiteInf)
 		{
 			return false;
 		}
-		if (y > limiteSup || y < limiteInf)
+		if (y > limiteVer || y < limiteInf)
 		{
 			return false;
 		}

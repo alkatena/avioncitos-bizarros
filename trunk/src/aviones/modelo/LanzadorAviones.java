@@ -8,7 +8,7 @@ import aviones.control.ControlVistas;
 
 public class LanzadorAviones
 {
-	int max = Mapa.getMapa().getLimite();
+	int max = Mapa.getMapa().getLimiteHor();
 	Random gen = new Random();
 	int maxAviones;
 	int ciclosDeEspera = 400;
