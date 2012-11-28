@@ -30,17 +30,17 @@ public class Score implements Posicionable, ObjetoDeTexto
 	// hardCore dimensiones mapa
 	public int getX()
 	{
-		return  (Mapa.getMapa().getLimiteHor()-120);
+		return  (Mapa.getMapa().getLimiteHor()-150);
 	}
 	
 	public int getY()
 	{
-		return (Mapa.getMapa().getLimiteVer()-60);
+		return (Mapa.getMapa().getLimiteVer()-50);
 	}
 	
 	public String getTexto()
 	{
-		return String.valueOf(this.devolverPuntaje());
+		return "SCORE: "+String.valueOf(this.devolverPuntaje());
 	}
 	
 }
