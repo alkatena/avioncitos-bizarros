@@ -2,8 +2,6 @@ package aviones.modelo;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-import aviones.control.ControlVistas;
-
 public class TorreDeControl
 {
 
@@ -29,7 +27,7 @@ public class TorreDeControl
 			}
 		}
 		if(avionEliminado != null)
-			{	ControlVistas.removerDibujable(avionEliminado.getVista());
+			{	
 				pista.aterrizar(avionEliminado);avionEliminado = null;
 			}
 	}

@@ -1,6 +1,7 @@
 package aviones.modelo;
 
 import  ar.uba.fi.algo3.titiritero.Posicionable;
+import aviones.control.ControlVistas;
 
 public abstract class Pista implements colisionable, Posicionable
 {
@@ -37,6 +38,7 @@ public abstract class Pista implements colisionable, Posicionable
 	{ 
 		AvionesAterrizados++;
 		Score.getScore().sumarPuntaje(1);
+		ControlVistas.removerDibujable(unAvion.getVista());
 		Mapa.getMapa().eliminarAvion(unAvion);
 		System.out.println("DEB02: Avion estacionado(Deleted)");
 	}

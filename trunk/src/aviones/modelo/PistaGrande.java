@@ -1,4 +1,5 @@
 package aviones.modelo;
+
 public class PistaGrande extends PistaConDireccion
 {
 
@@ -6,7 +7,7 @@ public class PistaGrande extends PistaConDireccion
 	{
 		super(pos, unaDireccion);
 		tamanioPista = TamanioAeronave.mediano();
-		this.direccion.setTolerancia(10);
+		this.direccion.setTolerancia(20);
 		this.anchoImagen = 190;
 		this.altoImagen = 320;
 	}
