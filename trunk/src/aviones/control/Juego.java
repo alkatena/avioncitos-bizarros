@@ -8,7 +8,6 @@ import ar.uba.fi.algo3.titiritero.vista.MouseClickController;
 
 // las nuestras
 import aviones.modelo.Refresher;
-import aviones.control.ControlAeronave;
 
 
 

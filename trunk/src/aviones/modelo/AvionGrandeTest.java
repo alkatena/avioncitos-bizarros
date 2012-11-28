@@ -35,14 +35,14 @@ public class AvionGrandeTest extends TestCase {
 	public void testactualizarPosicionVarias()
 	{
 		pInicial = new Posicion(0,0);
-		pIntermedia = new Posicion(0,50); // Hace que el avión se mueva en la dirección (0,1)
+		pIntermedia = new Posicion(0,50); // Hace que el aviÃ³n se mueva en la direcciÃ³n (0,1)
 		pFinal1 = new Posicion(1,1);
 		pFinal2 = new Posicion(1,2);
 		pArbitraria = new Posicion(1,2);
 		
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
-		boeing777.actualizar(); // El avión se movió hacia la (0,1)
-		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.actualizar(); // El aviÃ³n se moviÃ³ hacia la (0,1)
+		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posiciÃ³n (1,1) y luego en la (1,2)
 		boeing777.agregarAlRecorrido(pFinal2);
 		boeing777.actualizar(); 
 		boeing777.actualizar(); 
@@ -54,14 +54,14 @@ public class AvionGrandeTest extends TestCase {
 	public void testactualizarPosicionAvionQueSigue()
 	{
 		pInicial = new Posicion(0,0);
-		pIntermedia = new Posicion(0,50); // Hace que el avión se mueva en la dirección (0,1)
+		pIntermedia = new Posicion(0,50); // Hace que el aviÃ³n se mueva en la direcciÃ³n (0,1)
 		pFinal1 = new Posicion(1,1);
 		pFinal2 = new Posicion(1,2);
 		pArbitraria = new Posicion(1,6);
 		
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
-		boeing777.actualizar(); // El avión se movió hacia la (0,1)
-		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.actualizar(); // El aviÃ³n se moviÃ³ hacia la (0,1)
+		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posiciÃ³n (1,1) y luego en la (1,2)
 		boeing777.agregarAlRecorrido(pFinal2);
 		boeing777.actualizar();
 		boeing777.actualizar();
@@ -76,14 +76,14 @@ public class AvionGrandeTest extends TestCase {
 	public void testactualizarPosicionVerificarIntermedia()
 	{
 		pInicial = new Posicion(0,0);
-		pIntermedia = new Posicion(0,50); // Hace que el avión se mueva en la dirección (0,1)
+		pIntermedia = new Posicion(0,50); // Hace que el aviÃ³n se mueva en la direcciÃ³n (0,1)
 		pFinal1 = new Posicion(1,1);
 		pFinal2 = new Posicion(1,2);
 		pArbitraria = new Posicion(1,3);
 		
 		boeing777 = new AvionGrande(pInicial, pIntermedia, 1);
-		boeing777.actualizar(); // El avión se movió hacia la (0,1)
-		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posición (1,1) y luego en la (1,2)
+		boeing777.actualizar(); // El aviÃ³n se moviÃ³ hacia la (0,1)
+		boeing777.cambiarRecorrido(pFinal1); // "Hago clic" en las posiciÃ³n (1,1) y luego en la (1,2)
 		boeing777.agregarAlRecorrido(pFinal2);
 		boeing777.actualizar();
 		boeing777.actualizar();

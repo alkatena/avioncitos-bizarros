@@ -11,11 +11,7 @@ public class HelipuertoTest extends TestCase
 	Posicion posicionInicial;
 	Posicion posicionInicial2;
 	Posicion posicionFinal;
-	Posicion direccion;
-	Posicion direccionNoParecida;
-	DireccionPista direccionPista;
 	Helipuerto helipuerto;
-	double vel = 0.5;
 	
 	public void setUp() 
 	{
@@ -35,7 +31,7 @@ public class HelipuertoTest extends TestCase
 		
 	}
 	
-	public void testHelicopteroQueNoColisionaConPista()  // Acá hay algo raro... Si lo pongo en la (X,0.9), X<9 colisiona, y no debería porque el radio del helicoptero es 4, y ya en la (5.1,0.9) no debería colisionar. Me fijé y se debe a que la pista también tiene hitbox, del mismo tamaño de la aeronave que soporta, medio negro me parece. Debería tener tamamio de pista chica, es una boludez igual. 
+	public void testHelicopteroQueNoColisionaConPista()  // AcÃ¡ hay algo raro... Si lo pongo en la (X,0.9), X<9 colisiona, y no deberÃ­a porque el radio del helicoptero es 4, y ya en la (5.1,0.9) no deberÃ­a colisionar. Me fijÃ© y se debe a que la pista tambiÃ©n tiene hitbox, del mismo tamaÃ±o de la aeronave que soporta, medio negro me parece. DeberÃ­a tener tamamio de pista chica, es una boludez igual.
 	{
 		assertFalse (	helipuerto.colisionoCon(helicopteroQueNoAterriza)		);
 		
