@@ -14,4 +14,7 @@ public class PistaGrande extends PistaConDireccion
 	
 	public boolean puedeAterrizarAvionGrande()
 	{	return true;	}
+	
+	public boolean puedeAterrizarAvionChico()
+	{	return true;	}
 }
