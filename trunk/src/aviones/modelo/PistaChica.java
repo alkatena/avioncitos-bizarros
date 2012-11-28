@@ -10,6 +10,6 @@ public class PistaChica extends PistaConDireccion
 		this.altoImagen = 100;
 	}	
 	
-	public boolean puedeAterrizarnAvionChico()
+	public boolean puedeAterrizarAvionChico()
 	{	return true; }
 }
