@@ -26,7 +26,7 @@ public class Juego {
 		control.agregarObjetoVivo(new Refresher());
 		
 		//====Apartado visual: Panel y Ventana====
-		Panel panel = new Panel(1100,600);
+		Panel panel = new Panel(1110,600);
 		control.setSuperficieDeDibujo(panel);
 		Ventana ventana = new Ventana(1110,600,control);
 		ventana.setTitle("StarCraftTraffic");
