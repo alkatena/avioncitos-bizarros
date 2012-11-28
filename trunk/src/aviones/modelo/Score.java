@@ -1,8 +1,9 @@
 package aviones.modelo;
 
 import ar.uba.fi.algo3.titiritero.Posicionable;
+import ar.uba.fi.algo3.titiritero.vista.ObjetoDeTexto;
 
-public class Score implements Posicionable
+public class Score implements Posicionable, ObjetoDeTexto
 {
 	private int puntaje = 0;
 	private static Score score;
@@ -36,4 +37,10 @@ public class Score implements Posicionable
 	{
 		return (Mapa.getMapa().getLimiteVer()-60);
 	}
+	
+	public String getTexto()
+	{
+		return String.valueOf(this.devolverPuntaje());
+	}
+	
 }
