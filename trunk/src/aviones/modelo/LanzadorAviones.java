@@ -28,7 +28,7 @@ public class LanzadorAviones
 	
 	private Posicion randomearPosTablero()
 	{
-		Posicion pos = new Posicion(gen.nextInt(max), gen.nextInt(max));
+		Posicion pos = new Posicion(gen.nextInt(max+400), gen.nextInt(max));
 		return pos;
 	}
 	
