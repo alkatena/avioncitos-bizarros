@@ -5,10 +5,7 @@ import ar.uba.fi.algo3.titiritero.vista.Imagen;
 
 import aviones.modelo.AvionGrande;
 import aviones.modelo.Posicion;
-import aviones.vista.VistaAvionGrandeAbajo;
-import aviones.vista.VistaAvionGrandeArriba;
-import aviones.vista.VistaAvionGrandeHD;
-import aviones.vista.VistaAvionGrandeHI;
+
 
 
 public class VistaAvionGrandeConDireccion extends Imagen
