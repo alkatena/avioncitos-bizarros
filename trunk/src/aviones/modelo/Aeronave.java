@@ -78,4 +78,9 @@ public abstract class Aeronave implements colisionable, Posicionable
 		return (int) ( this.getPosicion().getY() - (this.altoImagen/2) );
 	}
 	
+	public Posicion getProximaPosicion() 
+	{
+		return this.recorrido.getSiguientePosicion();
+	}
+	
 }

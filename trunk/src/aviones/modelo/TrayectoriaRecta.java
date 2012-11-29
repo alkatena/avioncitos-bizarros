@@ -25,6 +25,10 @@ public class TrayectoriaRecta
 	 {
 	  posActual = posActual.sumar(step);
 	 }
+	 public Posicion getSiguientePosicion()
+	 {
+		 return this.getPosActual().sumar(step);
+	 }
 	
 	public Direccion getDireccion()
 	{

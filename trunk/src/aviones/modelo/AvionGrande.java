@@ -1,6 +1,15 @@
 package aviones.modelo;
 
 import aviones.vista.VistaAvionGrande;
+import aviones.vista.VistaAvionGrandeAbajo;
+import aviones.vista.VistaAvionGrandeAbajoDerecha;
+import aviones.vista.VistaAvionGrandeAbajoIzquierda;
+import aviones.vista.VistaAvionGrandeArriba;
+import aviones.vista.VistaAvionGrandeArribaDerecha;
+import aviones.vista.VistaAvionGrandeArribaIzquierda;
+import aviones.vista.VistaAvionGrandeConDireccion;
+import aviones.vista.VistaAvionGrandeDerecha;
+import aviones.vista.VistaAvionGrandeIzquierda;
 
 public class AvionGrande extends Aeronave 
 	{
@@ -18,7 +27,10 @@ public class AvionGrande extends Aeronave
 		
 		protected void asignarVista()
 		{
-			vistaAvion = new VistaAvionGrande();
+			 vistaAvion = new VistaAvionGrandeConDireccion(this);
 		}
 	
+		
+
+		
 	}

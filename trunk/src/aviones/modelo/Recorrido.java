@@ -52,4 +52,9 @@ public class Recorrido
 		return (posFinal == null);
 	}
 	
+	public Posicion getSiguientePosicion()
+	{
+		return	this.trayectoria.getSiguientePosicion();
+	}
+	
 }
