@@ -13,7 +13,7 @@ public class Refresher implements ObjetoVivo
 	{
 		controlAereo = new ControlAereo();
 		controlTerrestre = new ControlTerrestre();
-		lanzador = new LanzadorAviones(5);		
+		lanzador = new LanzadorAviones(15);		
 	}
 	
 	public void refresh()
