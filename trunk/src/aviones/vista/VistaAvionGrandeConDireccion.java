@@ -25,7 +25,6 @@ public class VistaAvionGrandeConDireccion extends VistasAeronavesDireccionadas
 		vistaArribaIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierUpLeft.png");
 		vistaArribaDerecha.setNombreArchivoImagen("/imagenes/battlecrousierUpRight.png");
 		vistaAbajoIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierDownLeft.png");
-		vistaArribaDerecha.setNombreArchivoImagen("/imagenes/battlecrousierDownRight.png");
-
+		vistaAbajoDerecha.setNombreArchivoImagen("/imagenes/battlecrousierDownRight.png");
 	}
 }
