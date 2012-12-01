@@ -6,6 +6,7 @@ import java.awt.Font;
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.Dibujable;
 
+import ar.uba.fi.algo3.titiritero.audio.Reproductor;
 import ar.uba.fi.algo3.titiritero.vista.TextoEstatico;
 import aviones.vista.VistaTextoFin;
 
@@ -50,5 +51,10 @@ public class ControlVistas
 	public static boolean estaEnEjecucion()
 	{
 		return controlador.estaEnEjecucion();
+	}
+	
+	public static Reproductor getReproductorDeAudio()
+	{
+		return controlador.getReproductorDeAudio();
 	}
 }
