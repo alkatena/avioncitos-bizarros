@@ -53,7 +53,7 @@ public class ControlAereo
 			{
 				if (avion.colisionoCon(iteradorInterno.next()))
 				{
-					ControlVistas.detenerJuego();
+					ControlVistas.juegoPerdido();
 					System.out.println("DEB03: Aviones colisionados(END)");
 				}	
 			}
