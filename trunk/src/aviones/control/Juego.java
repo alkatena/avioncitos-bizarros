@@ -36,7 +36,6 @@ public class Juego {
 		control.agregarMouseClickObservador(new ControlAeronave());
 		panel.addMouseListener(new MouseClickController(control));
 		
-		
 		//=======Selecciono Nivel=======
 		Nivel.instanciar(Niveles.Starcraft);
 		
