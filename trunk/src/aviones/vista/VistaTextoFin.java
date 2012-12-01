@@ -23,7 +23,7 @@ public class VistaTextoFin extends VistaTexto
 	{
 		if (ControlVistas.estaEnEjecucion() == true)
 		{	
-			return "PERDISTE EL JUEGO, NOOBSTER!";
+			return "¡PERDISTE EL JUEGO! NOOBSTER!";
 		}
 		else { return " ";}
 	}
