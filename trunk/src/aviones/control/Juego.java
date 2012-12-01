@@ -40,7 +40,7 @@ public class Juego {
 		Nivel.instanciar(Niveles.Starcraft);
 		
 		//========ComienzoJuego=========
-		control.comenzarJuego();	
+		control.comenzarJuegoAsyn();
 	}
 	
 
