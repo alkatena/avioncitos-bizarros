@@ -47,4 +47,8 @@ public class ControlVistas
 		controlador.detenerJuego();
 	}
 	
+	public static boolean estaEnEjecucio()
+	{
+		return controlador.estaEnEjecucion();
+	}
 }
