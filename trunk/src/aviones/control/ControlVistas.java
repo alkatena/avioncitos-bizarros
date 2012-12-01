@@ -1,7 +1,13 @@
 package aviones.control;
 
+import java.awt.Color;
+import java.awt.Font;
+
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.Dibujable;
+
+import ar.uba.fi.algo3.titiritero.vista.TextoEstatico;
+import aviones.vista.VistaTextoFin;
 
 
 public class ControlVistas 
@@ -25,4 +31,25 @@ public class ControlVistas
 	public static void agregarDibujable(Dibujable dibujable)
 	{	controlador.agregarDibujable(dibujable);	}
 
+	//nuevo
+	public static void comenzarJuego()
+	{
+		controlador.comenzarJuego();
+	}
+	
+	public static void detenerJuego()
+	{
+		// es loco, porque se supone que lo agrega, pero no deberia llegar a ejecutar...o si?
+		VistaTextoFin vistaTextoFin = new VistaTextoFin();
+		TextoEstatico textoFin = new TextoEstatico(vistaTextoFin.getTexto(),Color.RED, new Font( "TimesRoman",Font.PLAIN,50));
+		textoFin.setPosicionable(vistaTextoFin);
+		ControlVistas.agregarDibujable(textoFin);
+		controlador.detenerJuego();
+	}
+	
+	public static boolean estaEnEjecucion()
+	{
+		return controlador.estaEnEjecucion();
+	}
+	
 }
