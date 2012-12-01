@@ -31,7 +31,7 @@ public class ControlVistas
 	public static void agregarDibujable(Dibujable dibujable)
 	{	controlador.agregarDibujable(dibujable);	}
 
-	//nuevo
+	
 	public static void comenzarJuego()
 	{
 		controlador.comenzarJuego();
@@ -46,6 +46,5 @@ public class ControlVistas
 		ControlVistas.agregarDibujable(textoFin);
 		controlador.detenerJuego();
 	}
-	
 	
 }
