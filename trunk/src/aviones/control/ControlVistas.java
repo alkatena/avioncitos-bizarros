@@ -37,7 +37,7 @@ public class ControlVistas
 		controlador.comenzarJuego();
 	}
 	
-	public static void detenerJuego()
+	public static void juegoPerdido()
 	{
 		// es loco, porque se supone que lo agrega, pero no deberia llegar a ejecutar...o si?
 		VistaTextoFin vistaTextoFin = new VistaTextoFin();
@@ -47,9 +47,5 @@ public class ControlVistas
 		controlador.detenerJuego();
 	}
 	
-	public static boolean estaEnEjecucion()
-	{
-		return controlador.estaEnEjecucion();
-	}
 	
 }
