@@ -1,9 +1,6 @@
 package aviones.modelo;
 
-import ar.uba.fi.algo3.titiritero.Posicionable;
-import ar.uba.fi.algo3.titiritero.vista.ObjetoDeTexto;
-
-public class Score implements Posicionable, ObjetoDeTexto
+public class Score 
 {
 	private int puntaje = 0;
 	private static Score score;
@@ -25,22 +22,6 @@ public class Score implements Posicionable, ObjetoDeTexto
 	public int devolverPuntaje()
 	{
 		return puntaje;
-	}
-	
-	// hardCore dimensiones mapa
-	public int getX()
-	{
-		return  (Mapa.getMapa().getLimiteHor()-150);
-	}
-	
-	public int getY()
-	{
-		return (Mapa.getMapa().getLimiteVer()-50);
-	}
-	
-	public String getTexto()
-	{
-		return "SCORE: "+String.valueOf(this.devolverPuntaje());
 	}
 	
 }
