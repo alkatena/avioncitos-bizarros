@@ -13,9 +13,9 @@ public class Sound
 	{    
 		try 
 		{
-			AdvancedPlayer p = new AdvancedPlayer(new
-			FileInputStream("/sonidos/prueba.mp3"));
-			p.play();
+			AdvancedPlayer player = new AdvancedPlayer(new
+            FileInputStream("src/sonidos/bgmusic.mp3"));
+			player.play();
 	    }
 		catch (Exception e)
 		{
