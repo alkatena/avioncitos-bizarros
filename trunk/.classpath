@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/titiritero"/>
-	<classpathentry kind="lib" path="C:/Users/Mauri/Desktop/Algoritmos III/eclipse-workspace/libraries/EclipseLink 2.4.1 - Juno/jl1.0.1.jar" sourcepath=""/>
+	<classpathentry kind="lib" path="external/jl1.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
