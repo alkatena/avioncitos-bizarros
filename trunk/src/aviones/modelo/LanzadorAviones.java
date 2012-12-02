@@ -8,28 +8,35 @@ import aviones.control.ControlVistas;
 
 public class LanzadorAviones
 {
-	int max = Mapa.getMapa().getLimiteHor();
-	Random gen = new Random();
-	int maxAviones;
-	int ciclosDeEspera = 400;
-	Radar radar = new Radar();
-	int contador = 0;
+	private int max = Mapa.getMapa().getLimiteHor();
+    private int maxV = Mapa.getMapa().getLimiteVer();
+	private Random gen = new Random();
+	private int maxAviones;
+	private int ciclosDeEspera = 400;
+	private Radar radar = new Radar();
+	private int contador = 0;
+    private boolean arriba;
 	
 	public LanzadorAviones(int CantidadMaxAviones)
 	{
 		this.maxAviones = CantidadMaxAviones;
+        arriba = true;
 	}
 	
 	private Posicion randomearPosLimiteSup()
 	{
-		Posicion pos = new Posicion(gen.nextInt(max),0);
+        Posicion pos;
+        if (arriba)
+		    pos = new Posicion(gen.nextInt(max),0);
+        else
+            pos = new Posicion(gen.nextInt(max),maxV);
+        arriba = !arriba;
 		return pos;
 	}
 	
 	private Posicion randomearPosTablero()
 	{
-		Posicion pos = new Posicion(gen.nextInt(max+400), gen.nextInt(max));
-		return pos;
+		return new Posicion(gen.nextInt(max+10), gen.nextInt(maxV+10));
 	}
 	
 	public void actualizar()
@@ -52,7 +59,7 @@ public class LanzadorAviones
 		    int index = gen.nextInt(3);
 		    
 		    //Selecciono la aeronave randomeada.
-		    Aeronave avion = null;
+		    Aeronave avion;
 	        ArrayList<Class<?>> reflexion = new ArrayList<Class<?>>();
 	        reflexion.add(AvionChico.class);
 	        reflexion.add(AvionGrande.class);
@@ -62,7 +69,7 @@ public class LanzadorAviones
 	        double[] velocidad= new double[] {0.1, 0.2, 0.3, 0.4, 0.5};
 	       	        
 	        try {
-	            	avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),velocidad[gen.nextInt(5)]);        
+	            	avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),velocidad[gen.nextInt(5)]);
 	        	}
 	        catch (Exception e)
 	        	{
