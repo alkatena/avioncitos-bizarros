@@ -7,6 +7,6 @@ public class VistaHelicoptero extends  Imagen {
 
 	public VistaHelicoptero()
 	{
-		this.setNombreArchivoImagen("/imagenes/scivess.png");
+		this.setNombreArchivoImagen("/imagenes/scivessS.png");
 	}
 }

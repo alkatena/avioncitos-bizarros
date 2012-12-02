@@ -10,13 +10,13 @@ public class VistaAvionGrandeConDireccion extends VistasAeronavesDireccionadas
 	public VistaAvionGrandeConDireccion(AvionGrande unAvion)
 	{
 		super(unAvion);
-		vistaArriba.setNombreArchivoImagen("/imagenes/battlecrousierUp.png");
-		vistaAbajo.setNombreArchivoImagen("/imagenes/battlecrousierDown.png");
-		vistaDerecha.setNombreArchivoImagen("/imagenes/battlecrousierRight.png");
-		vistaIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierLeft.png");
-		vistaArribaIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierUpLeft.png");
-		vistaArribaDerecha.setNombreArchivoImagen("/imagenes/battlecrousierUpRight.png");
-		vistaAbajoIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierDownLeft.png");
-		vistaAbajoDerecha.setNombreArchivoImagen("/imagenes/battlecrousierDownRight.png");
+		vistaArriba.setNombreArchivoImagen("/imagenes/battlecrousierUpS.png");
+		vistaAbajo.setNombreArchivoImagen("/imagenes/battlecrousierDownS.png");
+		vistaDerecha.setNombreArchivoImagen("/imagenes/battlecrousierRightS.png");
+		vistaIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierLeftS.png");
+		vistaArribaIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierUpLeftS.png");
+		vistaArribaDerecha.setNombreArchivoImagen("/imagenes/battlecrousierUpRightS.png");
+		vistaAbajoIzquierda.setNombreArchivoImagen("/imagenes/battlecrousierDownLeftS.png");
+		vistaAbajoDerecha.setNombreArchivoImagen("/imagenes/battlecrousierDownRightS.png");
 	}
 }
