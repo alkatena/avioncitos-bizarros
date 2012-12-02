@@ -9,6 +9,7 @@ import ar.uba.fi.algo3.titiritero.vista.MouseClickController;
 
 // las nuestras
 import aviones.modelo.Refresher;
+import aviones.sonido.Sound;
 
 
 
@@ -42,7 +43,9 @@ public class Juego {
 		Nivel.instanciar(Niveles.Starcraft);
 		
 		//========ComienzoJuego=========
+
 		control.comenzarJuegoAsyn();
+		Sound.playMusic();
 
 	}
 	
