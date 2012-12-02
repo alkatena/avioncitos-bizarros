@@ -21,9 +21,9 @@ public class VistaTextoFin extends VistaTexto
 	
 	public String getTexto()
 	{
-		if (ControlVistas.estaEnEjecucion() == true)
+		if (ControlVistas.estaEnEjecucion())
 		{	
-			return "¡PERDISTE EL JUEGO! NOOBSTER!";
+			return "Â¡PERDISTE EL JUEGO! NOOBSTER!";
 		}
 		else { return " ";}
 	}

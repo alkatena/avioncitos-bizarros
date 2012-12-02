@@ -1,6 +1,6 @@
 package aviones.modelo;
 
-import aviones.vista.VistaAvionChico;
+import aviones.vista.VistaAvionChicoConDireccion;
 
 public class AvionChico extends Aeronave 
 	{
@@ -18,7 +18,7 @@ public class AvionChico extends Aeronave
 		
 		protected void asignarVista()
 		{
-			vistaAvion = new VistaAvionChico();
+			vistaAvion = new VistaAvionChicoConDireccion(this);
 		}
 	
 	}

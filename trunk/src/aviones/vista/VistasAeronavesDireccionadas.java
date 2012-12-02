@@ -3,7 +3,6 @@ package aviones.vista;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.vista.Imagen;
 import aviones.modelo.Aeronave;
-import aviones.modelo.AvionGrande;
 import aviones.modelo.Direccion;
 import aviones.modelo.Posicion;
 
