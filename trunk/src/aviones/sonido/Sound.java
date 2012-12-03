@@ -1,9 +1,8 @@
 package aviones.sonido;
 
-import java.io.FileInputStream;
 import javazoom.jl.player.advanced.AdvancedPlayer;
-	 
-public class Sound  
+
+public class Sound
 {
 	public Sound()
 	{    }
@@ -11,11 +10,11 @@ public class Sound
 	
 	public static void playMusic()
 	{    
-		try 
-		{
-			AdvancedPlayer player = new AdvancedPlayer(new
-            FileInputStream("src/sonidos/bgmusic.mp3"));
-			player.play();
+		try
+        {
+            AdvancedPlayer player = new AdvancedPlayer(
+                    Sound.class.getResourceAsStream("/sonidos/bgmusic.mp3"));
+            player.play();
 	    }
 		catch (Exception e)
 		{
