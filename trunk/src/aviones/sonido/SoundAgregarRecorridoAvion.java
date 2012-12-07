@@ -7,7 +7,7 @@ public class SoundAgregarRecorridoAvion
 	public SoundAgregarRecorridoAvion()
 	{    }
 	
-//Ahora SI! Aplica recurrencia, ohhh yeah! deberiamos tener una mejor jerarquia
+//Ahora SI! Aplica concurrencia, ohhh yeah! deberiamos tener una mejor jerarquia
 /* de clases y no tener estas 3 con codigo repetido, pero bueno es solo para
  * tunear el juegito!
  * 
