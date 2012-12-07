@@ -1,11 +1,9 @@
 package aviones.control;
 
 import ar.uba.fi.algo3.titiritero.MouseClickObservador;
-import  ar.uba.fi.algo3.titiritero.audio.Elemento;
 import aviones.modelo.Aeronave;
 import aviones.modelo.Posicion;
 import aviones.modelo.Radar;
-import aviones.sonido.Sound;
 
 import aviones.sonido.SoundSeleccionarAvion;
 import aviones.sonido.SoundSetiarRecorridoAvion;
