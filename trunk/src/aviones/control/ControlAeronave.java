@@ -5,7 +5,11 @@ import  ar.uba.fi.algo3.titiritero.audio.Elemento;
 import aviones.modelo.Aeronave;
 import aviones.modelo.Posicion;
 import aviones.modelo.Radar;
+import aviones.sonido.Sound;
 
+import aviones.sonido.SoundSeleccionarAvion;
+import aviones.sonido.SoundSetiarRecorridoAvion;
+import aviones.sonido.SoundAgregarRecorridoAvion;
 
 public class ControlAeronave implements MouseClickObservador
 {
@@ -28,7 +32,7 @@ public class ControlAeronave implements MouseClickObservador
 				avionSeleccionado = avion;
 				primero = true;
 				System.out.println("DEB04: Avion seleccionado");
-				ControlVistas.getReproductorDeAudio().reproducir(new Elemento(40,20));
+				SoundSeleccionarAvion.playMusic();
 			}
 			else
 			{	
@@ -39,13 +43,13 @@ public class ControlAeronave implements MouseClickObservador
 					avionSeleccionado.cambiarRecorrido(pos);
 					primero = false;
 					System.out.println("DEB05: Recorrido cambiado");
-					ControlVistas.getReproductorDeAudio().reproducir(new Elemento(60,20));
+					SoundSetiarRecorridoAvion.playMusic();
 					}
 					else
 					{
 					avionSeleccionado.agregarAlRecorrido(pos);
 					System.out.println("DEB06: Recorrido agregado");
-					ControlVistas.getReproductorDeAudio().reproducir(new Elemento(100,20));
+					SoundAgregarRecorridoAvion.playMusic();
 					}
 				}
 			}
