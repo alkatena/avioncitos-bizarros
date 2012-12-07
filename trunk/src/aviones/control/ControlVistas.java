@@ -42,7 +42,7 @@ public class ControlVistas
 	{
 		// es loco, porque se supone que lo agrega, pero no deberia llegar a ejecutar...o si?
 		VistaTextoFin vistaTextoFin = new VistaTextoFin();
-		TextoEstatico textoFin = new TextoEstatico(vistaTextoFin.getTexto(),Color.RED, new Font( "TimesRoman",Font.PLAIN,50));
+		TextoEstatico textoFin = new TextoEstatico(vistaTextoFin.getTexto(),Color.RED, new Font( "Italic",Font.PLAIN,50));
 		textoFin.setPosicionable(vistaTextoFin);
 		ControlVistas.agregarDibujable(textoFin);
 		controlador.detenerJuego();
