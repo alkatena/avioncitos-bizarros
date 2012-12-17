@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import ar.uba.fi.algo3.titiritero.vista.TextoDinamico;
 
-
 import aviones.modelo.DireccionPista;
 import aviones.modelo.Helipuerto;
 import aviones.modelo.Mapa;
@@ -16,6 +15,7 @@ import aviones.vista.VistaMapa;
 import aviones.vista.VistaPistaGrande;
 import aviones.vista.VistaPistaChica;
 import aviones.vista.VistaTextoScore;
+import aviones.vista.VistaTextoScoreMax;
 
 
 public class NivelStarCraft extends Nivel
@@ -48,12 +48,18 @@ public class NivelStarCraft extends Nivel
 			ControlVistas.agregarDibujable(vistaPistaChica);
 	
 			
-			//Agrego el Score correspondiente a las dimensiones del mapa
+			//Agrego los Scores correspondiente a las dimensiones del mapa
 			
 			VistaTextoScore vistaTextoScore = new VistaTextoScore();
-			TextoDinamico textoScoreDin = new TextoDinamico(vistaTextoScore,Color.RED, new Font( "TimesRoman",Font.PLAIN,25));
+			TextoDinamico textoScoreDin = new TextoDinamico(vistaTextoScore,Color.RED, new Font( "Italic",Font.PLAIN,25));
 			textoScoreDin.setPosicionable(vistaTextoScore);
 			ControlVistas.agregarDibujable(textoScoreDin);
 			
+			VistaTextoScoreMax vistaTextoScoreMax = new VistaTextoScoreMax();
+			TextoDinamico textoDimScoreMax = new TextoDinamico(vistaTextoScoreMax,Color.RED, new Font( "Italic",Font.PLAIN,25));
+			textoDimScoreMax.setPosicionable(vistaTextoScoreMax);
+			ControlVistas.agregarDibujable(textoDimScoreMax);
+			
+		
 		}
 }
