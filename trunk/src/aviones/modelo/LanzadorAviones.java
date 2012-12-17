@@ -66,7 +66,7 @@ public class LanzadorAviones
 	        reflexion.add(Helicoptero.class);
 	        Class<?> tipoAvion = reflexion.get(index); 			
 	        	        
-	        double[] velocidad= new double[] {0.1, 0.2, 0.3, 0.4, 0.5};
+	        double[] velocidad= new double[] {0.3, 0.4, 0.5, 0.6, 0.7};
 	       	        
 	        try {
 	            	avion = (Aeronave)tipoAvion.getConstructors()[0].newInstance(this.randomearPosLimiteSup(),this.randomearPosTablero(),velocidad[gen.nextInt(5)]);
